@@ -212,12 +212,12 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-EUROHPC-2025-NCC-01-02"
   },
   {
-    "title": "Generative-AI based Agents to Revolutionize Medical Diagnosis and Treatment of Cancer",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2025-PATHFINDERCHALLENGES-01-02"
-  },
-  {
     "title": "Biotech for Climate Resilient Crops and Plant-Based Biomanufacturing",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2025-PATHFINDERCHALLENGES-01-01"
+  },
+  {
+    "title": "Generative-AI based Agents to Revolutionize Medical Diagnosis and Treatment of Cancer",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2025-PATHFINDERCHALLENGES-01-02"
   },
   {
     "title": "Towards autonomous robot collectives delivering collaborative tasks in dynamic unstructured construction environments",
@@ -228,10 +228,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2025-PATHFINDERCHALLENGES-01-04"
   },
   {
-    "title": "Support standardisation for the EuroQCI (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-IRIS2-2025-QCI-03"
-  },
-  {
     "title": "Maturing of a European industrial ecosystem for security-certified terrestrial QKD technologies and systems",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-IRIS2-2025-QCI-01"
   },
@@ -240,8 +236,8 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-IRIS2-2025-QCI-02"
   },
   {
-    "title": "Fighting against antisemitism",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-ANTISEMITISM"
+    "title": "Support standardisation for the EuroQCI (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-IRIS2-2025-QCI-03"
   },
   {
     "title": "Support to public authorities to combat racism, xenophobia, LGBTIQ-phobia and all other forms of intolerance, including intersectional discrimination",
@@ -252,16 +248,20 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-ANTIMUSLIM"
   },
   {
+    "title": "Fighting discrimination against LGBTIQ people and promoting LGBTIQ equality",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-LGBTIQ"
+  },
+  {
     "title": "Fighting against discrimination and racism, xenophobia and other forms of intolerance, including antigypsyism, anti-black, and anti-Asian racism",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-RACI-DISC"
   },
   {
-    "title": "Promoting diversity management and inclusion at the workplace, both in the public and private sector",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-DIVERSITYMGT"
+    "title": "Fighting against antisemitism",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-ANTISEMITISM"
   },
   {
-    "title": "Fighting discrimination against LGBTIQ people and promoting LGBTIQ equality",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-LGBTIQ"
+    "title": "Promoting diversity management and inclusion at the workplace, both in the public and private sector",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-DIVERSITYMGT"
   },
   {
     "title": "ERC SYNERGY GRANTS",
@@ -280,12 +280,12 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-IDATA-01-02-Lot2"
   },
   {
-    "title": "DIGITAL-JU-CHIPS-2025-SG-SSOI",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2025-SG-SSOI"
-  },
-  {
     "title": "DIGITAL-JU-CHIPS-2025-IA-LEAI",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2025-IA-LEAI"
+  },
+  {
+    "title": "DIGITAL-JU-CHIPS-2025-SG-SSOI",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2025-SG-SSOI"
   },
   {
     "title": "HORIZON-JU-CHIPS-2025-CSA-JPN",
@@ -316,8 +316,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-CITIZENS-REM-HOLOCAUSTJEW"
   },
   {
+    "title": "RFCS-2025 Coal Pilot and Demonstration Projects",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RFCS-2025-01-PDP"
+  },
+  {
     "title": "SNS Trials and Pilots (T&Ps) with Verticals",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-02-STREAM-D-01"
+  },
+  {
+    "title": "RFCS-2025 Coal Accompanying Measures",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RFCS-2025-01-AM"
   },
   {
     "title": "RFCS-2025 Steel Research Projects",
@@ -332,28 +340,32 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RFCS-2025-02-PDP"
   },
   {
-    "title": "RFCS-2025 Coal Pilot and Demonstration Projects",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RFCS-2025-01-PDP"
-  },
-  {
-    "title": "RFCS-2025 Coal Accompanying Measures",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RFCS-2025-01-AM"
-  },
-  {
     "title": "RFCS-2025 Steel Accompanying Measures",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RFCS-2025-02-AM"
-  },
-  {
-    "title": "Understanding how infections foster and induce non-communicable diseases",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-02-two-stage"
   },
   {
     "title": "Establishing Ortho and Cardiology Ambulatory Surgical Centres in Europe",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-05-two-stage"
   },
   {
+    "title": "AI-Powered Signal Detection in Pharmacovigilance",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-03-two-stage"
+  },
+  {
+    "title": "Towards precision medicine: platform for transdiagnostic stratification of brain dysfunction",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-01-two-stage"
+  },
+  {
+    "title": "Leveraging Europe's Expertise to accelerate Cell Therapy for Type 1 Diabetes",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-04-two-stage"
+  },
+  {
     "title": "Women Leadership Category",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIT-2025-PRIZE-WIP-LEADERSHIP"
+  },
+  {
+    "title": "Understanding how infections foster and induce non-communicable diseases",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-02-two-stage"
   },
   {
     "title": "European Researchers' Night and Researchers at Schools 2026-2027",
@@ -368,68 +380,56 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2025-PRIZE-WIP-RisingInnovators"
   },
   {
-    "title": "Leveraging Europe's Expertise to accelerate Cell Therapy for Type 1 Diabetes",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-04-two-stage"
-  },
-  {
-    "title": "AI-Powered Signal Detection in Pharmacovigilance",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-03-two-stage"
-  },
-  {
-    "title": "Towards precision medicine: platform for transdiagnostic stratification of brain dysfunction",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2025-11-01-two-stage"
-  },
-  {
     "title": "Welfare monitoring: data driven risk assessment in fast and slower growing broilers (BROWARD)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-01"
-  },
-  {
-    "title": "Open topic on modern information and forensic evidence analysis and on frontline policing",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-01"
-  },
-  {
-    "title": "Advancing autonomous systems and robotics for high-risk disaster response, strengthening disaster resilience in conflict-afflicted crisis zones",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-04"
-  },
-  {
-    "title": "Security evaluations of Post-Quantum Cryptography (PQC) primitives",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-04"
   },
   {
     "title": "Security of implementations of Post-Quantum Cryptography algorithms",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-05"
   },
   {
-    "title": "Open topic on prevention, detection and deterrence of various forms of crime and terrorism through an enhanced understanding of the related societal issues",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-02"
-  },
-  {
-    "title": "National Contact Points (NCPs) in the field of security and cybersecurity fostering the links with National Community building for Safe, Secure and Resilient Societies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-01"
-  },
-  {
-    "title": "Open topic on citizen and regional and/or local authorities' engagement in enhanced disaster risk awareness, including education, and preparedness",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-01"
-  },
-  {
-    "title": "Open topic on secured and facilitated crossing of external borders",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-02"
-  },
-  {
     "title": "Privacy Enhancing Technologies",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-03"
   },
   {
-    "title": "Open topic on better customs and supply chain security",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-03"
+    "title": "Security evaluations of Post-Quantum Cryptography (PQC) primitives",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-04"
   },
   {
-    "title": "Open topic on testing / validating tools, technologies and data used in cross-border prevention, preparedness and responses to climate extreme and geological events and chemical, biological or radiological emergency threats",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-03"
+    "title": "New advanced tools and processes for Operational Cybersecurity",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-02"
   },
   {
-    "title": "Open topic for role of the human factor for the resilience of critical infrastructures",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-INFRA-02"
+    "title": "Open topic on modern information and forensic evidence analysis and on frontline policing",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-01"
+  },
+  {
+    "title": "Open topic on prevention, detection and deterrence of various forms of crime and terrorism through an enhanced understanding of the related societal issues",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-02"
+  },
+  {
+    "title": "Advancing autonomous systems and robotics for high-risk disaster response, strengthening disaster resilience in conflict-afflicted crisis zones",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-04"
+  },
+  {
+    "title": "Demand-led innovation for civil security through Pre-Commercial Procurement (PCP)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-06"
+  },
+  {
+    "title": "Generative AI for Cybersecurity applications",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-01"
+  },
+  {
+    "title": "Integration of Post-Quantum Cryptography (PQC) algorithms into high-level protocols",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-06"
+  },
+  {
+    "title": "Open grounds for pre-commercial procurement of innovative security technologies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-03"
+  },
+  {
+    "title": "Uptake Acceleration Services",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-02"
   },
   {
     "title": "Transition to post-quantum Public Key Infrastructures",
@@ -438,6 +438,18 @@
   {
     "title": "Enhancing the NCC Network",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-ECCC-2025-DEPLOY-CYBER-08-NCC"
+  },
+  {
+    "title": "Open topic on citizen and regional and/or local authorities' engagement in enhanced disaster risk awareness, including education, and preparedness",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-01"
+  },
+  {
+    "title": "National Contact Points (NCPs) in the field of security and cybersecurity fostering the links with National Community building for Safe, Secure and Resilient Societies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-01"
+  },
+  {
+    "title": "Open topic on testing / validating tools, technologies and data used in cross-border prevention, preparedness and responses to climate extreme and geological events and chemical, biological or radiological emergency threats",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-03"
   },
   {
     "title": "Open topic on improved intelligence picture and enhanced prevention, detection and deterrence of various forms of organised crime",
@@ -462,6 +474,18 @@
   {
     "title": "Data repository for security research and innovation",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-05"
+  },
+  {
+    "title": "Open topic on secured and facilitated crossing of external borders",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-02"
+  },
+  {
+    "title": "Open topic on better customs and supply chain security",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-03"
+  },
+  {
+    "title": "Open topic for role of the human factor for the resilience of critical infrastructures",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-INFRA-02"
   },
   {
     "title": "Accelerating uptake through open proposals for advanced SME innovation",
@@ -596,32 +620,24 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-03-HUMAN-17"
   },
   {
-    "title": "GenAI4EU central Hub (CSA) (AI/Data/Robotics Partnership)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-03-HUMAN-18"
-  },
-  {
     "title": "Drive the evolution of the internet towards open and interoperable Web 4.0 and Virtual Worlds: building blocks in priority areas (RIA) (Virtual Worlds Partnership)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-03-HUMAN-16"
-  },
-  {
-    "title": "Training of national judges in EU competition law",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/SMP-COMP-2025-JUDG"
   },
   {
     "title": "Open Internet Stack: development of technological commons/open-source 3C building blocks (RIA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-03-DATA-11"
   },
   {
-    "title": "Lighthouse Codes for HPC Applications",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-EUROHPC-2026-COE-LH-01-03"
+    "title": "Community Centres of Excellence",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-EUROHPC-2026-COE-LH-01-01"
   },
   {
     "title": "Transversal Centres of Excellence",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-EUROHPC-2026-COE-LH-01-02"
   },
   {
-    "title": "Community Centres of Excellence",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-EUROHPC-2026-COE-LH-01-01"
+    "title": "Lighthouse Codes for HPC Applications",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-EUROHPC-2026-COE-LH-01-03"
   },
   {
     "title": "SOFT Innovation Prize 2026",
@@ -636,18 +652,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-CHAR-LITI"
   },
   {
-    "title": "Innovative Earth observation services in support of maritime litter detection and ship source pollution policies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-46"
-  },
-  {
-    "title": "Digital enablers and building blocks for Earth Observation and Satellite telecommunication for Space solutions",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-31"
-  },
-  {
-    "title": "Accelerate the uptake of life-cycle assessment (LCA) for Safe and Sustainable by Design (SSbD) chemicals and materials and resulting products (RIA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-52"
-  },
-  {
     "title": "Enhanced logistics and operations of construction sites (IA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-05-TWIN-TRANSITION-11-two-stage"
   },
@@ -656,32 +660,36 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-62"
   },
   {
+    "title": "Innovative solutions for the sustainable production for Semiconductor raw materials (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-63"
+  },
+  {
+    "title": "Space Critical EEE Components for EU non-dependence – RISC-V Microprocessor on 7nm",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-71"
+  },
+  {
+    "title": "From heat-driven processes to the use of mechanical and electric forces (Processes4Planet partnership) (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-31"
+  },
+  {
     "title": "Advanced manufacturing technologies for leadership of EU manufacturers in products for the net-zero industry (Made in Europe Partnership) (IA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-05"
   },
   {
-    "title": "EU Co-funded Partnership on raw materials for the green and digital transition (Co-funded partnership Raw Materials for the Green and Digital Transition)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-64"
+    "title": "Green and resilient flexible production processes (Processes4Planet partnership) (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-32"
   },
   {
-    "title": "Digital solutions for autonomy for space transportation systems, design and simulation tools – targeting demonstration",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-13"
+    "title": "Space Critical EEE Components for EU non-dependence – Advanced Packages and Memories",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-74"
   },
   {
-    "title": "Facilitated cooperation for AI in Science (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-DIGITAL-62"
+    "title": "Digital solutions for autonomy for space transportation systems, design and simulation tools - Digital enablers and building blocks",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-12"
   },
   {
-    "title": "Developing and embedding upcycling technologies into viable business (Processes4Planet partnership) (IA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-05-TWIN-TRANSITION-35-two-stage"
-  },
-  {
-    "title": "AI Foundation models in science (GenAI4EU) (RIA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-DIGITAL-61"
-  },
-  {
-    "title": "Physical and cognitive augmentation in advanced manufacturing (Made in Europe Partnership) (RIA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-02"
+    "title": "Digitally enabled local-for-local textile and apparel production (Textiles for the Future Partnership) (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-31"
   },
   {
     "title": "ISOS Pilot Mission Detailed Design – HOST component",
@@ -700,20 +708,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-39"
   },
   {
-    "title": "Demonstrators for clusters of social circular enterprises (IA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-05-TWIN-TRANSITION-21-two-stage"
-  },
-  {
-    "title": "Technologies for critical raw materials and strategic raw materials from end-of-life products (IA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-61"
-  },
-  {
-    "title": "ISOS Pilot Mission Detailed Design – satAPPs component",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-24"
-  },
-  {
     "title": "Safe and clean processing technologies and products (Processes4Planet partnership) (RIA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-36"
+  },
+  {
+    "title": "Space Critical EEE Components for EU non-dependence - Connectors",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-73"
+  },
+  {
+    "title": "Physical and cognitive augmentation in advanced manufacturing (Made in Europe Partnership) (RIA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-02"
   },
   {
     "title": "ISOS Pilot Mission Detailed Design – Logistics component",
@@ -724,140 +728,64 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-01"
   },
   {
-    "title": "Interregional Innovation Investments Strand 2a",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/I3-2025-INV2a"
-  },
-  {
-    "title": "ISOS Pilot Mission Detailed Design – Servicing component",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-21"
-  },
-  {
-    "title": "CSA on access to European spaceports",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-11"
+    "title": "Copernicus Marine Environment Monitoring Service (CMEMS) evolution: new and innovative ocean data assimilation techniques",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-44"
   },
   {
     "title": "Development of safe and sustainable by design alternatives to Perfluoroalkyl and Polyfluoroalkyl Substances (PFAS) (IA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-05-MATERIALS-51-two-stage"
   },
   {
-    "title": "Copernicus Marine Environment Monitoring Service (CMEMS) evolution: new and innovative ocean data assimilation techniques",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-44"
+    "title": "ISOS Pilot Mission Detailed Design – Servicing component",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-21"
+  },
+  {
+    "title": "Materials Commons for Europe (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-45"
   },
   {
     "title": "Solving issues in carbon-neutral iron and steel making processes with diverse input materials of varying quality (Clean Steel Partnership) (RIA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-37"
   },
   {
-    "title": "Preparing demonstration missions for collaborative Earth Observation and Satellite telecommunication for Space solutions",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-32"
+    "title": "Copernicus Anthropogenic CO₂ Emissions Monitoring & Verification Support (CO2MVS) capacity: new and innovative methods to estimate the impact of fires on vegetation and related carbon fluxes",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-43"
   },
   {
-    "title": "Space Critical Equipment and Related Technologies for EU non-dependence – Chip Scale Atomic Clocks and Solar Cells",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-72"
+    "title": "Facilitated cooperation for AI in Science (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-DIGITAL-62"
+  },
+  {
+    "title": "Developing and embedding upcycling technologies into viable business (Processes4Planet partnership) (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-05-TWIN-TRANSITION-35-two-stage"
+  },
+  {
+    "title": "AI Foundation models in science (GenAI4EU) (RIA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-DIGITAL-61"
+  },
+  {
+    "title": "Innovative Earth observation services in support of maritime litter detection and ship source pollution policies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-46"
   },
   {
     "title": "Innovative Advanced Materials (IAMs) for product monitoring, smart maintenance and repair strategies in the construction sector (RIA) (Innovative Advanced Materials for Europe partnership)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-05-MATERIALS-42-two-stage"
   },
   {
-    "title": "Integrated use of renewable energy carriers in industrial sites (Processes4Planet partnership) (RIA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-33"
-  },
-  {
-    "title": "Facilitating the conduct of multinational clinical studies of orphan devices and/or of highly innovative (“breakthrough”) devices",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-IND-03-two-stage"
-  },
-  {
-    "title": "Digitalisation of conformity assessment procedures of medical devices and in vitro diagnostic medical devices",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-IND-02"
-  },
-  {
-    "title": "Optimising the manufacturing of Advanced Therapy Medicinal Products (ATMPs)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-IND-01"
-  },
-  {
-    "title": "Boosting the translation of biotech research into innovative health therapies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-05"
-  },
-  {
-    "title": "Leveraging multimodal data to advance Generative Artificial Intelligence applicability in biomedical research (GenAI4EU)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-03"
-  },
-  {
-    "title": "Tackling high-burden for patients and under-researched medical conditions",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-07"
-  },
-  {
-    "title": "Standardisation landscape analyses tool (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-61"
-  },
-  {
-    "title": "Horizon Standardisation Booster (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-60"
-  },
-  {
-    "title": "Artificial Intelligence for knowledge valorisation (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-62"
-  },
-  {
-    "title": "End user-driven application of Generative Artificial Intelligence models in healthcare (GenAI4EU)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-CARE-01"
-  },
-  {
-    "title": "Support for the functioning of the Global Research Collaboration for Infectious Disease Preparedness (GloPID-R)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-05"
-  },
-  {
-    "title": "The impact of pollution on the development and progression of brain diseases and disorders",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-ENVHLTH-01-two-stage"
-  },
-  {
-    "title": "Implementation research addressing strategies to strengthen health systems for equitable high-quality care and health outcomes in the context of non-communicable diseases (GACD)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-06"
-  },
-  {
-    "title": "Enhancing cell therapies with genomic techniques",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-01"
-  },
-  {
-    "title": "Advancing cell secretome-based therapies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-02"
-  },
-  {
-    "title": "Testing safety and efficacy of phage therapy for the treatment of antibiotic-resistant bacterial infections",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-01"
-  },
-  {
-    "title": "Advancing innovative interventions for mental, behavioural and neurodevelopmental disorders",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-DISEASE-02-two-stage"
-  },
-  {
-    "title": "Advancing knowledge on the impacts of micro- and nanoplastics on human health",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-ENVHLTH-02-two-stage"
-  },
-  {
-    "title": "Development of antibodies and antibody-derived proteins for the prevention and treatment of infectious diseases with epidemic potential",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-03"
-  },
-  {
-    "title": "Leveraging artificial intelligence for pandemic preparedness and response",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-04"
-  },
-  {
-    "title": "Improving the quality of life of persons with intellectual disabilities and their families",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-STAYHLTH-01-two-stage"
-  },
-  {
-    "title": "Assessment of Technology Infrastructure needs in Ukraine (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-66"
-  },
-  {
-    "title": "System innovation experimentation for Industry 5.0 (IA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-65"
-  },
-  {
     "title": "Smart integration of net zero technologies into Energy Intensive industries (Processes4Planet and Made in Europe partnerships) (IA)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-34"
+  },
+  {
+    "title": "Copernicus Atmosphere Monitoring Service (CAMS) evolution: improved soil-vegetation-atmosphere modelling and data assimilation of atmospheric constituents",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-42"
+  },
+  {
+    "title": "Innovative Advanced Materials Innovation Procurement (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-44"
+  },
+  {
+    "title": "Space Critical Equipment and Related Technologies for EU non-dependence – Chip Scale Atomic Clocks and Solar Cells",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-72"
   },
   {
     "title": "EU-Japan cooperation on the exploitation of Quantum Space Gravimetry data",
@@ -872,36 +800,132 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-41"
   },
   {
-    "title": "Innovative Advanced Materials Innovation Procurement (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-MATERIALS-44"
-  },
-  {
-    "title": "Copernicus Atmosphere Monitoring Service (CAMS) evolution: improved soil-vegetation-atmosphere modelling and data assimilation of atmospheric constituents",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-02-SPACE-42"
-  },
-  {
-    "title": "Value creation pilots for scaling up innovative solutions (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-63"
-  },
-  {
-    "title": "Pilot initiatives on Technology Infrastructures (CSA)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-64"
+    "title": "Standardisation landscape analyses tool (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-61"
   },
   {
     "title": "Interregional Innovation Investments Strand 1",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/I3-2025-INV1"
   },
   {
+    "title": "The impact of pollution on the development and progression of brain diseases and disorders",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-ENVHLTH-01-two-stage"
+  },
+  {
+    "title": "Development of antibodies and antibody-derived proteins for the prevention and treatment of infectious diseases with epidemic potential",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-03"
+  },
+  {
+    "title": "Improving the quality of life of persons with intellectual disabilities and their families",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-STAYHLTH-01-two-stage"
+  },
+  {
+    "title": "Integrated use of renewable energy carriers in industrial sites (Processes4Planet partnership) (RIA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-TWIN-TRANSITION-33"
+  },
+  {
+    "title": "Pilot initiatives on Technology Infrastructures (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-64"
+  },
+  {
+    "title": "Assessment of Technology Infrastructure needs in Ukraine (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-66"
+  },
+  {
+    "title": "System innovation experimentation for Industry 5.0 (IA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-65"
+  },
+  {
+    "title": "Digitalisation of conformity assessment procedures of medical devices and in vitro diagnostic medical devices",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-IND-02"
+  },
+  {
     "title": "Experimental protocols for estimation of pest survey parameters",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-PLANTS-02"
   },
   {
-    "title": "Smart Security / Security Services",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-04-01"
+    "title": "Value creation pilots for scaling up innovative solutions (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-63"
   },
   {
-    "title": "6G NTN-TN Unification/Integration",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-03-01"
+    "title": "Horizon Standardisation Booster (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-60"
+  },
+  {
+    "title": "Artificial Intelligence for knowledge valorisation (CSA)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-62"
+  },
+  {
+    "title": "Advancing knowledge on the impacts of micro- and nanoplastics on human health",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-ENVHLTH-02-two-stage"
+  },
+  {
+    "title": "Leveraging artificial intelligence for pandemic preparedness and response",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-04"
+  },
+  {
+    "title": "Enhancing cell therapies with genomic techniques",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-01"
+  },
+  {
+    "title": "Tackling high-burden for patients and under-researched medical conditions",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-07"
+  },
+  {
+    "title": "Advancing cell secretome-based therapies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-02"
+  },
+  {
+    "title": "Optimising the manufacturing of Advanced Therapy Medicinal Products (ATMPs)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-IND-01"
+  },
+  {
+    "title": "End user-driven application of Generative Artificial Intelligence models in healthcare (GenAI4EU)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-CARE-01"
+  },
+  {
+    "title": "Support for the functioning of the Global Research Collaboration for Infectious Disease Preparedness (GloPID-R)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-05"
+  },
+  {
+    "title": "Implementation research addressing strategies to strengthen health systems for equitable high-quality care and health outcomes in the context of non-communicable diseases (GACD)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-06"
+  },
+  {
+    "title": "Facilitating the conduct of multinational clinical studies of orphan devices and/or of highly innovative (“breakthrough”) devices",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-IND-03-two-stage"
+  },
+  {
+    "title": "Testing safety and efficacy of phage therapy for the treatment of antibiotic-resistant bacterial infections",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-DISEASE-01"
+  },
+  {
+    "title": "Advancing innovative interventions for mental, behavioural and neurodevelopmental disorders",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-03-DISEASE-02-two-stage"
+  },
+  {
+    "title": "Leveraging multimodal data to advance Generative Artificial Intelligence applicability in biomedical research (GenAI4EU)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-03"
+  },
+  {
+    "title": "Boosting the translation of biotech research into innovative health therapies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2025-01-TOOL-05"
+  },
+  {
+    "title": "Reliable Services Operation",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-04-02"
+  },
+  {
+    "title": "Higher Speed Optical Access Networks and future end-to-end Packet Optical Network Architecture in 6G",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-03-02"
+  },
+  {
+    "title": "Advanced IoT and Device Technologies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-01-02"
+  },
+  {
+    "title": "Smart Security / Security Services",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-04-01"
   },
   {
     "title": "Advanced Architectures Systems and Technologies",
@@ -912,28 +936,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-02"
   },
   {
-    "title": "Higher Speed Optical Access Networks and future end-to-end Packet Optical Network Architecture in 6G",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-03-02"
+    "title": "6G NTN-TN Unification/Integration",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-03-01"
   },
   {
     "title": "Microelectronic – Front-End Module (FEM)",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-05"
   },
   {
-    "title": "Reliable Services Operation",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-04-02"
-  },
-  {
     "title": "6G Telco Cloud and Service Provision Enablers",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-C-01"
-  },
-  {
-    "title": "Advanced IoT and Device Technologies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2025-01-STREAM-B-01-02"
-  },
-  {
-    "title": "Co-funded European partnership for Resilient Cultural Heritage",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-03-HERITAGE-01"
   },
   {
     "title": "Business and consumer surveys - SGA",
@@ -944,32 +956,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/BCS-2025-FPA"
   },
   {
-    "title": "MSCA4Ukraine Fellowships 2025",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2025-MSCA4UA-01-01"
+    "title": "Co-funded European partnership for Resilient Cultural Heritage",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-03-HERITAGE-01"
   },
   {
     "title": "Innovative approaches to intangible cultural heritage for societal resilience",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-02-HERITAGE-02-two-stage"
   },
   {
-    "title": "Gender differences in career trajectories of parents and their implications for gender equality and family well-being",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-02-TRANSFO-04-two-stage"
-  },
-  {
-    "title": "Science comes to town 2027",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-07"
-  },
-  {
-    "title": "Investigating and addressing career barriers faced by underrepresented and marginalised researchers",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-04"
-  },
-  {
-    "title": "Strengthening of the European Science for Policy Ecosystem",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-06"
-  },
-  {
-    "title": "Programme-level collaboration",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-05"
+    "title": "Research and innovation to provide evidence that support reforms of research assessment",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-03"
   },
   {
     "title": "Enable sustained coordination and guidance at the European level on institutional non-profit open access publishing",
@@ -980,8 +976,52 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-01"
   },
   {
-    "title": "Research and innovation to provide evidence that support reforms of research assessment",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-03"
+    "title": "Science comes to town 2027",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-07"
+  },
+  {
+    "title": "MSCA4Ukraine Fellowships 2025",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2025-MSCA4UA-01-01"
+  },
+  {
+    "title": "Gender differences in career trajectories of parents and their implications for gender equality and family well-being",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-02-TRANSFO-04-two-stage"
+  },
+  {
+    "title": "Investigating and addressing career barriers faced by underrepresented and marginalised researchers",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-04"
+  },
+  {
+    "title": "Programme-level collaboration",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-05"
+  },
+  {
+    "title": "Strengthening of the European Science for Policy Ecosystem",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-06-ERA-06"
+  },
+  {
+    "title": "Fostering the consolidation of European science diplomacy",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-02"
+  },
+  {
+    "title": "A European Collaborative Cloud for Cultural Heritage – Innovative use cases",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-03"
+  },
+  {
+    "title": "Fighting against disinformation while ensuring the right to freedom of expression",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-09"
+  },
+  {
+    "title": "Economic inequalities and their impact on democracy",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-08"
+  },
+  {
+    "title": "The role of civic and citizenship education for strengthening civic and democratic participation and support for common European values",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-10"
+  },
+  {
+    "title": "Improving mental health outcomes for people in education, training and work",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-08"
   },
   {
     "title": "Evolution of culture in a virtualising world",
@@ -992,56 +1032,8 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-06"
   },
   {
-    "title": "Fighting against disinformation while ensuring the right to freedom of expression",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-09"
-  },
-  {
-    "title": "Intergenerational fairness in the context of demographic change in the EU",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-10"
-  },
-  {
-    "title": "Tackling gender-based violence in different social and economic spheres",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-01"
-  },
-  {
-    "title": "Open strategic autonomy, economic and research security in EU foreign policy",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-04"
-  },
-  {
-    "title": "Independence of the judiciary as an aspect of rule of law compliance",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-11"
-  },
-  {
-    "title": "A European Collaborative Cloud for Cultural Heritage – Innovative use cases",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-03"
-  },
-  {
-    "title": "Fostering the consolidation of European science diplomacy",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-02"
-  },
-  {
-    "title": "Preparing the EU for future enlargement: challenges and opportunities",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-03"
-  },
-  {
-    "title": "The autocratic appeal: nature, drivers and strategies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-07"
-  },
-  {
-    "title": "Leveraging artificial intelligence for creativity-driven innovation",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-04"
-  },
-  {
     "title": "Bridging historical past and future potential through conservation, preservation, and adaptive use of Europe’s contentious and dissonant heritage",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-08"
-  },
-  {
-    "title": "Cultural Strategies for Peace: culture and creativity as catalysts for conflict prevention and post-conflict reconciliation",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-07"
-  },
-  {
-    "title": "Impacts of culture and the arts on health and well-being",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-09"
   },
   {
     "title": "Europe as a global powerhouse of design for sustainable competitiveness",
@@ -1072,20 +1064,44 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-05"
   },
   {
-    "title": "Economic inequalities and their impact on democracy",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-08"
-  },
-  {
-    "title": "The role of civic and citizenship education for strengthening civic and democratic participation and support for common European values",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-10"
-  },
-  {
-    "title": "Improving mental health outcomes for people in education, training and work",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-08"
+    "title": "Independence of the judiciary as an aspect of rule of law compliance",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-11"
   },
   {
     "title": "Historical and regional analyses of industrial transitions and their lessons for ensuring a fair green transition",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-02"
+  },
+  {
+    "title": "Intergenerational fairness in the context of demographic change in the EU",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-10"
+  },
+  {
+    "title": "Preparing the EU for future enlargement: challenges and opportunities",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-03"
+  },
+  {
+    "title": "Tackling gender-based violence in different social and economic spheres",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-01"
+  },
+  {
+    "title": "Open strategic autonomy, economic and research security in EU foreign policy",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-04"
+  },
+  {
+    "title": "Impacts of culture and the arts on health and well-being",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-09"
+  },
+  {
+    "title": "The autocratic appeal: nature, drivers and strategies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-07"
+  },
+  {
+    "title": "Cultural Strategies for Peace: culture and creativity as catalysts for conflict prevention and post-conflict reconciliation",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-07"
+  },
+  {
+    "title": "Leveraging artificial intelligence for creativity-driven innovation",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-HERITAGE-04"
   },
   {
     "title": "Towards a European research hub on contemporary antisemitism and Jewish life and culture",
@@ -1624,10 +1640,6 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/JUST-2025-JACC-EJUSTICE"
   },
   {
-    "title": "Environment governance",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-SAP-ENV-GOV"
-  },
-  {
     "title": "Nature and Biodiversity",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-SAP-NAT-NATURE"
   },
@@ -1640,8 +1652,36 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-SAP-ENV-ENVIRONMENT"
   },
   {
+    "title": "Environment governance",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-SAP-ENV-GOV"
+  },
+  {
+    "title": "Technical Assistance preparation of SNAPs",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-PP-NAT-SNAP"
+  },
+  {
+    "title": "Technical Assistance preparation of CLIMA SIPs",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-PP-CLIMA-SIP"
+  },
+  {
+    "title": "Towards an effective implementation of key legislation in the field of sustainable energy",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-POLICY"
+  },
+  {
+    "title": "Technical Assistance - Replication - Nature & Biodiversity and Circular Economy & Quality of Life",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-R-NAT-ENV"
+  },
+  {
+    "title": "Crowding in private finance",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-PRIVAFIN"
+  },
+  {
     "title": "Projects on Legislative and Policy Priorities in the fields of Nature & Biodiversity and Circular Economy & Quality of Life",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-PLP-NAT-ENV"
+  },
+  {
+    "title": "Projects on Legislative and Policy Priorities in the field of Clean Energy Transition",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-PLP-ENER"
   },
   {
     "title": "Projects on Legislative and Policy Priorities (PLP) for the green transition in Urban spaces",
@@ -1652,32 +1692,8 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-PP-ENV-SIP"
   },
   {
-    "title": "Energy renovation solutions - Making buildings’ renovation faster, deeper, affordable, smarter, service- and data-driven",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-BETTERRENO"
-  },
-  {
-    "title": "Boosting the clean energy transition in cities and regions",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-LOCAL"
-  },
-  {
-    "title": "Supporting district heating and cooling networks",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-DHC"
-  },
-  {
-    "title": "BUILD UP Skills - National Platforms on energy efficiency skills for the clean energy transition",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-BUILDSKILLS"
-  },
-  {
-    "title": "Supporting the clean energy transition of European industry and businesses",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-INDUSTRY"
-  },
-  {
-    "title": "One-Stop-Shops - Integrated services for clean energy transition in buildings",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-OSS"
-  },
-  {
-    "title": "Project Development Assistance for sustainable energy investments",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-PDA"
+    "title": "Climate Governance and Information",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-SAP-CLIMA-GOV"
   },
   {
     "title": "Climate Change Mitigation",
@@ -1696,32 +1712,32 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-ENERCOM"
   },
   {
-    "title": "Technical Assistance - Replication - Nature & Biodiversity and Circular Economy & Quality of Life",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-R-NAT-ENV"
+    "title": "BUILD UP Skills - National Platforms on energy efficiency skills for the clean energy transition",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-BUILDSKILLS"
   },
   {
-    "title": "Crowding in private finance",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-PRIVAFIN"
+    "title": "Supporting the clean energy transition of European industry and businesses",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-INDUSTRY"
   },
   {
-    "title": "Projects on Legislative and Policy Priorities in the field of Clean Energy Transition",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-PLP-ENER"
+    "title": "Supporting district heating and cooling networks",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-DHC"
   },
   {
-    "title": "Technical Assistance preparation of SNAPs",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-PP-NAT-SNAP"
+    "title": "One-Stop-Shops - Integrated services for clean energy transition in buildings",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-OSS"
   },
   {
-    "title": "Technical Assistance preparation of CLIMA SIPs",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-TA-PP-CLIMA-SIP"
+    "title": "Project Development Assistance for sustainable energy investments",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-PDA"
   },
   {
-    "title": "Climate Governance and Information",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-SAP-CLIMA-GOV"
+    "title": "Energy renovation solutions - Making buildings’ renovation faster, deeper, affordable, smarter, service- and data-driven",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-BETTERRENO"
   },
   {
-    "title": "Towards an effective implementation of key legislation in the field of sustainable energy",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-POLICY"
+    "title": "Boosting the clean energy transition in cities and regions",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2025-CET-LOCAL"
   },
   {
     "title": "European City Facility",
@@ -1744,24 +1760,24 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-SKILLS-08-GENAI-ACADEMY-STEP"
   },
   {
-    "title": "Apply AI: GenAI for the public administrations",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-SUPPLY-AI"
-  },
-  {
-    "title": "Digital solutions for regulatory compliance through data",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-COMPLIANCE"
-  },
-  {
-    "title": "Multi-Country project in Agri-Food",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-AGRIFOOD"
-  },
-  {
     "title": "Support to the secretariat for the Alliance on Processors and Semiconductor Technologies",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-PROCESSOR"
   },
   {
     "title": "Data Spaces Support Centre",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-DS-SUPPORT"
+  },
+  {
+    "title": "Apply AI: GenAI for the public administrations",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-SUPPLY-AI"
+  },
+  {
+    "title": "Multi-Country project in Agri-Food",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-AGRIFOOD"
+  },
+  {
+    "title": "Digital solutions for regulatory compliance through data",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2025-AI-08-COMPLIANCE"
   },
   {
     "title": "Call Town Twinning 2025",
@@ -1772,12 +1788,8 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2025-DEVMINISLATE"
   },
   {
-    "title": "Access to healthcare",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/AMIF-2025-TF2-AG-INTE-02-HEALTH"
-  },
-  {
-    "title": "Improving digital skills among migrants",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/AMIF-2025-TF2-AG-INTE-03-DIGITAL"
+    "title": "Promoting complementary pathways linked to education",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/AMIF-2025-TF2-AG-INTE-04-PATHWAYS"
   },
   {
     "title": "Measures to support Member States in the field of protection of children in migration",
@@ -1796,20 +1808,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-E-2025-PCI-PMI-STUDIES"
   },
   {
+    "title": "Improving digital skills among migrants",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/AMIF-2025-TF2-AG-INTE-03-DIGITAL"
+  },
+  {
+    "title": "Sustainable macroalgae systems for innovative, added-value applications: cultivation and optimised production systems",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-01"
+  },
+  {
     "title": "Valorisation of untapped forest biomass",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-RIA-01"
-  },
-  {
-    "title": "Urban-industrial symbiosis for bio-waste valorisation",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IAFlag-01"
-  },
-  {
-    "title": "Cost-effective and robust continuous biotech bio-based processes",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-04"
-  },
-  {
-    "title": "Retrofitting of (bio)refineries industrial plants towards higher-value bio-based products",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IAFlag-04"
   },
   {
     "title": "Bio-based and biodegradable delivery systems for fertilising products to reduce microplastics pollution & promote soil health",
@@ -1824,6 +1832,30 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-RIA-03"
   },
   {
+    "title": "Circular-by-design fibre-based packaging with improved properties",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IAFlag-03"
+  },
+  {
+    "title": "Retrofitting of (bio)refineries industrial plants towards higher-value bio-based products",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IAFlag-04"
+  },
+  {
+    "title": "SSbD bio-based polymers/copolymers unlocking new market applications",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-05"
+  },
+  {
+    "title": "SSbD bio-based solutions to replace hazardous conventional chemicals for textiles production",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-02"
+  },
+  {
+    "title": "Urban-industrial symbiosis for bio-waste valorisation",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IAFlag-01"
+  },
+  {
+    "title": "Cost-effective and robust continuous biotech bio-based processes",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-04"
+  },
+  {
     "title": "Develop and deploy new curricula and knowledge exchange practices relevant to bio-based systems",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-CSA-01"
   },
@@ -1832,20 +1864,48 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-03"
   },
   {
-    "title": "SSbD bio-based solutions to replace hazardous conventional chemicals for textiles production",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-02"
+    "title": "Fast-track Enabling innovative air mobility (IAM) / Vertical take-off and landing capable aircraft (VCA) (crewed and uncrewed) operations",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA6-3"
   },
   {
-    "title": "SSbD bio-based polymers/copolymers unlocking new market applications",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-05"
+    "title": "Highly automated ATM for all airspace users",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA5-2"
   },
   {
-    "title": "Sustainable macroalgae systems for innovative, added-value applications: cultivation and optimised production systems",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IA-01"
+    "title": "Increased automation assistance for the pilot for ATM tasks",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA5-1"
   },
   {
-    "title": "Circular-by-design fibre-based packaging with improved properties",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CBE-2025-IAFlag-03"
+    "title": "Fast-track Extending U-space eco-system",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA6-2"
+  },
+  {
+    "title": "Support to programme execution on SESAR architecture and on Strategic deployment planning and monitoring",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA7-2"
+  },
+  {
+    "title": "Smart airports, airports as multimodal nodes and passenger experience",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA4-2"
+  },
+  {
+    "title": "Support to programme execution framework on performance",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA7-1"
+  },
+  {
+    "title": "Transition towards high performance of air-ground connectivity (multilink)",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA2-1"
+  },
+  {
+    "title": "Transformation to trajectory-based operations",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA1-1"
+  },
+  {
+    "title": "Next generation ATS platform for airport operations",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA4-1"
+  },
+  {
+    "title": "Airborne capabilities for supporting reducing ATM environmental footprint",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA5-3"
   },
   {
     "title": "Research to help shape the future regulatory framework for a DES",
@@ -1864,56 +1924,8 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-ER-03-WA1-1"
   },
   {
-    "title": "Transformation to trajectory-based operations",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA1-1"
-  },
-  {
-    "title": "Next generation ATS platform for airport operations",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA4-1"
-  },
-  {
-    "title": "Transition towards high performance of air-ground connectivity (multilink)",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA2-1"
-  },
-  {
-    "title": "Airborne capabilities for supporting reducing ATM environmental footprint",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA5-3"
-  },
-  {
-    "title": "Enhanced CNS capabilities",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA3-2"
-  },
-  {
-    "title": "Fast-track U3 U-space advanced services and CNS capabilities",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA6-1"
-  },
-  {
-    "title": "Fast-track Enabling innovative air mobility (IAM) / Vertical take-off and landing capable aircraft (VCA) (crewed and uncrewed) operations",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA6-3"
-  },
-  {
-    "title": "Highly automated ATM for all airspace users",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA5-2"
-  },
-  {
-    "title": "Fast-track Extending U-space eco-system",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA6-2"
-  },
-  {
-    "title": "Increased automation assistance for the pilot for ATM tasks",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA5-1"
-  },
-  {
-    "title": "Support to programme execution on SESAR architecture and on Strategic deployment planning and monitoring",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA7-2"
-  },
-  {
-    "title": "Smart airports, airports as multimodal nodes and passenger experience",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA4-2"
-  },
-  {
-    "title": "Support to programme execution framework on performance",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA7-1"
+    "title": "Fundamental research for other topics",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-ER-03-WA1-4"
   },
   {
     "title": "Digital flight rules",
@@ -1924,8 +1936,12 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-ER-03-WA1-3"
   },
   {
-    "title": "Fundamental research for other topics",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-ER-03-WA1-4"
+    "title": "Enhanced CNS capabilities",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA3-2"
+  },
+  {
+    "title": "Fast-track U3 U-space advanced services and CNS capabilities",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-SESAR-2025-DES-IR-02-WA6-1"
   },
   {
     "title": "MSCA Staff Exchanges 2025",
@@ -1940,52 +1956,52 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PERI-2025-ANTI-COUNTERFEIT"
   },
   {
-    "title": "Land collaborative combat including air-land",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-GROUND-LCC-STEP"
+    "title": "Risk, robustness and resilience for autonomous vehicles in military operations",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-SI-CYBER-3RAV-STEP"
+  },
+  {
+    "title": "Future modular multifunctional land platforms and enabling technologies, including green technologies",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-GROUND-FM2LP"
+  },
+  {
+    "title": "Advanced underwater networks",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-UWW-AUWN-STEP"
+  },
+  {
+    "title": "Drone-based affordable mass munitions",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SI-GROUND-DAMM"
+  },
+  {
+    "title": "On-orbit operations and services",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SI-SPACE-3OS"
   },
   {
     "title": "Chiplet for Defence Application",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-MATCOMP-CDA-STEP"
   },
   {
-    "title": "Autonomous triage and evacuation",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-MCBRN-ATE"
-  },
-  {
-    "title": "Technologies for counter-battery capabilities",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-GROUND-CBC"
-  },
-  {
-    "title": "Multi-Disciplinary design and Analysis Framework for Aerial Systems",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-SIMTRAIN-DAFAS"
-  },
-  {
-    "title": "Multifunctional Information Distribution System",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-C4ISR-MIDS-STEP"
-  },
-  {
-    "title": "Naval hybrid propulsion and power systems",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-SI-ENERENV-NH2PS-STEP"
-  },
-  {
-    "title": "Non-thematic research actions targeting disruptive technologies for defence",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-DIS-NT"
+    "title": "Improved cyber defence operations capabilities",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-CYBER-CDOC-STEP"
   },
   {
     "title": "Technologies for optronic detectors",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SENS-IRD-STEP"
   },
   {
-    "title": "Multiband 4D Radar",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SENS-MB4DR-STEP"
-  },
-  {
-    "title": "Non-thematic research actions by SMEs and research organisations",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-SMERO-NT"
+    "title": "Privacy-preserving human-AI dialogue systems – Organisation of a technological challenge",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-CHALLENGE-DIGIT-HAIDO"
   },
   {
     "title": "Aircraft propulsion and energy management systems",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-ENERENV-APEM"
+  },
+  {
+    "title": "Collaborative air combat",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-AIR-CAC"
+  },
+  {
+    "title": "Enhanced pilot environment",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-AIR-EPE"
   },
   {
     "title": "Space-based ISR constellation",
@@ -1996,20 +2012,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-PROTMOB-SS"
   },
   {
-    "title": "Drone-based affordable mass munitions",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SI-GROUND-DAMM"
-  },
-  {
     "title": "Non-thematic development actions by SMEs",
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-DA-SME-NT"
   },
   {
-    "title": "Collaborative air combat",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-AIR-CAC"
+    "title": "Technologies for counter-battery capabilities",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-GROUND-CBC"
   },
   {
-    "title": "Enhanced pilot environment",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-AIR-EPE"
+    "title": "Multi-Disciplinary design and Analysis Framework for Aerial Systems",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-SIMTRAIN-DAFAS"
   },
   {
     "title": "Stand-off anti-submarine warfare engagement",
@@ -2024,8 +2036,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-SIMTRAIN-LVC-STEP"
   },
   {
-    "title": "Future modular multifunctional land platforms and enabling technologies, including green technologies",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-GROUND-FM2LP"
+    "title": "Autonomous triage and evacuation",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-MCBRN-ATE"
+  },
+  {
+    "title": "Naval hybrid propulsion and power systems",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-SI-ENERENV-NH2PS-STEP"
+  },
+  {
+    "title": "Multifunctional Information Distribution System",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-RA-C4ISR-MIDS-STEP"
   },
   {
     "title": "Propulsion system for next generation rotorcrafts",
@@ -2036,20 +2056,16 @@
     "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-NAVAL-DSNCC-STEP"
   },
   {
-    "title": "Advanced underwater networks",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-UWW-AUWN-STEP"
+    "title": "Non-thematic research actions targeting disruptive technologies for defence",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-DIS-NT"
   },
   {
-    "title": "On-orbit operations and services",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SI-SPACE-3OS"
+    "title": "Multiband 4D Radar",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-SENS-MB4DR-STEP"
   },
   {
-    "title": "Improved cyber defence operations capabilities",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-DA-CYBER-CDOC-STEP"
-  },
-  {
-    "title": "Privacy-preserving human-AI dialogue systems – Organisation of a technological challenge",
-    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-CHALLENGE-DIGIT-HAIDO"
+    "title": "Non-thematic research actions by SMEs and research organisations",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2025-LS-RA-SMERO-NT"
   },
   {
     "title": "Support to the EDF National Focal Points (NFP) network",
