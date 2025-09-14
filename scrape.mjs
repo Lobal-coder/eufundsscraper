@@ -2,11 +2,12 @@ import { chromium } from '@playwright/test';
 import fs from 'fs';
 
 const HEADLESS = true;
+const RUN_TS = new Date().toISOString(); // timestamp pour forcer un diff/commit
 
 /**
  * Deux parcours :
  *  - funding (Calls for proposals) — liens /topic-details/
- *  - tenders (Call for tenders)    — liens /tender-details/
+ *  - tenders (Calls for tenders)   — liens /tender-details/
  */
 const TASKS = [
   {
@@ -20,12 +21,13 @@ const TASKS = [
       status: '31094501,31094502' // Forthcoming + Open
     },
     linkSelector: 'a[href*="/topic-details/"]',
-    expectedMin: 700,   // cible (≈723)
-    maxPages: 400
+    expectedMin: 700,   // cible indicative
+    maxPages: 1000
   },
   {
     name: 'tenders',
-    baseUrl: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tenders',
+    // ✅ bonne page :
+    baseUrl: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-tenders',
     params: {
       order: 'DESC',
       sortBy: 'startDate',
@@ -35,8 +37,8 @@ const TASKS = [
     },
     // ✅ vrai pattern de page détail d’un appel d’offres
     linkSelector: 'a[href*="/tender-details/"]',
-    expectedMin: 600,   // cible (≈645)
-    maxPages: 400
+    expectedMin: 600,   // cible indicative
+    maxPages: 1000
   }
 ];
 
@@ -80,8 +82,8 @@ async function findScrollContainers(page) {
 async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeast = 50) {
   const seen = new Set();
   const items = [];
-  const maxLoops = 300;
-  const pause = 700;
+  const maxLoops = 400;
+  const pause = 750;
 
   async function collectOnce() {
     const anchors = await page.locator(linkSelector).all();
@@ -97,22 +99,17 @@ async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeas
     }
   }
 
-  // premiers éléments
   await collectOnce();
-
-  // conteneurs scrollables
   const containers = await findScrollContainers(page);
 
   let loops = 0, lastCount = 0, stagnation = 0;
   while (seen.size < targetAtLeast && loops < maxLoops) {
-    // scroll de tous les conteneurs identifiés
     for (const sel of containers) {
       try {
         const loc = page.locator(sel);
         await loc.evaluate(el => { el.scrollTop = el.scrollHeight; });
       } catch { /* ignore */ }
     }
-    // roue de secours
     await page.mouse.wheel(0, 99999);
 
     await page.waitForTimeout(pause);
@@ -120,34 +117,33 @@ async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeas
 
     if (seen.size === lastCount) {
       stagnation++;
-      // petit “nudge” pour déclencher la virtualisation
       for (const sel of containers) {
         try {
           const loc = page.locator(sel);
-          await loc.evaluate(el => { el.scrollTop = Math.max(0, el.scrollTop - 400); });
-          await page.waitForTimeout(200);
-          await loc.evaluate(el => { el.scrollTop = el.scrollTop + 1400; });
+          await loc.evaluate(el => { el.scrollTop = Math.max(0, el.scrollTop - 600); });
+          await page.waitForTimeout(250);
+          await loc.evaluate(el => { el.scrollTop = el.scrollTop + 1600; });
         } catch { /* ignore */ }
       }
     } else {
       stagnation = 0;
       lastCount = seen.size;
     }
-    if (stagnation >= 12) break;
+    if (stagnation >= 18) break; // on a clairement atteint la fin
     loops++;
   }
   return items;
 }
 
-// Génère un UL HTML
-function toHtmlList(items) {
+// Génère un UL HTML (avec timestamp)
+function toHtmlList(items, title) {
   const lis = items.map(it => `  <li><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></li>`).join('\n');
-  return `<ul>\n${lis}\n</ul>\n`;
+  return `<!-- generated ${RUN_TS} -->\n<h2>${title}</h2>\n<ul>\n${lis}\n</ul>\n`;
 }
 
 // Écrit sorties pour un prefix donné (html/csv/json)
-function writeOutputs(prefix, items) {
-  fs.writeFileSync(`${prefix}-list.html`, toHtmlList(items), 'utf8');
+function writeOutputs(prefix, items, humanTitle) {
+  fs.writeFileSync(`${prefix}-list.html`, toHtmlList(items, humanTitle), 'utf8');
 
   const header = ['title', 'url'];
   const csvRows = [header.join(',')].concat(
@@ -155,7 +151,7 @@ function writeOutputs(prefix, items) {
   );
   fs.writeFileSync(`${prefix}-list.csv`, csvRows.join('\n'), 'utf8');
 
-  fs.writeFileSync(`${prefix}-list.json`, JSON.stringify(items, null, 2), 'utf8');
+  fs.writeFileSync(`${prefix}-list.json`, JSON.stringify({ generatedAt: RUN_TS, items }, null, 2), 'utf8');
 }
 
 (async () => {
@@ -169,27 +165,28 @@ function writeOutputs(prefix, items) {
     console.log(`\n=== ${task.name.toUpperCase()} ===`);
     const all = [];
     const seen = new Set();
-    let noNewInARow = 0; // ✅ stop après 2 pages d’affilée sans nouveautés
 
+    let noNewInARow = 0; // stop après 2 pages d’affilée sans nouveautés trouvées (vrai “nouveau”)
     for (let p = 1; p <= task.maxPages; p++) {
       const url = buildPageUrl(task.baseUrl, task.params, p);
       console.log(`→ page ${p}: ${url}`);
       await page.goto(url, { waitUntil: 'networkidle' });
-      await page.waitForTimeout(600); // petite pause pour laisser la liste se poser
+      await page.waitForTimeout(700); // laisse la liste se poser
 
       // attendre qu’au moins un lien arrive (si résultats)
       try {
         await page.waitForSelector(task.linkSelector, { timeout: 30000 });
       } catch {
-        console.log('  (aucun résultat détecté)');
+        console.log('  (aucun résultat détecté) — fin');
         break;
       }
 
       // collecte robuste (50 / page)
       const pageItems = await collectVirtualized(page, task.linkSelector, url, 50);
 
+      // si la page ne contient vraiment rien (ou quasi), on sort
       if (!pageItems.length) {
-        console.log('  page vide → arrêt pagination.');
+        console.log('  page vide — fin');
         break;
       }
 
@@ -203,11 +200,11 @@ function writeOutputs(prefix, items) {
       }
       console.log(`  ${pageItems.length} trouvés, ${added} nouveaux (total: ${all.length})`);
 
-      // ✅ heuristique d’arrêt : 2 pages d’affilée sans nouveaux liens
+      // heuristique d’arrêt : 2 pages consécutives sans nouveau lien
       if (added === 0) {
         noNewInARow++;
         if (noNewInARow >= 2) {
-          console.log('  deux pages sans nouveaux liens → arrêt de la pagination');
+          console.log('  deux pages sans nouveaux liens → fin');
           break;
         }
       } else {
@@ -215,12 +212,17 @@ function writeOutputs(prefix, items) {
       }
     }
 
-    writeOutputs(task.name, all);
+    const niceTitle = task.name === 'funding'
+      ? `Funding — Calls for proposals (Open + Forthcoming) — ${all.length} items`
+      : `Procurement — Calls for tenders (Open + Forthcoming) — ${all.length} items`;
+
+    writeOutputs(task.name, all, niceTitle);
     index.push({ name: task.name, count: all.length });
   }
 
-  // Petit index récap
+  // Petit index récap (avec timestamp)
   const idxHtml = [
+    `<!-- generated ${RUN_TS} -->`,
     '<h1>EU Funding & Tenders — Extractions</h1>',
     '<ul>',
     ...index.map(x => `  <li>${x.name}: ${x.count} items — <a href="${x.name}-list.html">${x.name}-list.html</a> / <a href="${x.name}-list.csv">${x.name}-list.csv</a></li>`),
