@@ -3,7 +3,11 @@ import fs from 'fs';
 
 const HEADLESS = true;
 
-// Les deux parcours à faire
+/**
+ * Deux parcours :
+ *  - funding (Calls for proposals) — liens /topic-details/
+ *  - tenders (Call for tenders)    — liens /tender-details/
+ */
 const TASKS = [
   {
     name: 'funding',
@@ -16,8 +20,8 @@ const TASKS = [
       status: '31094501,31094502' // Forthcoming + Open
     },
     linkSelector: 'a[href*="/topic-details/"]',
-    expectedMin: 700,         // ta cible: ~723 (on s'arrête si plus rien de nouveau)
-    maxPages: 200             // plafond très large
+    expectedMin: 700,   // cible (≈723)
+    maxPages: 400
   },
   {
     name: 'tenders',
@@ -27,15 +31,16 @@ const TASKS = [
       sortBy: 'startDate',
       pageSize: 50,
       isExactMatch: true,
-      status: '31094501,31094502' // Forthcoming + Open (tenders)
+      status: '31094501,31094502' // Forthcoming + Open
     },
-    linkSelector: 'a[href*="/tenders/"]', // liens de détail des appels d'offres
-    expectedMin: 600,         // ta cible: ~645
-    maxPages: 200
+    // ✅ vrai pattern de page détail d’un appel d’offres
+    linkSelector: 'a[href*="/tender-details/"]',
+    expectedMin: 600,   // cible (≈645)
+    maxPages: 400
   }
 ];
 
-// Nettoie une URL (retire query/fragment)
+// Nettoie une URL (retire query & fragment)
 function cleanUrl(href, base) {
   try {
     const u = new URL(href, base);
@@ -51,7 +56,7 @@ function buildPageUrl(base, params, pageNumber) {
   return u.toString();
 }
 
-// Trouve des conteneurs scrollables (pour listes virtualisées)
+// Identifie des conteneurs scrollables (utile pour listes virtualisées)
 async function findScrollContainers(page) {
   return await page.evaluate(() => {
     const els = Array.from(document.querySelectorAll('main, [role="main"], [data-ft-results], [data-results-container], [class*="scroll"], body, html'));
@@ -61,10 +66,8 @@ async function findScrollContainers(page) {
       const overY = style.overflowY;
       return (sh && ch && sh > ch + 50) || overY === 'auto' || overY === 'scroll';
     });
-    // fallback au document
     if (!scrollables.length) return [document.scrollingElement || document.body];
     return scrollables.map(el => {
-      // renvoyer un identifiant “chemin” pour pouvoir le retrouver côté Playwright
       let sel = el.tagName.toLowerCase();
       if (el.id) sel += '#' + el.id;
       if (el.className) sel += '.' + String(el.className).trim().split(/\s+/).join('.');
@@ -73,7 +76,7 @@ async function findScrollContainers(page) {
   });
 }
 
-// Scroll itératif + collecte au fil de l’eau (pour ne pas perdre d’items)
+// Scroll itératif + collecte au fil de l’eau (virtualisation)
 async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeast = 50) {
   const seen = new Set();
   const items = [];
@@ -97,19 +100,19 @@ async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeas
   // premiers éléments
   await collectOnce();
 
-  // détermine les conteneurs à scroller (plus fiable que window)
+  // conteneurs scrollables
   const containers = await findScrollContainers(page);
 
   let loops = 0, lastCount = 0, stagnation = 0;
   while (seen.size < targetAtLeast && loops < maxLoops) {
-    // scroll tous les conteneurs connus
+    // scroll de tous les conteneurs identifiés
     for (const sel of containers) {
       try {
         const loc = page.locator(sel);
         await loc.evaluate(el => { el.scrollTop = el.scrollHeight; });
-      } catch {/* ignore */}
+      } catch { /* ignore */ }
     }
-    // roue de secours: scroll global
+    // roue de secours
     await page.mouse.wheel(0, 99999);
 
     await page.waitForTimeout(pause);
@@ -117,14 +120,14 @@ async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeas
 
     if (seen.size === lastCount) {
       stagnation++;
-      // nudge
+      // petit “nudge” pour déclencher la virtualisation
       for (const sel of containers) {
         try {
           const loc = page.locator(sel);
           await loc.evaluate(el => { el.scrollTop = Math.max(0, el.scrollTop - 400); });
           await page.waitForTimeout(200);
           await loc.evaluate(el => { el.scrollTop = el.scrollTop + 1400; });
-        } catch {/* ignore */}
+        } catch { /* ignore */ }
       }
     } else {
       stagnation = 0;
@@ -142,15 +145,16 @@ function toHtmlList(items) {
   return `<ul>\n${lis}\n</ul>\n`;
 }
 
-// Écrit fichiers
+// Écrit sorties pour un prefix donné (html/csv/json)
 function writeOutputs(prefix, items) {
-  // HTML
   fs.writeFileSync(`${prefix}-list.html`, toHtmlList(items), 'utf8');
-  // CSV
+
   const header = ['title', 'url'];
-  const csvRows = [header.join(',')].concat(items.map(r => `"${String(r.title).replace(/"/g,'""')}","${String(r.url).replace(/"/g,'""')}"`));
+  const csvRows = [header.join(',')].concat(
+    items.map(r => `"${String(r.title).replace(/"/g,'""')}","${String(r.url).replace(/"/g,'""')}"`)
+  );
   fs.writeFileSync(`${prefix}-list.csv`, csvRows.join('\n'), 'utf8');
-  // JSON
+
   fs.writeFileSync(`${prefix}-list.json`, JSON.stringify(items, null, 2), 'utf8');
 }
 
@@ -165,13 +169,15 @@ function writeOutputs(prefix, items) {
     console.log(`\n=== ${task.name.toUpperCase()} ===`);
     const all = [];
     const seen = new Set();
+    let noNewInARow = 0; // ✅ stop après 2 pages d’affilée sans nouveautés
 
     for (let p = 1; p <= task.maxPages; p++) {
       const url = buildPageUrl(task.baseUrl, task.params, p);
       console.log(`→ page ${p}: ${url}`);
       await page.goto(url, { waitUntil: 'networkidle' });
+      await page.waitForTimeout(600); // petite pause pour laisser la liste se poser
 
-      // attendre que la première carte/ligne arrive (si elle existe)
+      // attendre qu’au moins un lien arrive (si résultats)
       try {
         await page.waitForSelector(task.linkSelector, { timeout: 30000 });
       } catch {
@@ -179,16 +185,15 @@ function writeOutputs(prefix, items) {
         break;
       }
 
-      // collecte solide des 50 (liste virtualisée)
+      // collecte robuste (50 / page)
       const pageItems = await collectVirtualized(page, task.linkSelector, url, 50);
 
-      // stop si page vide
       if (!pageItems.length) {
-        console.log('  page vide, on arrête la pagination.');
+        console.log('  page vide → arrêt pagination.');
         break;
       }
 
-      // Ajoute en dédupliquant globalement
+      // déduplication globale
       let added = 0;
       for (const it of pageItems) {
         if (seen.has(it.url)) continue;
@@ -196,18 +201,25 @@ function writeOutputs(prefix, items) {
         all.push(it);
         added++;
       }
-      console.log(`  ${pageItems.length} trouvés, ${added} nouveaux (total cumulé: ${all.length})`);
+      console.log(`  ${pageItems.length} trouvés, ${added} nouveaux (total: ${all.length})`);
 
-      // heuristique d’arrêt : si la page suivante n’apporte plus rien
-      if (added === 0 && p > 1) break;
+      // ✅ heuristique d’arrêt : 2 pages d’affilée sans nouveaux liens
+      if (added === 0) {
+        noNewInARow++;
+        if (noNewInARow >= 2) {
+          console.log('  deux pages sans nouveaux liens → arrêt de la pagination');
+          break;
+        }
+      } else {
+        noNewInARow = 0;
+      }
     }
 
-    // Écrit les fichiers de cette famille
     writeOutputs(task.name, all);
     index.push({ name: task.name, count: all.length });
   }
 
-  // Petit index pour savoir combien on a
+  // Petit index récap
   const idxHtml = [
     '<h1>EU Funding & Tenders — Extractions</h1>',
     '<ul>',
