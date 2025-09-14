@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   run:
@@ -20,13 +18,11 @@ jobs:
         with:
           node-version: '20'
 
-      # ==> pas de package-lock.json : on utilise npm install
       - run: npm install
-
       - run: npx playwright install --with-deps chromium
       - run: npm start
 
-      - name: Commit output
+      - name: Publish to docs/
         run: |
           git config user.name "gh-actions"
           git config user.email "actions@users.noreply.github.com"
@@ -36,14 +32,3 @@ jobs:
           git add docs list.* || true
           git commit -m "update list $(date -u +%F)" || echo "no changes"
           git push
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
