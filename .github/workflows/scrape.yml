@@ -27,8 +27,10 @@ jobs:
           git config user.name "gh-actions"
           git config user.email "actions@users.noreply.github.com"
           mkdir -p docs
-          mv -f list.html docs/index.html || true
-          cp -f list.csv list.json docs/ 2>/dev/null || true
-          git add docs list.* || true
-          git commit -m "update list $(date -u +%F)" || echo "no changes"
+          # index + listes
+          mv -f index.html docs/index.html || true
+          cp -f funding-list.* docs/ 2>/dev/null || true
+          cp -f tenders-list.* docs/ 2>/dev/null || true
+          git add docs || true
+          git commit -m "update lists $(date -u +%F)" || echo "no changes"
           git push
