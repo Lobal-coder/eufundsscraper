@@ -1,19 +1,31 @@
 name: scrape-eu-ft
+
 on:
   schedule:
     - cron: "7 5 * * *"   # 05:07 UTC ~ 07:07 Paris
   workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm ci
+
+      # ==> pas de package-lock.json : on utilise npm install
+      - run: npm install
+
       - run: npx playwright install --with-deps chromium
       - run: npm start
+
       - name: Commit output
         run: |
           git config user.name "gh-actions"
@@ -24,11 +36,14 @@ jobs:
           git add docs list.* || true
           git commit -m "update list $(date -u +%F)" || echo "no changes"
           git push
-      - name: Enable Pages (first run only)
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
