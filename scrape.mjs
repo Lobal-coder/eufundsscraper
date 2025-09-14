@@ -6,7 +6,7 @@ const RUN_TS = new Date().toISOString(); // timestamp pour forcer un diff/commit
 
 /**
  * Deux parcours :
- *  - funding (Calls for proposals) — liens /topic-details/
+ *  - funding (Calls for proposals) — liens /topic-details/ (+ crawl des /call-details/)
  *  - tenders (Calls for tenders)   — liens /tender-details/
  */
 const TASKS = [
@@ -21,12 +21,16 @@ const TASKS = [
       status: '31094501,31094502' // Forthcoming + Open
     },
     linkSelector: 'a[href*="/topic-details/"]',
+    // liens de pages "Call details" qui contiennent des topics supplémentaires
+    callSelectors: [
+      'a[href*="/call-details/"]',
+      'a[href*="/calls/"]'
+    ],
     expectedMin: 700,   // cible indicative
-    maxPages: 1000
+    maxPages: 2000
   },
   {
     name: 'tenders',
-    // ✅ bonne page :
     baseUrl: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-tenders',
     params: {
       order: 'DESC',
@@ -35,10 +39,9 @@ const TASKS = [
       isExactMatch: true,
       status: '31094501,31094502' // Forthcoming + Open
     },
-    // ✅ vrai pattern de page détail d’un appel d’offres
     linkSelector: 'a[href*="/tender-details/"]',
     expectedMin: 600,   // cible indicative
-    maxPages: 1000
+    maxPages: 2000
   }
 ];
 
@@ -135,7 +138,42 @@ async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeas
   return items;
 }
 
-// Génère un UL HTML (avec timestamp)
+// Collecte des liens correspondant à un sélecteur donné (dédup locale)
+async function collectLinks(page, selector, baseForClean) {
+  const list = [];
+  const seen = new Set();
+  const anchors = await page.locator(selector).all();
+  for (const a of anchors) {
+    const raw = await a.getAttribute('href');
+    if (!raw) continue;
+    const href = cleanUrl(raw, baseForClean);
+    if (seen.has(href)) continue;
+    seen.add(href);
+    let title = (await a.innerText())?.trim() || (await a.getAttribute('title')) || href;
+    title = title.replace(/\s+/g, ' ').trim();
+    list.push({ title, url: href });
+  }
+  return list;
+}
+
+// Ouvre une page "call-details" et récupère tous les topic-details internes
+async function scrapeTopicsInsideCall(page, callUrl) {
+  await page.goto(callUrl, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(700);
+
+  // petit scroll pour déclencher un éventuel lazy-loading
+  try {
+    for (let i = 0; i < 12; i++) {
+      await page.mouse.wheel(0, 5000);
+      await page.waitForTimeout(300);
+    }
+  } catch {}
+
+  const inner = await collectLinks(page, 'a[href*="/topic-details/"]', callUrl);
+  return inner;
+}
+
+// Génère un UL HTML (avec timestamp & titre)
 function toHtmlList(items, title) {
   const lis = items.map(it => `  <li><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></li>`).join('\n');
   return `<!-- generated ${RUN_TS} -->\n<h2>${title}</h2>\n<ul>\n${lis}\n</ul>\n`;
@@ -166,14 +204,14 @@ function writeOutputs(prefix, items, humanTitle) {
     const all = [];
     const seen = new Set();
 
-    let noNewInARow = 0; // stop après 2 pages d’affilée sans nouveautés trouvées (vrai “nouveau”)
+    // Pagination sans arrêt anticipé (jusqu’à page vide ou maxPages)
     for (let p = 1; p <= task.maxPages; p++) {
       const url = buildPageUrl(task.baseUrl, task.params, p);
       console.log(`→ page ${p}: ${url}`);
       await page.goto(url, { waitUntil: 'networkidle' });
       await page.waitForTimeout(700); // laisse la liste se poser
 
-      // attendre qu’au moins un lien arrive (si résultats)
+      // attendre qu’au moins un lien correspondant arrive (si résultats)
       try {
         await page.waitForSelector(task.linkSelector, { timeout: 30000 });
       } catch {
@@ -181,16 +219,41 @@ function writeOutputs(prefix, items, humanTitle) {
         break;
       }
 
-      // collecte robuste (50 / page)
-      const pageItems = await collectVirtualized(page, task.linkSelector, url, 50);
+      // 1) topic-details visibles sur la page (virtualisés)
+      const pageTopics = await collectVirtualized(page, task.linkSelector, url, 50);
 
-      // si la page ne contient vraiment rien (ou quasi), on sort
+      // 2) (Funding) call-details / calls : puis scraper leurs topic-details internes
+      let pageTopicsFromCalls = [];
+      if (task.callSelectors && task.callSelectors.length) {
+        let callLinks = [];
+        for (const sel of task.callSelectors) {
+          const found = await collectLinks(page, sel, url);
+          callLinks.push(...found);
+        }
+        // déduplication locale des calls
+        const seenCalls = new Set();
+        callLinks = callLinks.filter(c => (seenCalls.has(c.url) ? false : seenCalls.add(c.url)));
+
+        for (const c of callLinks) {
+          try {
+            const innerTopics = await scrapeTopicsInsideCall(page, c.url);
+            pageTopicsFromCalls.push(...innerTopics);
+          } catch (e) {
+            console.warn('  call-details ERR', c.url, e.message);
+          }
+        }
+      }
+
+      // 3) fusionne les deux sources de la page (topics visibles + via calls)
+      const pageItems = [...pageTopics, ...pageTopicsFromCalls];
+
+      // stop si page réellement vide
       if (!pageItems.length) {
         console.log('  page vide — fin');
         break;
       }
 
-      // déduplication globale
+      // 4) déduplication **globale**
       let added = 0;
       for (const it of pageItems) {
         if (seen.has(it.url)) continue;
@@ -198,18 +261,7 @@ function writeOutputs(prefix, items, humanTitle) {
         all.push(it);
         added++;
       }
-      console.log(`  ${pageItems.length} trouvés, ${added} nouveaux (total: ${all.length})`);
-
-      // heuristique d’arrêt : 2 pages consécutives sans nouveau lien
-      if (added === 0) {
-        noNewInARow++;
-        if (noNewInARow >= 2) {
-          console.log('  deux pages sans nouveaux liens → fin');
-          break;
-        }
-      } else {
-        noNewInARow = 0;
-      }
+      console.log(`  ${pageItems.length} trouvés (dont via calls: ${pageTopicsFromCalls.length}), ${added} nouveaux (total: ${all.length})`);
     }
 
     const niceTitle = task.name === 'funding'
