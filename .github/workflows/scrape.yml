@@ -32,9 +32,22 @@ jobs:
           key: playwright-${{ runner.os }}-chromium
           restore-keys: |
             playwright-${{ runner.os }}-
+            
+      - name: Prep npm (clean cache + retries)
+        run: |
+          npm config set fetch-retries 5
+          npm config set fetch-retry-mintimeout 20000
+          npm config set fetch-retry-maxtimeout 120000
+          npm config set registry https://registry.npmjs.org/
+          npm cache clean --force
+          rm -rf ~/.npm .npm-cache || true
 
-      - name: Install deps
-        run: npm install
+# ⚠️ Utilise CI avec lockfile (plus fiable) ; si tu avais "npm install", remplace par "npm ci"
+      - name: Install deps (clean & online)
+        env:
+          NPM_CONFIG_PREFER_ONLINE: "true"
+        run: |
+          npm ci --no-audit --no-fund
 
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
