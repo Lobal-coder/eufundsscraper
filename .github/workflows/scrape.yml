@@ -41,6 +41,7 @@ jobs:
           # Listes Funding & Tenders (HTML/CSV/JSON)
           cp -f funding-list.* docs/ 2>/dev/null || true
           cp -f tenders-list.* docs/ 2>/dev/null || true
+          cp -f newsletter.html docs/ 2>/dev/null || true
           # Commit/push si changements
           git add docs || true
           git commit -m "update lists $(date -u +%FT%H:%M:%SZ)" || echo "no changes"
