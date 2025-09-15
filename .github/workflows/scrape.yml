@@ -2,47 +2,102 @@ name: scrape-eu-ft
 
 on:
   schedule:
-    - cron: "7 5 * * *"   # 05:07 UTC (~ 07:07 Europe/Paris) - exécution quotidienne
-  workflow_dispatch: {}    # lancement manuel possible
+    - cron: "7 5 * * *"     # ✅ quotidien FAST (05:07 UTC ~ 07:07 Paris)
+    - cron: "17 4 * * 1"    # ✅ hebdo FULL (lundi 04:17 UTC ~ 06:17 Paris)
+  workflow_dispatch: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 permissions:
-  contents: write          # nécessaire pour commit/push dans le dépôt
+  contents: write
 
 jobs:
-  run:
+  fast:
+    if: ${{ github.event.schedule == '7 5 * * *' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Install dependencies
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-chromium
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
+      - name: Install deps
         run: npm install
 
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run scraper
+      - name: Run scraper (FAST)
+        env:
+          FAST: "1"
         run: npm start
 
-      # Publier les fichiers générés dans /docs (servi par GitHub Pages en Option A)
       - name: Publish to docs/
         run: |
           git config user.name "gh-actions"
           git config user.email "actions@users.noreply.github.com"
           mkdir -p docs
-          # Page d'index
           mv -f index.html docs/index.html || true
-          # Listes Funding & Tenders (HTML/CSV/JSON)
-          cp -f funding-list.* docs/ 2>/dev/null || true
-          cp -f tenders-list.* docs/ 2>/dev/null || true
+          cp -f funding-list.* tenders-list.* docs/ 2>/dev/null || true
+          cp -f funding_enriched.* tenders_enriched.* docs/ 2>/dev/null || true
           cp -f newsletter.html docs/ 2>/dev/null || true
-          # Commit/push si changements
+          cp -f docs/state.json docs/ 2>/dev/null || true
           git add docs || true
-          git commit -m "update lists $(date -u +%FT%H:%M:%SZ)" || echo "no changes"
+          git commit -m "update (FAST) $(date -u +%FT%H:%M:%SZ)" || echo "no changes"
+          git push
+
+  full:
+    if: ${{ github.event.schedule == '17 4 * * 1' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-chromium
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
+      - name: Install deps
+        run: npm install
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run scraper (FULL)
+        env:
+          FAST: "0"
+        run: npm start
+
+      - name: Publish to docs/
+        run: |
+          git config user.name "gh-actions"
+          git config user.email "actions@users.noreply.github.com"
+          mkdir -p docs
+          mv -f index.html docs/index.html || true
+          cp -f funding-list.* tenders-list.* docs/ 2>/dev/null || true
+          cp -f funding_enriched.* tenders_enriched.* docs/ 2>/dev/null || true
+          cp -f newsletter.html docs/ 2>/dev/null || true
+          cp -f docs/state.json docs/ 2>/dev/null || true
+          git add docs || true
+          git commit -m "update (FULL) $(date -u +%FT%H:%M:%SZ)" || echo "no changes"
           git push
