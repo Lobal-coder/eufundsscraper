@@ -1,12 +1,13 @@
-// scrape.mjs
+// scrape.mjs — FULL + DEBUG PATCH
 import { chromium } from 'playwright';
 import fs from 'fs';
 
-/* ====== Config ====== */
+/* ====== Run config ====== */
 const RUN_TS = new Date().toISOString();
 const HEADLESS = true;
+const DEBUG = true; // active les dumps/trace de diagnostic
 
-// Quick/full contrôlés par les workflows (variables d'env)
+// Paramétrables par env via workflows
 const QUICK_MODE = String(process.env.QUICK_MODE || '0') === '1';
 const MAX_ENRICH_FUNDING = Number(process.env.MAX_ENRICH_FUNDING || (QUICK_MODE ? 30 : 2000));
 const MAX_ENRICH_TENDERS = Number(process.env.MAX_ENRICH_TENDERS || (QUICK_MODE ? 30 : 1500));
@@ -29,7 +30,14 @@ const TASKS = [
   }
 ];
 
-/* ====== Utils ====== */
+/* ====== FS helpers ====== */
+function ensureDir(p){ try{ fs.mkdirSync(p, {recursive:true}); }catch{} }
+ensureDir('debug');
+
+function writeText(path, txt){ fs.writeFileSync(path, txt, 'utf8'); }
+function fileLines(p){ try { return fs.readFileSync(p,'utf8').trim().split(/\r?\n/).length; } catch { return 0; } }
+
+/* ====== Generic helpers ====== */
 function cleanUrl(href, base) { try { const u=new URL(href, base); return `${u.origin}${u.pathname}`; } catch { return href; } }
 function buildPageUrl(base, params, pageNumber) { const u=new URL(base); Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,String(v))); u.searchParams.set('pageNumber',String(pageNumber)); return u.toString(); }
 function normLabel(s){ return String(s||'').toLowerCase().replace(/\s+/g,' ').trim(); }
@@ -178,7 +186,7 @@ async function extractJsonLd(page){
   }catch{ return []; }
 }
 
-/* ====== Generic value helpers ====== */
+/* ====== Value helpers ====== */
 function textify(v) {
   if (v == null) return '';
   if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean') return String(v);
@@ -494,11 +502,11 @@ async function enrichTenders(page, tenderUrls) {
 /* ====== List outputs ====== */
 function writeListOutputs(prefix, items, humanTitle) {
   const lis = items.map(it => `  <li><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></li>`).join('\n');
-  fs.writeFileSync(`${prefix}-list.html`, `<!-- generated ${RUN_TS} -->\n<h2>${humanTitle}</h2>\n<ul>\n${lis}\n</ul>\n`, 'utf8');
+  writeText(`${prefix}-list.html`, `<!-- generated ${RUN_TS} -->\n<h2>${humanTitle}</h2>\n<ul>\n${lis}\n</ul>\n`);
   const header=['title','url'];
   const csv=[header.join(',')].concat(items.map(r=>`"${String(r.title).replace(/"/g,'""')}","${String(r.url).replace(/"/g,'""')}"`));
-  fs.writeFileSync(`${prefix}-list.csv`, csv.join('\n'), 'utf8');
-  fs.writeFileSync(`${prefix}-list.json`, JSON.stringify({ generatedAt: RUN_TS, items }, null, 2), 'utf8');
+  writeText(`${prefix}-list.csv`, csv.join('\n'));
+  writeText(`${prefix}-list.json`, JSON.stringify({ generatedAt: RUN_TS, items }, null, 2));
 }
 
 /* ====== Calls (funding) helpers ====== */
@@ -509,14 +517,21 @@ async function scrapeTopicsInsideCall(page, callUrl) {
   return await collectLinks(page, 'a[href*="/topic-details/"]', callUrl);
 }
 
-/* ====== Main ====== */
+/* ====== MAIN ====== */
 (async () => {
-  const browser = await chromium.launch({ headless: HEADLESS });
-  const ctx = await browser.newContext();
+  // Contexte browser + anti-bot soft + TRACE
+  const browser = await chromium.launch({ headless: HEADLESS, args: ['--disable-blink-features=AutomationControlled'] });
+  const ctx = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36',
+    viewport: { width: 1366, height: 900 }
+  });
   await ctx.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => false });
     Object.defineProperty(navigator, 'language', { get: ()=>'en-US' });
     Object.defineProperty(navigator, 'languages', { get: ()=>['en-US','en'] });
   });
+  if (DEBUG) { await ctx.tracing.start({ screenshots: true, snapshots: true }); }
+
   const page = await ctx.newPage();
 
   const collected = {};
@@ -531,6 +546,11 @@ async function scrapeTopicsInsideCall(page, callUrl) {
       console.log(`→ page ${p}: ${url}`);
       await safeGoto(page, url, `list ${task.name} p${p}`);
       await page.waitForTimeout(700);
+
+      // Dump page1 HTML pour diagnostic
+      if (DEBUG && p === 1) {
+        try { writeText(`debug/${task.name}-list-page1.html`, await page.content()); } catch {}
+      }
 
       try { await page.waitForSelector(task.linkSelector, { timeout: 30000 }); }
       catch { console.log('  (aucun résultat détecté) — fin'); break; }
@@ -579,6 +599,24 @@ async function scrapeTopicsInsideCall(page, callUrl) {
     counts[`${task.name}_list`] = all.length;
   }
 
+  // DEBUG: pré-dumps d'une fiche de chaque type
+  if ((collected.funding || []).length && DEBUG) {
+    try {
+      const sampleF = collected.funding[0];
+      await safeGoto(page, sampleF, 'funding-sample');
+      await page.waitForTimeout(600);
+      writeText('debug/funding-sample.html', await page.content());
+    } catch(e){ console.log('[DEBUG] funding sample err:', e.message); }
+  }
+  if ((collected.tenders || []).length && DEBUG) {
+    try {
+      const sampleT = collected.tenders[0];
+      await safeGoto(page, sampleT, 'tender-sample');
+      await page.waitForTimeout(600);
+      writeText('debug/tender-sample.html', await page.content());
+    } catch(e){ console.log('[DEBUG] tender sample err:', e.message); }
+  }
+
   // Enrichissements
   const fundingUrls = Array.from(new Set(collected.funding || []));
   if (fundingUrls.length) {
@@ -586,7 +624,7 @@ async function scrapeTopicsInsideCall(page, callUrl) {
     counts.funding_enriched = await enrichFunding(page, fundingUrls);
   } else {
     console.log('[Funding] rien à enrichir.');
-    fs.writeFileSync('funding_enriched.csv', 'identifier,title,programme,destination,workProgrammePart,typeOfAction,topicStatus,url,callIdentifier,callUrl,plannedOpeningDate,nextDeadline,allDeadlines,daysToDeadline,totalBudget,projectBudgetMin,projectBudgetMax,fundingRate,eligibleCountries,consortiumSummary,trl,summaryShort,priorityScore,urgencyScore,keywordScore,generatedAt,rawRef\n', 'utf8');
+    writeText('funding_enriched.csv', 'identifier,title,programme,destination,workProgrammePart,typeOfAction,topicStatus,url,callIdentifier,callUrl,plannedOpeningDate,nextDeadline,allDeadlines,daysToDeadline,totalBudget,projectBudgetMin,projectBudgetMax,fundingRate,eligibleCountries,consortiumSummary,trl,summaryShort,priorityScore,urgencyScore,keywordScore,generatedAt,rawRef\n');
   }
 
   const tendersUrls = Array.from(new Set(collected.tenders || []));
@@ -595,10 +633,10 @@ async function scrapeTopicsInsideCall(page, callUrl) {
     counts.tenders_enriched = await enrichTenders(page, tendersUrls);
   } else {
     console.log('[Tenders] rien à enrichir.');
-    fs.writeFileSync('tenders_enriched.csv', 'reference,title,contractingAuthority,buyerCountry,buyerCity,procedureType,contractType,cpvTop,lotsCount,publicationDate,deadlineDate,daysToDeadline,estimatedValue,currency,documentsCount,noticeUrl,esubmissionLink,priorityScore,urgencyScore,valueScore,generatedAt\n', 'utf8');
+    writeText('tenders_enriched.csv', 'reference,title,contractingAuthority,buyerCountry,buyerCity,procedureType,contractType,cpvTop,lotsCount,publicationDate,deadlineDate,daysToDeadline,estimatedValue,currency,documentsCount,noticeUrl,esubmissionLink,priorityScore,urgencyScore,valueScore,generatedAt\n');
   }
 
-  // Index avec compteurs
+  // Index (avec compteurs)
   const idxHtml = [
     `<!-- generated ${RUN_TS} -->`,
     '<h1>EU Funding & Tenders — Extractions</h1>',
@@ -609,8 +647,27 @@ async function scrapeTopicsInsideCall(page, callUrl) {
     `  <li>Tenders enriched: <a href="tenders_enriched.csv">CSV</a> — <strong>${counts.tenders_enriched}</strong> rows</li>`,
     '</ul>'
   ].join('\n');
-  fs.writeFileSync('index.html', idxHtml, 'utf8');
+  writeText('index.html', idxHtml);
+
+  // SANITY: comptages & hints
+  const linesFL = fileLines('funding-list.csv');
+  const linesTL = fileLines('tenders-list.csv');
+  const linesFE = fileLines('funding_enriched.csv');
+  const linesTE = fileLines('tenders_enriched.csv');
+
+  console.log(`[SANITY] funding-list.csv lines=${linesFL}`);
+  console.log(`[SANITY] tenders-list.csv lines=${linesTL}`);
+  console.log(`[SANITY] funding_enriched.csv lines=${linesFE}`);
+  console.log(`[SANITY] tenders_enriched.csv lines=${linesTE}`);
+
+  if (linesFL <= 1) console.log('[WHY] Liste Funding vide → pagination/scroll/selector ? Voir debug/funding-list-page1.html et debug/trace.zip');
+  if (linesTL <= 1) console.log('[WHY] Liste Tenders vide → pagination/scroll/selector ? Voir debug/tenders-list-page1.html et debug/trace.zip');
+  if (linesFE <= 1 && linesFL > 1) console.log('[WHY] Enrich Funding vide → JSON topicDetails fetch/parse ? Voir debug/funding-sample.html');
+  if (linesTE <= 1 && linesTL > 1) console.log('[WHY] Enrich Tenders vide → extraction DOM/labels ? Voir debug/tender-sample.html');
+
+  // TRACE
+  if (DEBUG) { try { await ctx.tracing.stop({ path: 'debug/trace.zip' }); } catch{} }
 
   await browser.close();
-  console.log('\n✓ Terminé (listes + enriched CSV générés, index avec compteurs).');
+  console.log('\n✓ Terminé (listes + enriched CSV + debug dumps + index avec compteurs).');
 })();
