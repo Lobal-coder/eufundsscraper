@@ -1,19 +1,16 @@
+// scrape.mjs
 import { chromium } from 'playwright';
 import fs from 'fs';
 
+/* ====== Config ====== */
 const RUN_TS = new Date().toISOString();
 const HEADLESS = true;
 
-// Mode “rapide” activable par workflow (ne change rien si non défini)
+// Quick/full contrôlés par les workflows (variables d'env)
 const QUICK_MODE = String(process.env.QUICK_MODE || '0') === '1';
 const MAX_ENRICH_FUNDING = Number(process.env.MAX_ENRICH_FUNDING || (QUICK_MODE ? 30 : 2000));
 const MAX_ENRICH_TENDERS = Number(process.env.MAX_ENRICH_TENDERS || (QUICK_MODE ? 30 : 1500));
 
-/**
- * Deux parcours :
- *  - funding (Calls for proposals) — liens /topic-details/ (+ crawl des /call-details/)
- *  - tenders (Calls for tenders)   — liens /tender-details/
- */
 const TASKS = [
   {
     name: 'funding',
@@ -32,7 +29,7 @@ const TASKS = [
   }
 ];
 
-/* ====================== Utils ====================== */
+/* ====== Utils ====== */
 function cleanUrl(href, base) { try { const u=new URL(href, base); return `${u.origin}${u.pathname}`; } catch { return href; } }
 function buildPageUrl(base, params, pageNumber) { const u=new URL(base); Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,String(v))); u.searchParams.set('pageNumber',String(pageNumber)); return u.toString(); }
 function normLabel(s){ return String(s||'').toLowerCase().replace(/\s+/g,' ').trim(); }
@@ -69,6 +66,7 @@ async function safeJsonGet(request, url, attempts=3){
   }
 }
 
+/* ====== DOM helpers ====== */
 async function findScrollContainers(page) {
   return await page.evaluate(() => {
     const els = Array.from(document.querySelectorAll('main, [role="main"], [data-ft-results], [data-results-container], [class*="scroll"], body, html'));
@@ -139,27 +137,10 @@ async function collectLinks(page, selector, baseForClean) {
   }
   return list;
 }
-async function scrapeTopicsInsideCall(page, callUrl) {
-  await safeGoto(page, callUrl, 'call-details');
-  await page.waitForTimeout(700);
-  try { for (let i=0;i<12;i++){ await page.mouse.wheel(0,5000); await page.waitForTimeout(300);} } catch {}
-  return await collectLinks(page, 'a[href*="/topic-details/"]', callUrl);
-}
-function writeListOutputs(prefix, items, humanTitle) {
-  const lis = items.map(it => `  <li><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></li>`).join('\n');
-  fs.writeFileSync(`${prefix}-list.html`, `<!-- generated ${RUN_TS} -->\n<h2>${humanTitle}</h2>\n<ul>\n${lis}\n</ul>\n`, 'utf8');
-  const header=['title','url'];
-  const csv=[header.join(',')].concat(items.map(r=>`"${String(r.title).replace(/"/g,'""')}","${String(r.url).replace(/"/g,'""')}"`));
-  fs.writeFileSync(`${prefix}-list.csv`, csv.join('\n'), 'utf8');
-  fs.writeFileSync(`${prefix}-list.json`, JSON.stringify({ generatedAt: RUN_TS, items }, null, 2), 'utf8');
-}
-
-/* ====================== Extraction HTML générique ====================== */
 async function extractKeyValuePairs(page){
   return await page.evaluate(() => {
     function grabKv(root){
       const kv = {};
-      // dl/dt/dd
       root.querySelectorAll('dl').forEach(dl=>{
         const dts = dl.querySelectorAll('dt');
         dts.forEach(dt=>{
@@ -170,7 +151,6 @@ async function extractKeyValuePairs(page){
           if (k && v) kv[k] = v;
         });
       });
-      // tables 2 colonnes
       root.querySelectorAll('table').forEach(t=>{
         Array.from(t.querySelectorAll('tr')).forEach(tr=>{
           const tds = tr.querySelectorAll('th,td');
@@ -198,11 +178,62 @@ async function extractJsonLd(page){
   }catch{ return []; }
 }
 
-/* ====================== Funding — enrichissement ====================== */
-function extractSlugFromTopicUrl(href) { const m=String(href).toLowerCase().match(/\/topic-details\/([^/?#]+)/); return m? m[1] : ''; }
-async function fetchTopicDetails(page, slugLower, lang='en') {
-  const url = `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${encodeURIComponent(slugLower)}.json?lang=${encodeURIComponent(lang)}`;
-  return await safeJsonGet(page.request, url);
+/* ====== Generic value helpers ====== */
+function textify(v) {
+  if (v == null) return '';
+  if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean') return String(v);
+  if (Array.isArray(v)) return Array.from(new Set(v.map(textify).filter(Boolean))).join(' | ');
+  if (typeof v === 'object') {
+    const picks = ['title','name','label','value','code','id','identifier','shortTitle','displayName'];
+    for (const k of picks) if (v[k]!=null) { const t=textify(v[k]); if (t) return t; }
+    const flat = Object.entries(v)
+      .filter(([k,val]) => ['title','name','label','code','id'].includes(k) && val!=null)
+      .map(([,val])=>textify(val)).filter(Boolean);
+    if (flat.length) return Array.from(new Set(flat)).join(' | ');
+  }
+  return '';
+}
+function collectDatesDeep(obj, keyRegex=/deadline/i, limiter=20000) {
+  const out=[]; let count=0;
+  (function walk(x){
+    if (x==null || count>limiter) return; count++;
+    if (Array.isArray(x)) return x.forEach(walk);
+    if (typeof x==='object') {
+      for (const [k,v] of Object.entries(x)) {
+        if (keyRegex.test(String(k))) {
+          const t = textify(v);
+          String(t).split(/[\s,;|]+/).forEach(p => {
+            const iso = toIsoDate(p); if (iso) out.push(iso);
+          });
+        }
+        walk(v);
+      }
+    }
+  })(obj);
+  return Array.from(new Set(out)).sort();
+}
+function mapStatusLabel(v){
+  const s = textify(v);
+  if (/31094501/.test(s)) return 'Open';
+  if (/31094502/.test(s)) return 'Forthcoming';
+  if (/31094503/.test(s)) return 'Closed';
+  return s;
+}
+
+/* ====== Funding enrich ====== */
+function extractSlugFromTopicUrl(href) {
+  const m=String(href).match(/\/topic-details\/([^/?#]+)/i);
+  return m? m[1] : '';
+}
+async function fetchTopicDetails(page, slug, lang='en') {
+  // 1) slug tel quel (respect casse)
+  let url = `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${encodeURIComponent(slug)}.json?lang=${encodeURIComponent(lang)}`;
+  try { return await safeJsonGet(page.request, url); } catch(e1) {
+    // 2) fallback lowercase (anciens topics)
+    const slugLower = slug.toLowerCase();
+    url = `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${encodeURIComponent(slugLower)}.json?lang=${encodeURIComponent(lang)}`;
+    return await safeJsonGet(page.request, url);
+  }
 }
 async function scrapeFundingTopicHtml(page, url){
   await safeGoto(page, url, 'topic-details HTML');
@@ -245,6 +276,7 @@ async function enrichFunding(page, topicUrls) {
     'generatedAt','rawRef'
   ];
   const rows = [header.join(',')];
+  const rawOut = fs.createWriteStream('funding_raw.jsonl', {flags:'w'});
   const todayISO = new Date().toISOString().slice(0,10);
 
   let count = 0;
@@ -259,20 +291,23 @@ async function enrichFunding(page, topicUrls) {
     try { html = await scrapeFundingTopicHtml(page, u); }
     catch (e) { console.warn('[Funding] HTML err', slug, e.message); }
 
-    const programme = pick(TD.frameworkProgramme, TD.programme, html.kv['Programme'], html.kv['Program']);
-    const destination = pick(TD.destination, TD.destinationCode, TD.destinationTitle, html.kv['Destination']);
-    const workProgrammePart = pick(TD.workProgramPart, TD.workProgrammePart, TD.workProgramme, html.kv['Work programme part'], html.kv['Work Programme']);
-    const typeOfAction = Array.isArray(TD.typeOfAction) ? TD.typeOfAction.join(' | ')
-                      : Array.isArray(TD.typeOfActions) ? TD.typeOfActions.join(' | ')
-                      : pick(TD.typeOfAction, html.kv['Type of action']);
-    const topicStatus = pick(TD.topicStatus, TD.status, html.kv['Status']);
-    const callIdentifier = pick(TD.callIdentifier, TD.callId, html.kv['Call identifier']);
-    const callUrl = pick(TD.callDocumentsLink, TD.callLink, html.kv['Call link'], '');
-    const plannedOpeningDate = toIsoDate(pick(TD.actions?.[0]?.plannedOpeningDate, html.kv['Opening date'], html.kv['Planned opening date']));
+    const programme         = textify(TD.frameworkProgramme) || textify(TD.programme) || textify(html.kv['Programme']) || textify(html.kv['Program']);
+    const destination       = textify(TD.destination) || textify(TD.destinationCode) || textify(TD.destinationTitle) || textify(html.kv['Destination']);
+    const workProgrammePart = textify(TD.workProgramPart) || textify(TD.workProgrammePart) || textify(TD.workProgramme) || textify(html.kv['Work programme part']) || textify(html.kv['Work Programme']);
+    const typeOfAction      = textify(TD.typeOfAction) || textify(TD.typeOfActions) || textify(html.kv['Type of action']);
+    const topicStatus       = mapStatusLabel(TD.topicStatus || TD.status || html.kv['Status']);
+    const callIdentifier    = textify(TD.callIdentifier) || textify(TD.callId) || textify(html.kv['Call identifier']);
+    const callUrl           = textify(TD.callDocumentsLink) || textify(TD.callLink) || textify(html.kv['Call link']) || '';
 
-    const allDs = (Array.isArray(TD.actions?.[0]?.deadlineDates) ? TD.actions[0].deadlineDates.map(toIsoDate) : []).filter(Boolean);
-    const dlFromHtml = Object.entries(html.kv).filter(([k]) => /deadline/i.test(k)).map(([,v]) => toIsoDate(v)).filter(Boolean);
-    const allDeadlinesArr = Array.from(new Set([...allDs, ...dlFromHtml])).sort();
+    const plannedOpeningDate = toIsoDate(textify(
+      (TD.actions && TD.actions[0] && TD.actions[0].plannedOpeningDate) ||
+      html.kv['Opening date'] || html.kv['Planned opening date']
+    ));
+
+    const deadlinesJson = collectDatesDeep(TD, /deadline/i);
+    const deadlinesHtml = collectDatesDeep(html.kv, /deadline/i);
+    const allDeadlinesArr = Array.from(new Set([...deadlinesJson, ...deadlinesHtml])).sort();
+
     const nextDeadline = allDeadlinesArr.find(d => d >= todayISO) || (allDeadlinesArr.length ? allDeadlinesArr[allDeadlinesArr.length-1] : '');
     const daysToDeadline = nextDeadline ? Math.ceil((new Date(nextDeadline) - new Date(todayISO)) / 86400000) : '';
 
@@ -280,47 +315,52 @@ async function enrichFunding(page, topicUrls) {
       const m = String(txt||'').replace(/\s+/g,' ').match(/([\d.,]+)\s*(million|m|M)?/);
       return m ? (m[2] ? Number(m[1].replace(/\./g,'').replace(/,/g,'.'))*1e6 : Number(m[1].replace(/\./g,'').replace(/,/g,'.'))) : '';
     }
-    const totalBudget = TD.totalBudget || extractMoney(TD.budgetOverview||'');
-    const fundingRate = (TD.fundingRate || '').toString().replace(/[^\d%]/g,'');
-    const eligibleCountries = Array.isArray(TD.eligibleCountries) ? TD.eligibleCountries.join(' | ')
-                               : pick(TD.eligibleCountries, TD.associatedCountries, html.kv['Eligible countries'], html.kv['Eligibility']);
-    const trl = pick(TD.technologyReadinessLevel, TD.TRL, html.kv['TRL']);
-    const summaryShort = clampLen(pick(TD.summary, TD.expectedOutcome, TD.scope, html.textBits.summary, html.textBits.outcome, html.textBits.scope, html.title), 600);
+    const totalBudget  = TD.totalBudget || extractMoney(TD.budgetOverview||'');
+    const fundingRate  = (textify(TD.fundingRate) || '').toString().replace(/[^\d%]/g,'');
+
+    const eligibleCountries = Array.isArray(TD.eligibleCountries) ? TD.eligibleCountries.map(textify).filter(Boolean).join(' | ')
+                             : textify(TD.eligibleCountries) || textify(TD.associatedCountries) || textify(html.kv['Eligible countries']) || textify(html.kv['Eligibility']);
+
+    const trl = textify(TD.technologyReadinessLevel) || textify(TD.TRL) || textify(html.kv['TRL']);
+
+    const summaryShort = clampLen(
+      textify(TD.summary) || textify(TD.expectedOutcome) || textify(TD.scope) ||
+      textify(html.textBits.summary) || textify(html.textBits.outcome) || textify(html.textBits.scope) || textify(html.title), 600
+    );
 
     const urgencyScore = nextDeadline ? (daysToDeadline <= 14 ? 3 : daysToDeadline <= 30 ? 2 : daysToDeadline <= 45 ? 1 : 0) : 0;
     const keywordScore = 0;
     const priorityScore = urgencyScore + keywordScore;
 
     const rec = {
-      identifier: pick(TD.identifier, TD.topicId, slug.toUpperCase()),
-      title: pick(TD.title, html.title),
+      identifier: textify(TD.identifier) || textify(TD.topicId) || slug,
+      title:      textify(TD.title) || textify(html.title),
       programme, destination, workProgrammePart, typeOfAction,
       topicStatus, url: u, callIdentifier, callUrl,
       plannedOpeningDate, nextDeadline, allDeadlines: allDeadlinesArr.join(' | '),
       daysToDeadline: daysToDeadline === '' ? '' : String(daysToDeadline),
       totalBudget, projectBudgetMin:'', projectBudgetMax:'', fundingRate,
-      eligibleCountries, consortiumSummary: clampLen(pick(TD.consortiumRequirements, TD.eligibility, html.kv['Consortium']), 180),
+      eligibleCountries, consortiumSummary: clampLen(textify(TD.consortiumRequirements) || textify(TD.eligibility) || textify(html.kv['Consortium']), 180),
       trl, summaryShort,
       priorityScore:String(priorityScore), urgencyScore:String(urgencyScore), keywordScore:String(keywordScore),
       generatedAt: RUN_TS, rawRef: slug
     };
 
-    const header = rows[0].split(',');
     const vals = header.map(h => (rec[h] ?? '').toString().replace(/"/g,'""'));
     rows.push(`"${vals.join('","')}"`);
-
-    // RAW JSONL (audit)
-    fs.appendFileSync('funding_raw.jsonl', JSON.stringify({ url:u, slug, topicDetails:TD||{}, htmlKV:html.kv||{}, jsonLd:html.jsonLdArr||[] }) + '\n');
+    rawOut.write(JSON.stringify({ url:u, slug, topicDetails:TD||{}, htmlKV:html.kv||{}, jsonLd:html.jsonLdArr||[] }) + '\n');
 
     count++;
     if (count % 100 === 0) console.log(`[Funding] enrichi: ${count}`);
   }
 
   fs.writeFileSync('funding_enriched.csv', rows.join('\n'), 'utf8');
+  rawOut.end();
   console.log(`[Funding] Enrichissement terminé: ${count} lignes`);
+  return count;
 }
 
-/* ====================== Tenders — enrichissement ====================== */
+/* ====== Tenders enrich ====== */
 function getTextOrEmpty(el){ return (el?.trim?.() ? el.trim() : ''); }
 async function enrichTenderPage(page, url) {
   await safeGoto(page, url, 'tender-details');
@@ -345,21 +385,21 @@ async function enrichTenderPage(page, url) {
   const pageTitle = await page.title().catch(()=>'');
 
   const title = (jl.name || jl.title || pageTitle) || get(['title','notice title']);
-  const reference = get(['reference','reference number','notice number','ref.']);
-  const contractingAuthority = jl?.publisher?.name || get(['contracting authority','buyer','purchaser','awarding entity']);
-  const buyerCountry = jl?.address?.addressCountry || get(['country']);
-  const buyerCity = jl?.address?.addressLocality || get(['city','town']);
+  const reference = get(['reference','reference number','notice number','ref.','identifier']);
+  const contractingAuthority = jl?.publisher?.name || get(['contracting authority','buyer','purchaser','awarding entity','contracting entity']);
+  const buyerCountry = jl?.address?.addressCountry || get(['country','member state']);
+  const buyerCity = jl?.address?.addressLocality || get(['city','town','place']);
   const procedureType = get(['procedure type','procedure']);
-  const contractType = get(['contract type','type of contract']);
+  const contractType = get(['contract type','type of contract','object']);
   const cpvTop = (Array.isArray(jl?.additionalProperty) ? jl.additionalProperty.find(x=>/cpv/i.test(x?.name||''))?.value : '') || get(['cpv','cpv code']);
   const lotsCountTxt = get(['lot(s)','lots','number of lots']);
   const publicationDate = jl?.datePublished || get(['publication date','date of publication']);
-  const deadlineDate = jl?.validThrough || get(['deadline','time limit','submission deadline','deadline for receipt of tenders']);
+  const deadlineDate = jl?.validThrough || get(['deadline','time limit','submission deadline','deadline for receipt of tenders','closing date']);
 
-  const docsCount = (await page.$$eval('a', as => as.filter(a=>/document|annex|spec|tender doc/i.test(a.textContent||'')).length)).toString();
+  const docsCount = (await page.$$eval('a', as => as.filter(a=>/document|annex|spec|tender doc|documentation|guidance/i.test(a.textContent||'')).length)).toString();
   const esub = await page.$$eval('a', as => {
     const m = as.map(a=>({href:a.href, t:(a.textContent||'').trim()}))
-      .find(x => /submit|e-?submission|tender|apply/i.test(x.t) || /submission/.test(x.href));
+      .find(x => /submit|e-?submission|tender|apply|eprocurement|e-procurement/i.test(x.t) || /submission|eproc/.test(x.href));
     return m?.href || '';
   });
 
@@ -380,7 +420,7 @@ async function enrichTenderPage(page, url) {
     if (/GBP|£/.test(t) && !currency) currency='GBP';
     return { amount, currency };
   }
-  const moneyTxt = get(['estimated value','contract value','value']);
+  const moneyTxt = get(['estimated value','contract value','value','budget']);
   const currencyTxt = get(['currency']);
   const { amount: estimatedValue, currency } = parseMoney(moneyTxt || currencyTxt);
 
@@ -448,14 +488,31 @@ async function enrichTenders(page, tenderUrls) {
   fs.writeFileSync('tenders_enriched.csv', rows.join('\n'), 'utf8');
   rawOut.end();
   console.log(`[Tenders] Enrichissement terminé: ${count} lignes`);
+  return count;
 }
 
-/* ====================== Main ====================== */
+/* ====== List outputs ====== */
+function writeListOutputs(prefix, items, humanTitle) {
+  const lis = items.map(it => `  <li><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></li>`).join('\n');
+  fs.writeFileSync(`${prefix}-list.html`, `<!-- generated ${RUN_TS} -->\n<h2>${humanTitle}</h2>\n<ul>\n${lis}\n</ul>\n`, 'utf8');
+  const header=['title','url'];
+  const csv=[header.join(',')].concat(items.map(r=>`"${String(r.title).replace(/"/g,'""')}","${String(r.url).replace(/"/g,'""')}"`));
+  fs.writeFileSync(`${prefix}-list.csv`, csv.join('\n'), 'utf8');
+  fs.writeFileSync(`${prefix}-list.json`, JSON.stringify({ generatedAt: RUN_TS, items }, null, 2), 'utf8');
+}
+
+/* ====== Calls (funding) helpers ====== */
+async function scrapeTopicsInsideCall(page, callUrl) {
+  await safeGoto(page, callUrl, 'call-details');
+  await page.waitForTimeout(700);
+  try { for (let i=0;i<12;i++){ await page.mouse.wheel(0,5000); await page.waitForTimeout(300);} } catch {}
+  return await collectLinks(page, 'a[href*="/topic-details/"]', callUrl);
+}
+
+/* ====== Main ====== */
 (async () => {
   const browser = await chromium.launch({ headless: HEADLESS });
   const ctx = await browser.newContext();
-  // labels stables en anglais
-  await ctx.grantPermissions([]);
   await ctx.addInitScript(() => {
     Object.defineProperty(navigator, 'language', { get: ()=>'en-US' });
     Object.defineProperty(navigator, 'languages', { get: ()=>['en-US','en'] });
@@ -463,6 +520,8 @@ async function enrichTenders(page, tenderUrls) {
   const page = await ctx.newPage();
 
   const collected = {};
+  const counts = { funding_list:0, tenders_list:0, funding_enriched:0, tenders_enriched:0 };
+
   for (const task of TASKS) {
     console.log(`\n=== ${task.name.toUpperCase()} ===`);
     const all = []; const seen = new Set();
@@ -517,12 +576,14 @@ async function enrichTenders(page, tenderUrls) {
 
     writeListOutputs(task.name, all, niceTitle);
     collected[task.name] = all.map(x => x.url);
+    counts[`${task.name}_list`] = all.length;
   }
 
+  // Enrichissements
   const fundingUrls = Array.from(new Set(collected.funding || []));
   if (fundingUrls.length) {
     console.log(`\n[Funding] enrichissement de ${Math.min(fundingUrls.length, MAX_ENRICH_FUNDING)} topics…`);
-    await enrichFunding(page, fundingUrls);
+    counts.funding_enriched = await enrichFunding(page, fundingUrls);
   } else {
     console.log('[Funding] rien à enrichir.');
     fs.writeFileSync('funding_enriched.csv', 'identifier,title,programme,destination,workProgrammePart,typeOfAction,topicStatus,url,callIdentifier,callUrl,plannedOpeningDate,nextDeadline,allDeadlines,daysToDeadline,totalBudget,projectBudgetMin,projectBudgetMax,fundingRate,eligibleCountries,consortiumSummary,trl,summaryShort,priorityScore,urgencyScore,keywordScore,generatedAt,rawRef\n', 'utf8');
@@ -531,24 +592,25 @@ async function enrichTenders(page, tenderUrls) {
   const tendersUrls = Array.from(new Set(collected.tenders || []));
   if (tendersUrls.length) {
     console.log(`\n[Tenders] enrichissement de ${Math.min(tendersUrls.length, MAX_ENRICH_TENDERS)} avis…`);
-    await enrichTenders(page, tendersUrls);
+    counts.tenders_enriched = await enrichTenders(page, tendersUrls);
   } else {
     console.log('[Tenders] rien à enrichir.');
     fs.writeFileSync('tenders_enriched.csv', 'reference,title,contractingAuthority,buyerCountry,buyerCity,procedureType,contractType,cpvTop,lotsCount,publicationDate,deadlineDate,daysToDeadline,estimatedValue,currency,documentsCount,noticeUrl,esubmissionLink,priorityScore,urgencyScore,valueScore,generatedAt\n', 'utf8');
   }
 
+  // Index avec compteurs
   const idxHtml = [
     `<!-- generated ${RUN_TS} -->`,
     '<h1>EU Funding & Tenders — Extractions</h1>',
     '<ul>',
-    `  <li>funding-list: <a href="funding-list.html">HTML</a> / <a href="funding-list.csv">CSV</a></li>`,
-    `  <li>tenders-list: <a href="tenders-list.html">HTML</a> / <a href="tenders-list.csv">CSV</a></li>`,
-    `  <li>funding_enriched: <a href="funding_enriched.csv">CSV</a></li>`,
-    `  <li>tenders_enriched: <a href="tenders_enriched.csv">CSV</a></li>`,
+    `  <li>Funding list: <a href="funding-list.html">HTML</a> / <a href="funding-list.csv">CSV</a> — <strong>${counts.funding_list}</strong> items</li>`,
+    `  <li>Tenders list: <a href="tenders-list.html">HTML</a> / <a href="tenders-list.csv">CSV</a> — <strong>${counts.tenders_list}</strong> items</li>`,
+    `  <li>Funding enriched: <a href="funding_enriched.csv">CSV</a> — <strong>${counts.funding_enriched}</strong> rows</li>`,
+    `  <li>Tenders enriched: <a href="tenders_enriched.csv">CSV</a> — <strong>${counts.tenders_enriched}</strong> rows</li>`,
     '</ul>'
   ].join('\n');
   fs.writeFileSync('index.html', idxHtml, 'utf8');
 
   await browser.close();
-  console.log('\n✓ Terminé (listes + enriched CSV générés).');
+  console.log('\n✓ Terminé (listes + enriched CSV générés, index avec compteurs).');
 })();
