@@ -1,12 +1,10 @@
 {
   "name": "eu-ft-scraper",
-  "private": true,
   "type": "module",
-  "version": "0.1.0",
   "scripts": {
     "start": "node scrape.mjs"
   },
   "dependencies": {
-    "@playwright/test": "^1.47.2"
+    "playwright": "^1.47.2"
   }
 }
