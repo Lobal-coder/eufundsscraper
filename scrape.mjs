@@ -4,17 +4,22 @@ import fs from 'fs';
 const HEADLESS = true;
 const RUN_TS = new Date().toISOString();
 
-// Limites (sécurité) — tu peux les ajuster via variables d’env
+// Limites (ajustables via variables d’env du workflow)
 const MAX_ENRICH_FUNDING = Number(process.env.MAX_ENRICH_FUNDING || 2000);
 const MAX_ENRICH_TENDERS = Number(process.env.MAX_ENRICH_TENDERS || 1500);
 
-// --------- TÂCHES DE COLLECTE (listes brutes) ---------
+/**
+ * Deux parcours :
+ *  - funding (Calls for proposals) — liens /topic-details/ (+ crawl des /call-details/)
+ *  - tenders (Calls for tenders)   — liens /tender-details/
+ */
 const TASKS = [
   {
     name: 'funding',
     baseUrl: 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals',
     params: { order:'DESC', sortBy:'startDate', pageSize:50, isExactMatch:true, status:'31094501,31094502' },
     linkSelector: 'a[href*="/topic-details/"]',
+    // liens de pages "Call details" qui contiennent des topics supplémentaires
     callSelectors: ['a[href*="/call-details/"]','a[href*="/calls/"]'],
     maxPages: 2000
   },
@@ -27,16 +32,21 @@ const TASKS = [
   }
 ];
 
-// ------------- UTILITAIRES GÉNÉRAUX -------------
-function cleanUrl(href, base) {
-  try { const u = new URL(href, base); return `${u.origin}${u.pathname}`; } catch { return href; }
+/* ====================== UTILITAIRES GÉNÉRAUX ====================== */
+function cleanUrl(href, base) { try { const u=new URL(href, base); return `${u.origin}${u.pathname}`; } catch { return href; } }
+function buildPageUrl(base, params, pageNumber) { const u=new URL(base); Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,String(v))); u.searchParams.set('pageNumber',String(pageNumber)); return u.toString(); }
+function normLabel(s){ return String(s||'').toLowerCase().replace(/\s+/g,' ').trim(); }
+function toIsoDate(v) {
+  if (v == null || v === '') return '';
+  if (typeof v === 'number') { const d=new Date(v); return isNaN(d)?'':d.toISOString().slice(0,10); }
+  const s=String(v).trim();
+  const mEU=s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (mEU){ const d=new Date(+mEU[3], +mEU[2]-1, +mEU[1]); return isNaN(d)?'':d.toISOString().slice(0,10); }
+  const d=new Date(s); return isNaN(d)?'':d.toISOString().slice(0,10);
 }
-function buildPageUrl(base, params, pageNumber) {
-  const u = new URL(base);
-  Object.entries(params).forEach(([k,v]) => u.searchParams.set(k, String(v)));
-  u.searchParams.set('pageNumber', String(pageNumber));
-  return u.toString();
-}
+function clampLen(txt,max=600){ if(!txt) return ''; const t=String(txt).replace(/\s+/g,' ').trim(); return t.length>max ? t.slice(0,max-1)+'…' : t; }
+function pick(...vals){ for(const v of vals){ if(v!=null && String(v).trim()!=='') return String(v);} return ''; }
+
 async function findScrollContainers(page) {
   return await page.evaluate(() => {
     const els = Array.from(document.querySelectorAll('main, [role="main"], [data-ft-results], [data-results-container], [class*="scroll"], body, html'));
@@ -55,6 +65,7 @@ async function findScrollContainers(page) {
     });
   });
 }
+
 async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeast = 50) {
   const seen = new Set(); const items = [];
   const maxLoops = 400, pause = 750;
@@ -96,6 +107,7 @@ async function collectVirtualized(page, linkSelector, baseForClean, targetAtLeas
   }
   return items;
 }
+
 async function collectLinks(page, selector, baseForClean) {
   const list = []; const seen = new Set();
   const anchors = await page.locator(selector).all();
@@ -110,12 +122,14 @@ async function collectLinks(page, selector, baseForClean) {
   }
   return list;
 }
+
 async function scrapeTopicsInsideCall(page, callUrl) {
   await page.goto(callUrl, { waitUntil: 'networkidle' });
   await page.waitForTimeout(700);
   try { for (let i=0;i<12;i++){ await page.mouse.wheel(0,5000); await page.waitForTimeout(300);} } catch {}
   return await collectLinks(page, 'a[href*="/topic-details/"]', callUrl);
 }
+
 function writeListOutputs(prefix, items, humanTitle) {
   const lis = items.map(it => `  <li><a href="${it.url}" target="_blank" rel="noopener noreferrer">${it.title}</a></li>`).join('\n');
   fs.writeFileSync(`${prefix}-list.html`, `<!-- generated ${RUN_TS} -->\n<h2>${humanTitle}</h2>\n<ul>\n${lis}\n</ul>\n`, 'utf8');
@@ -125,67 +139,99 @@ function writeListOutputs(prefix, items, humanTitle) {
   fs.writeFileSync(`${prefix}-list.json`, JSON.stringify({ generatedAt: RUN_TS, items }, null, 2), 'utf8');
 }
 
-// ------------- ENRICHISSEMENT FUNDING -------------
-function extractSlugFromTopicUrl(href) {
-  const m = String(href).toLowerCase().match(/\/topic-details\/([^/?#]+)/);
-  return m ? m[1] : '';
+/* ====================== EXTRACTION HTML GÉNÉRIQUE ====================== */
+// Parse <dl> dt/dd et tables 2 colonnes "Label | Valeur"
+async function extractKeyValuePairs(page){
+  return await page.evaluate(() => {
+    function grabKv(root){
+      const kv = {};
+      // dl/dt/dd
+      root.querySelectorAll('dl').forEach(dl=>{
+        const dts = dl.querySelectorAll('dt');
+        dts.forEach(dt=>{
+          const dd = dt.nextElementSibling && dt.nextElementSibling.tagName.toLowerCase()==='dd'
+            ? dt.nextElementSibling : null;
+          const k = dt.textContent?.trim();
+          const v = dd?.textContent?.trim();
+          if (k && v) kv[k] = v;
+        });
+      });
+      // tables 2 colonnes
+      root.querySelectorAll('table').forEach(t=>{
+        Array.from(t.querySelectorAll('tr')).forEach(tr=>{
+          const tds = tr.querySelectorAll('th,td');
+          if (tds.length === 2){
+            const k = tds[0].textContent?.trim();
+            const v = tds[1].textContent?.trim();
+            if (k && v) kv[k] = v;
+          }
+        });
+      });
+      return kv;
+    }
+    const kv = grabKv(document);
+    const blocks = Array.from(document.querySelectorAll('[data-testid*="key"],[class*="key-info"],section,article'));
+    blocks.forEach(b=>{ Object.assign(kv, grabKv(b)); });
+    return kv;
+  });
 }
-function toIsoDate(v) {
-  if (v == null || v === '') return '';
-  if (typeof v === 'number') { const d=new Date(v); return isNaN(d)?'':d.toISOString().slice(0,10); }
-  const s=String(v);
-  const mEU=s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-  if (mEU){ const d=new Date(+mEU[3], +mEU[2]-1, +mEU[1]); return isNaN(d)?'':d.toISOString().slice(0,10);}
-  const d=new Date(s); return isNaN(d)?'':d.toISOString().slice(0,10);
+
+async function extractJsonLd(page){
+  try{
+    const arr = await page.$$eval('script[type="application/ld+json"]', nodes =>
+      nodes.map(n=>{ try{ return JSON.parse(n.textContent||'{}'); }catch(e){ return null; } }).filter(Boolean)
+    );
+    return arr;
+  }catch{ return []; }
 }
-function pick(...vals){ for(const v of vals){ if(v!=null && String(v).trim()!=='') return String(v);} return ''; }
-function clampLen(txt,max=600){ if(!txt) return ''; const t=String(txt).replace(/\s+/g,' ').trim(); return t.length>max ? t.slice(0,max-1)+'…' : t; }
+
+/* ====================== FUNDING — ENRICHISSEMENT ====================== */
+function extractSlugFromTopicUrl(href) { const m=String(href).toLowerCase().match(/\/topic-details\/([^/?#]+)/); return m? m[1] : ''; }
 
 async function fetchTopicDetails(page, slugLower, lang='en') {
   const url = `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${encodeURIComponent(slugLower)}.json?lang=${encodeURIComponent(lang)}`;
-  const resp = await page.request.get(url, { timeout: 20000 });
+  const resp = await page.request.get(url, { timeout: 25000 });
   if (!resp.ok()) throw new Error(`HTTP ${resp.status()} for ${url}`);
   return await resp.json();
 }
-function computeNextDeadline(actions) {
-  const a0 = Array.isArray(actions) ? actions[0] : null;
-  const ds = a0 && Array.isArray(a0.deadlineDates) ? a0.deadlineDates.map(toIsoDate).filter(Boolean) : [];
-  if (!ds.length) return { nextDeadline:'', allDeadlines:'' };
-  const today = new Date().toISOString().slice(0,10);
-  const next = ds.find(d => d >= today) || ds.sort()[ds.length-1];
-  return { nextDeadline: next, allDeadlines: ds.join(' | ') };
+
+// Scrape HTML de la page topic-details (Key info, résumés…)
+async function scrapeFundingTopicHtml(page, url){
+  await page.goto(url, { waitUntil:'networkidle' });
+  await page.waitForTimeout(600);
+
+  const title = await page.title().catch(()=>'');
+
+  const kv = await extractKeyValuePairs(page);
+  const jsonLdArr = await extractJsonLd(page);
+
+  // Tentative d’extraction de blocs texte (Outcome / Scope / Summary)
+  const textBits = await page.evaluate(() => {
+    function hasText(el, t){ return el && RegExp(t,'i').test(el.textContent||''); }
+    function grabByHeading(keyword){
+      const heads = Array.from(document.querySelectorAll('h1,h2,h3,h4'));
+      for (const h of heads){
+        if (hasText(h, keyword)){
+          // cherche le paragraphe le plus proche après l’en-tête
+          let n = h.nextElementSibling; let acc='';
+          for (let i=0;i<6 && n;i++, n=n.nextElementSibling){
+            const txt = n.textContent?.trim();
+            if (txt && txt.length > 40) { acc = txt; break; }
+          }
+          return acc;
+        }
+      }
+      return '';
+    }
+    const outcome = grabByHeading('Expected Outcome|Outcomes') || '';
+    const scope   = grabByHeading('Scope') || '';
+    const summary = grabByHeading('Summary|Overview') || '';
+    return { outcome, scope, summary };
+  }).catch(()=>({outcome:'',scope:'',summary:''}));
+
+  return { title, kv, jsonLdArr, textBits: textBits || {} };
 }
-function extractFundingMoneyish(TD){
-  // Best-effort: certains topics exposent totalBudget, d’autres des textes; on reste conservateur
-  const totalBudget = (TD.totalBudget && Number(TD.totalBudget)) || '';
-  let projectBudgetMin='', projectBudgetMax='', fundingRate='';
-  // on peut tenter une extraction simple de chiffres depuis TD.budgetOverview / summary
-  const src = [TD.budgetOverview, TD.summary, TD.content].map(x=>x||'').join(' ');
-  const mRate = src.match(/(\d{1,3})\s?%/);
-  if (mRate) fundingRate = mRate[1];
-  // plages € (ex: 1-3 million, 500k-2M)
-  const mRange = src.match(/(?:€|EUR)?\s?([\d.,]+)\s*(?:k|K|000)?\s*[-–]\s*(?:€|EUR)?\s?([\d.,]+)\s*(?:m|M|million|Millions|Mio|000000)?/i);
-  // ceci est volontairement basique; on peut raffiner plus tard
-  if (mRange){
-    projectBudgetMin = mRange[1];
-    projectBudgetMax = mRange[2];
-  }
-  return { totalBudget, projectBudgetMin, projectBudgetMax, fundingRate };
-}
-function eligibleCountriesSummary(TD){
-  const v = TD.eligibleCountries || TD.associatedCountries || '';
-  if (Array.isArray(v)) return v.join(' | ');
-  return String(v||'');
-}
-function consortiumSummary(TD){
-  const txt = TD.consortiumRequirements || TD.eligibility || TD.scope || '';
-  const m = String(txt).match(/(?:at least|min(?:imum)?)\s*\d+.+?countries?/i);
-  return m ? clampLen(m[0], 120) : '';
-}
-function summaryShortFrom(TD){
-  const cand = pick(TD.summary, TD.expectedOutcome, TD.scope, TD.title);
-  return clampLen(cand, 600);
-}
+
 async function enrichFunding(page, topicUrls) {
   const header = [
     'identifier','title','programme','destination','workProgrammePart','typeOfAction',
@@ -196,198 +242,191 @@ async function enrichFunding(page, topicUrls) {
     'summaryShort','priorityScore','urgencyScore','keywordScore',
     'generatedAt','rawRef'
   ];
-  const today = new Date().toISOString().slice(0,10);
-
   const rows = [header.join(',')];
-  let count = 0;
+  const todayISO = new Date().toISOString().slice(0,10);
+  const rawOut = fs.createWriteStream('funding_raw.jsonl', {flags:'w'});
 
+  let count = 0;
   for (const u of topicUrls.slice(0, MAX_ENRICH_FUNDING)) {
     const slug = extractSlugFromTopicUrl(u);
-    if (!slug){ continue; }
-    try {
-      const data = await fetchTopicDetails(page, slug, 'en');
-      const TD = data?.TopicDetails || {};
-      const actions = Array.isArray(TD.actions) ? TD.actions : [];
-      const a0 = actions[0] || {};
-      const { nextDeadline, allDeadlines } = computeNextDeadline(actions);
-      const planned = toIsoDate(a0.plannedOpeningDate);
-      const daysToDeadline = nextDeadline ? Math.ceil((new Date(nextDeadline) - new Date(today)) / (1000*3600*24)) : '';
+    if (!slug) continue;
 
-      const money = extractFundingMoneyish(TD);
-      const programme = pick(TD.frameworkProgramme, TD.programme);
-      const typeOfAction = Array.isArray(TD.typeOfAction) ? TD.typeOfAction.join(' | ')
-                         : Array.isArray(TD.typeOfActions) ? TD.typeOfActions.join(' | ')
-                         : pick(TD.typeOfAction);
-      const typeOfMGAs = Array.isArray(TD.typeOfMGAs) ? TD.typeOfMGAs.join(' | ')
-                        : Array.isArray(TD.typeofMGAs) ? TD.typeofMGAs.join(' | ')
-                        : '';
-      const urgencyScore = nextDeadline ? (daysToDeadline <= 14 ? 3 : daysToDeadline <= 30 ? 2 : daysToDeadline <= 45 ? 1 : 0) : 0;
-      const keywordScore = 0; // tu feras tes tris dans Sheets; on laisse 0 par défaut
-      const priorityScore = urgencyScore + keywordScore;
+    let TD = {};
+    let html = {kv:{}, textBits:{}, jsonLdArr:[], title:''};
 
-      const rec = {
-        identifier: pick(TD.identifier, TD.topicId, slug.toUpperCase()),
-        title: pick(TD.title),
-        programme,
-        destination: pick(TD.destination, TD.destinationCode, TD.destinationTitle),
-        workProgrammePart: pick(TD.workProgramPart, TD.workProgrammePart, TD.workProgramme),
-        typeOfAction,
-        topicStatus: pick(TD.topicStatus, TD.status),
-        url: u,
-        callIdentifier: pick(TD.callIdentifier, TD.callId),
-        callUrl: pick(TD.callDocumentsLink, TD.callLink, ''),
-        plannedOpeningDate: planned,
-        nextDeadline,
-        allDeadlines,
-        daysToDeadline: daysToDeadline === '' ? '' : String(daysToDeadline),
-        totalBudget: money.totalBudget,
-        projectBudgetMin: money.projectBudgetMin,
-        projectBudgetMax: money.projectBudgetMax,
-        fundingRate: money.fundingRate || '',
-        eligibleCountries: eligibleCountriesSummary(TD),
-        consortiumSummary: consortiumSummary(TD),
-        trl: pick(TD.technologyReadinessLevel, TD.TRL),
-        summaryShort: summaryShortFrom(TD),
-        priorityScore: String(priorityScore),
-        urgencyScore: String(urgencyScore),
-        keywordScore: String(keywordScore),
-        generatedAt: RUN_TS,
-        rawRef: slug
-      };
+    try { const data = await fetchTopicDetails(page, slug, 'en'); TD = data?.TopicDetails || {}; }
+    catch (e) { console.warn('[Funding] JSON err', slug, e.message); }
 
-      const vals = header.map(h => (rec[h] ?? '').toString().replace(/"/g,'""'));
-      rows.push(`"${vals.join('","')}"`);
-      count++;
-      if (count % 100 === 0) console.log(`[Funding] enrichi: ${count}`);
-    } catch (e) {
-      console.warn('[Funding] ERR', slug, e.message);
+    try { html = await scrapeFundingTopicHtml(page, u); }
+    catch (e) { console.warn('[Funding] HTML err', slug, e.message); }
+
+    // Champs depuis JSON avec fallback HTML (kv)
+    const programme = pick(TD.frameworkProgramme, TD.programme, html.kv['Programme'], html.kv['Program']);
+    const destination = pick(TD.destination, TD.destinationCode, TD.destinationTitle, html.kv['Destination']);
+    const workProgrammePart = pick(TD.workProgramPart, TD.workProgrammePart, TD.workProgramme, html.kv['Work programme part'], html.kv['Work Programme']);
+    const typeOfAction = Array.isArray(TD.typeOfAction) ? TD.typeOfAction.join(' | ')
+                      : Array.isArray(TD.typeOfActions) ? TD.typeOfActions.join(' | ')
+                      : pick(TD.typeOfAction, html.kv['Type of action']);
+    const topicStatus = pick(TD.topicStatus, TD.status, html.kv['Status']);
+    const callIdentifier = pick(TD.callIdentifier, TD.callId, html.kv['Call identifier']);
+    const callUrl = pick(TD.callDocumentsLink, TD.callLink, html.kv['Call link'], '');
+    const plannedOpeningDate = toIsoDate(pick(TD.actions?.[0]?.plannedOpeningDate, html.kv['Opening date'], html.kv['Planned opening date']));
+
+    // Deadlines
+    const allDs = (Array.isArray(TD.actions?.[0]?.deadlineDates) ? TD.actions[0].deadlineDates.map(toIsoDate) : []).filter(Boolean);
+    const dlFromHtml = Object.entries(html.kv).filter(([k]) => /deadline/i.test(k)).map(([,v]) => toIsoDate(v)).filter(Boolean);
+    const allDeadlinesArr = Array.from(new Set([...allDs, ...dlFromHtml])).sort();
+    const nextDeadline = allDeadlinesArr.find(d => d >= todayISO) || (allDeadlinesArr.length ? allDeadlinesArr[allDeadlinesArr.length-1] : '');
+    const daysToDeadline = nextDeadline ? Math.ceil((new Date(nextDeadline) - new Date(todayISO)) / 86400000) : '';
+
+    // Money-ish (best effort)
+    function extractMoney(txt){
+      const m = String(txt||'').replace(/\s+/g,' ').match(/([\d.,]+)\s*(million|m|M)?/);
+      return m ? (m[2] ? Number(m[1].replace(/\./g,'').replace(/,/g,'.'))*1e6 : Number(m[1].replace(/\./g,'').replace(/,/g,'.'))) : '';
     }
+    const totalBudget = TD.totalBudget || extractMoney(TD.budgetOverview||'');
+    const fundingRate = (TD.fundingRate || '').toString().replace(/[^\d%]/g,'');
+    const eligibleCountries = Array.isArray(TD.eligibleCountries) ? TD.eligibleCountries.join(' | ')
+                               : pick(TD.eligibleCountries, TD.associatedCountries, html.kv['Eligible countries'], html.kv['Eligibility']);
+    const trl = pick(TD.technologyReadinessLevel, TD.TRL, html.kv['TRL']);
+    const summaryShort = clampLen(pick(TD.summary, TD.expectedOutcome, TD.scope, html.textBits.summary, html.textBits.outcome, html.textBits.scope, html.title), 600);
+
+    const urgencyScore = nextDeadline ? (daysToDeadline <= 14 ? 3 : daysToDeadline <= 30 ? 2 : daysToDeadline <= 45 ? 1 : 0) : 0;
+    const keywordScore = 0;
+    const priorityScore = urgencyScore + keywordScore;
+
+    const rec = {
+      identifier: pick(TD.identifier, TD.topicId, slug.toUpperCase()),
+      title: pick(TD.title, html.title),
+      programme, destination, workProgrammePart, typeOfAction,
+      topicStatus, url: u, callIdentifier, callUrl,
+      plannedOpeningDate, nextDeadline, allDeadlines: allDeadlinesArr.join(' | '),
+      daysToDeadline: daysToDeadline === '' ? '' : String(daysToDeadline),
+      totalBudget, projectBudgetMin:'', projectBudgetMax:'', fundingRate,
+      eligibleCountries, consortiumSummary: clampLen(pick(TD.consortiumRequirements, TD.eligibility, html.kv['Consortium']), 180),
+      trl, summaryShort,
+      priorityScore:String(priorityScore), urgencyScore:String(urgencyScore), keywordScore:String(keywordScore),
+      generatedAt: RUN_TS, rawRef: slug
+    };
+
+    const vals = header.map(h => (rec[h] ?? '').toString().replace(/"/g,'""'));
+    rows.push(`"${vals.join('","')}"`);
+
+    // RAW JSONL pour audit
+    const rawRecord = { url:u, slug, topicDetails:TD||{}, htmlKV:html.kv||{}, jsonLd:html.jsonLdArr||[] };
+    fs.appendFileSync('funding_raw.jsonl', JSON.stringify(rawRecord) + '\n');
+
+    count++;
+    if (count % 100 === 0) console.log(`[Funding] enrichi: ${count}`);
   }
 
   fs.writeFileSync('funding_enriched.csv', rows.join('\n'), 'utf8');
   console.log(`[Funding] Enrichissement terminé: ${count} lignes`);
 }
 
-// ------------- ENRICHISSEMENT TENDERS -------------
+/* ====================== TENDERS — ENRICHISSEMENT ====================== */
 function getTextOrEmpty(el){ return (el?.trim?.() ? el.trim() : ''); }
-function parseMoney(text){
-  if (!text) return { amount:'', currency:'' };
-  const t = text.replace(/\s+/g,' ');
-  const m = t.match(/([€$£]|EUR|USD|GBP)?\s*([\d.,]+)\s*(million|m|M)?/);
-  let amount='', currency='';
-  if (m){
-    currency = (m[1]||'').replace(/[^A-Z€$£]/gi,'') || '';
-    const raw = m[2].replace(/\./g,'').replace(/,/g,'.');
-    let val = Number(raw);
-    if (m[3]) val = val * 1_000_000;
-    amount = isNaN(val) ? '' : String(Math.round(val));
-  }
-  if (/EUR|€/.test(t) && !currency) currency='EUR';
-  if (/USD|\$/.test(t) && !currency) currency='USD';
-  if (/GBP|£/.test(t) && !currency) currency='GBP';
-  return { amount, currency };
-}
-function pickFirstNonEmpty(...arr){ for(const v of arr){ if(v && String(v).trim()!=='') return String(v).trim(); } return ''; }
 
 async function enrichTenderPage(page, url) {
-  await page.goto(url, { waitUntil: 'networkidle' });
-  await page.waitForTimeout(500);
+  await page.goto(url, { waitUntil:'networkidle' });
+  await page.waitForTimeout(700);
 
-  // Stratégie : lire blocs "Key information" + entête
-  const data = await page.evaluate(() => {
-    function text(sel){ const el=document.querySelector(sel); return el ? el.textContent.trim() : ''; }
-    function findByLabel(labels){
-      // cherche un dt/dd ou une ligne "Label: Valeur"
-      const candidates = Array.from(document.querySelectorAll('dt, .label, .field-label, th'));
-      for (const c of candidates) {
-        const lbl = c.textContent.trim().toLowerCase();
-        for (const l of labels) {
-          if (lbl.includes(l)) {
-            // valeur voisine
-            let val = '';
-            const dd = c.nextElementSibling;
-            if (dd) val = dd.textContent.trim();
-            else val = c.parentElement?.querySelector('dd, .value, td')?.textContent?.trim() || '';
-            if (val) return val;
-          }
-        }
-      }
-      // fallback : scan des p/li
-      const blocks = Array.from(document.querySelectorAll('p, li'));
-      for (const b of blocks) {
-        const t = b.textContent.trim();
-        for (const l of labels) {
-          const i = t.toLowerCase().indexOf(l);
-          if (i >= 0) {
-            const after = t.slice(i + l.length).replace(/^[\s:–-]+/, '');
-            if (after) return after;
-          }
-        }
-      }
-      return '';
+  // 1) JSON-LD (si présent)
+  const jsonLdArr = await extractJsonLd(page);
+  let jl = {};
+  if (jsonLdArr && jsonLdArr.length){
+    jl = jsonLdArr.sort((a,b)=>JSON.stringify(b).length - JSON.stringify(a).length)[0] || {};
+  }
+
+  // 2) Key/value pairs (dl, tables…)
+  const kv = await extractKeyValuePairs(page);
+
+  // 3) Helpers
+  const get = (labels) => {
+    const keys = Object.keys(kv);
+    for (const lab of labels){
+      const match = keys.find(k => normLabel(k).includes(normLabel(lab)));
+      if (match) return kv[match];
     }
+    return '';
+  };
 
-    const title = text('h1, h2, [data-testid="title"], .page-title');
-    const reference = findByLabel(['reference','notice number','reference number','ref.']);
-    const contractingAuthority = findByLabel(['contracting authority','buyer','purchaser','awarding entity']);
-    const buyerCountry = findByLabel(['country']);
-    const buyerCity = findByLabel(['city','town']);
-    const procedureType = findByLabel(['procedure type','procedure']);
-    const contractType = findByLabel(['contract type','type of contract']);
-    const cpvTop = findByLabel(['cpv','cpv code']);
-    const lotsCountTxt = findByLabel(['lot(s)','lots']);
-    const publicationDate = findByLabel(['publication date','date of publication']);
-    const deadlineDate = findByLabel(['deadline','time limit','submission deadline']);
-    const estimatedValueTxt = findByLabel(['estimated value','contract value','value']);
-    const currencyTxt = findByLabel(['currency']);
+  // 4) Champs
+  const pageTitle = await page.title().catch(()=>'');
 
-    const docs = Array.from(document.querySelectorAll('a')).filter(a => /document|annex|spec/i.test(a.textContent||''));
-    const documentsCount = docs.length;
+  const title = (jl.name || jl.title || pageTitle) || get(['title','notice title']);
+  const reference = get(['reference','reference number','notice number','ref.']);
+  const contractingAuthority = jl?.publisher?.name || get(['contracting authority','buyer','purchaser','awarding entity']);
+  const buyerCountry = jl?.address?.addressCountry || get(['country']);
+  const buyerCity = jl?.address?.addressLocality || get(['city','town']);
+  const procedureType = get(['procedure type','procedure']);
+  const contractType = get(['contract type','type of contract']);
+  const cpvTop = (Array.isArray(jl?.additionalProperty) ? jl.additionalProperty.find(x=>/cpv/i.test(x?.name||''))?.value : '') || get(['cpv','cpv code']);
+  const lotsCountTxt = get(['lot(s)','lots','number of lots']);
+  const publicationDate = jl?.datePublished || get(['publication date','date of publication']);
+  const deadlineDate = jl?.validThrough || get(['deadline','time limit','submission deadline','deadline for receipt of tenders']);
 
-    const esub = Array.from(document.querySelectorAll('a')).map(a => ({href:a.href, t:(a.textContent||'').trim()}))
+  const docsCount = (await page.$$eval('a', as => as.filter(a=>/document|annex|spec|tender doc/i.test(a.textContent||'')).length)).toString();
+  const esub = await page.$$eval('a', as => {
+    const m = as.map(a=>({href:a.href, t:(a.textContent||'').trim()}))
       .find(x => /submit|e-?submission|tender|apply/i.test(x.t) || /submission/.test(x.href));
-
-    return {
-      title, reference, contractingAuthority, buyerCountry, buyerCity,
-      procedureType, contractType, cpvTop, lotsCountTxt, publicationDate,
-      deadlineDate, estimatedValueTxt, currencyTxt,
-      documentsCount, esubUrl: esub?.href || ''
-    };
+    return m?.href || '';
   });
 
-  const lotsCount = (data.lotsCountTxt && Number((data.lotsCountTxt.match(/\d+/)||[''])[0])) || '';
-  const { amount: estimatedValue, currency } = parseMoney(data.estimatedValueTxt || data.currencyTxt);
-  const pubISO = toIsoDate(data.publicationDate);
-  const deadISO = toIsoDate(data.deadlineDate);
+  // argent
+  function parseMoney(text){
+    if (!text) return { amount:'', currency:'' };
+    const t = text.replace(/\s+/g,' ');
+    const m = t.match(/([€$£]|EUR|USD|GBP)?\s*([\d.,]+)\s*(million|m|M)?/);
+    let amount='', currency='';
+    if (m){
+      currency = (m[1]||'').replace(/[^A-Z€$£]/gi,'') || '';
+      const raw = m[2].replace(/\./g,'').replace(/,/g,'.');
+      let val = Number(raw);
+      if (m[3]) val = val * 1_000_000;
+      amount = isNaN(val) ? '' : String(Math.round(val));
+    }
+    if (/EUR|€/.test(t) && !currency) currency='EUR';
+    if (/USD|\$/.test(t) && !currency) currency='USD';
+    if (/GBP|£/.test(t) && !currency) currency='GBP';
+    return { amount, currency };
+  }
+  const moneyTxt = get(['estimated value','contract value','value']);
+  const currencyTxt = get(['currency']);
+  const { amount: estimatedValue, currency } = parseMoney(moneyTxt || currencyTxt);
+
+  const pubISO = toIsoDate(publicationDate);
+  const deadISO = toIsoDate(deadlineDate);
   const today = new Date().toISOString().slice(0,10);
-  const daysToDeadline = deadISO ? Math.ceil((new Date(deadISO) - new Date(today)) / (1000*3600*24)) : '';
+  const daysToDeadline = deadISO ? Math.ceil((new Date(deadISO) - new Date(today)) / 86400000) : '';
 
   const urgencyScore = deadISO ? (daysToDeadline <= 14 ? 3 : daysToDeadline <= 30 ? 2 : daysToDeadline <= 45 ? 1 : 0) : 0;
   const valueScore = estimatedValue ? (Number(estimatedValue) >= 1_000_000 ? 2 : Number(estimatedValue) >= 250_000 ? 1 : 0) : 0;
   const priorityScore = urgencyScore + valueScore;
 
   return {
-    reference: getTextOrEmpty(data.reference),
-    title: getTextOrEmpty(data.title),
-    contractingAuthority: getTextOrEmpty(data.contractingAuthority),
-    buyerCountry: getTextOrEmpty(data.buyerCountry),
-    buyerCity: getTextOrEmpty(data.buyerCity),
-    procedureType: getTextOrEmpty(data.procedureType),
-    contractType: getTextOrEmpty(data.contractType),
-    cpvTop: getTextOrEmpty(data.cpvTop),
-    lotsCount: lotsCount === '' ? '' : String(lotsCount),
+    reference: getTextOrEmpty(reference) || jl?.identifier || '',
+    title: getTextOrEmpty(title),
+    contractingAuthority: getTextOrEmpty(contractingAuthority),
+    buyerCountry: getTextOrEmpty(buyerCountry),
+    buyerCity: getTextOrEmpty(buyerCity),
+    procedureType: getTextOrEmpty(procedureType),
+    contractType: getTextOrEmpty(contractType),
+    cpvTop: getTextOrEmpty(cpvTop),
+    lotsCount: (lotsCountTxt && (lotsCountTxt.match(/\d+/)||[''])[0]) || '',
     publicationDate: pubISO,
     deadlineDate: deadISO,
     daysToDeadline: daysToDeadline === '' ? '' : String(daysToDeadline),
-    estimatedValue: estimatedValue,
-    currency: currency,
-    documentsCount: String(data.documentsCount || 0),
+    estimatedValue,
+    currency,
+    documentsCount: docsCount,
     noticeUrl: url,
-    esubmissionLink: data.esubUrl || '',
+    esubmissionLink: esub || '',
     urgencyScore: String(urgencyScore),
     valueScore: String(valueScore),
     priorityScore: String(priorityScore),
-    generatedAt: RUN_TS
+    generatedAt: RUN_TS,
+    _raw: { kv, jsonLd: jl || {} }
   };
 }
 
@@ -402,6 +441,7 @@ async function enrichTenders(page, tenderUrls) {
     'generatedAt'
   ];
   const rows = [header.join(',')];
+  const rawOut = fs.createWriteStream('tenders_raw.jsonl', {flags:'w'});
   let count = 0;
 
   for (const u of tenderUrls.slice(0, MAX_ENRICH_TENDERS)) {
@@ -409,6 +449,8 @@ async function enrichTenders(page, tenderUrls) {
       const rec = await enrichTenderPage(page, u);
       const vals = header.map(h => (rec[h] ?? '').toString().replace(/"/g,'""'));
       rows.push(`"${vals.join('","')}"`);
+      // RAW
+      rawOut.write(JSON.stringify({ url:u, kv:rec._raw?.kv || {}, jsonLd:rec._raw?.jsonLd || {} })+'\n');
       count++;
       if (count % 50 === 0) console.log(`[Tenders] enrichi: ${count}`);
     } catch (e) {
@@ -417,13 +459,22 @@ async function enrichTenders(page, tenderUrls) {
   }
 
   fs.writeFileSync('tenders_enriched.csv', rows.join('\n'), 'utf8');
+  rawOut.end();
   console.log(`[Tenders] Enrichissement terminé: ${count} lignes`);
 }
 
-// ------------- MAIN -------------
+/* ====================== MAIN ====================== */
 (async () => {
   const browser = await chromium.launch({ headless: HEADLESS });
   const ctx = await browser.newContext();
+
+  // Forcer l’anglais pour des labels plus prévisibles
+  await ctx.grantPermissions([]);
+  await ctx.addInitScript(() => {
+    Object.defineProperty(navigator, 'language', { get: ()=>'en-US' });
+    Object.defineProperty(navigator, 'languages', { get: ()=>['en-US','en'] });
+  });
+
   const page = await ctx.newPage();
 
   // 1) Collecte Funding + Tenders (listes brutes)
@@ -473,10 +524,7 @@ async function enrichTenders(page, tenderUrls) {
         added++;
       }
       console.log(`  ${pageItems.length} trouvés (dont via calls: ${pageTopicsFromCalls.length}), ${added} nouveaux (total: ${all.length})`);
-      if (added === 0 && pageItems.length < 5) { // heuristique "vraiment" à la fin
-        console.log('  page quasi vide et aucun nouveau — fin pagination');
-        break;
-      }
+      if (added === 0 && pageItems.length < 5) { console.log('  page quasi vide et aucun nouveau — fin pagination'); break; }
     }
 
     const niceTitle = task.name === 'funding'
@@ -487,8 +535,7 @@ async function enrichTenders(page, tenderUrls) {
     collected[task.name] = all.map(x => x.url);
   }
 
-  // 2) ENRICHIR (aucun tri — tu feras les tris dans Google Sheets)
-  // Funding
+  // 2) ENRICHIR (aucun tri — Sheets fera le tri)
   const fundingUrls = Array.from(new Set(collected.funding || []));
   if (fundingUrls.length) {
     console.log(`\n[Funding] enrichissement de ${Math.min(fundingUrls.length, MAX_ENRICH_FUNDING)} topics…`);
@@ -498,7 +545,6 @@ async function enrichTenders(page, tenderUrls) {
     fs.writeFileSync('funding_enriched.csv', 'identifier,title,programme,destination,workProgrammePart,typeOfAction,topicStatus,url,callIdentifier,callUrl,plannedOpeningDate,nextDeadline,allDeadlines,daysToDeadline,totalBudget,projectBudgetMin,projectBudgetMax,fundingRate,eligibleCountries,consortiumSummary,trl,summaryShort,priorityScore,urgencyScore,keywordScore,generatedAt,rawRef\n', 'utf8');
   }
 
-  // Tenders
   const tendersUrls = Array.from(new Set(collected.tenders || []));
   if (tendersUrls.length) {
     console.log(`\n[Tenders] enrichissement de ${Math.min(tendersUrls.length, MAX_ENRICH_TENDERS)} avis…`);
@@ -508,7 +554,7 @@ async function enrichTenders(page, tenderUrls) {
     fs.writeFileSync('tenders_enriched.csv', 'reference,title,contractingAuthority,buyerCountry,buyerCity,procedureType,contractType,cpvTop,lotsCount,publicationDate,deadlineDate,daysToDeadline,estimatedValue,currency,documentsCount,noticeUrl,esubmissionLink,priorityScore,urgencyScore,valueScore,generatedAt\n', 'utf8');
   }
 
-  // 3) Index HTML rapide (info)
+  // 3) Index HTML sommaire
   const idxHtml = [
     `<!-- generated ${RUN_TS} -->`,
     '<h1>EU Funding & Tenders — Extractions</h1>',
