@@ -51,6 +51,8 @@ jobs:
           # CSV enrichis
           cp -f funding_enriched.csv docs/ 2>/dev/null || true
           cp -f tenders_enriched.csv docs/ 2>/dev/null || true
+          cp -f funding_raw.jsonl docs/ 2>/dev/null || true
+          cp -f tenders_raw.jsonl docs/ 2>/dev/null || true
           # Commit/push si changements
           git add docs || true
           git commit -m "update lists & enriched $(date -u +%FT%H:%M:%SZ)" || echo "no changes"
