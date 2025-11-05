@@ -1,6 +1,18 @@
 {
-  "generatedAt": "2025-11-04T05:29:53.024Z",
+  "generatedAt": "2025-11-05T05:30:35.253Z",
   "items": [
+    {
+      "title": "Cross-border renewable energy works projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-E-2026-CBRENEW-WORKS"
+    },
+    {
+      "title": "Cross-border renewable energy studies projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-E-2026-CBRENEW-STUDIES"
+    },
+    {
+      "title": "Selection of partners to carry out EUROPE DIRECT activities (2026-2030) in Belgium - 2",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ED-2025-BELGIUM-2-FPA"
+    },
     {
       "title": "Health: Data ingestion capacities and data services for the European Genomic Data Infrastructure in the European Health Data Space: data storage and processing capacity",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-DS-HEALTH-STORAGE"
@@ -86,10 +98,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-EXPLR-03"
     },
     {
-      "title": "DIGITAL & AUTOMATIC UP TO AUTOMATED TRAIN OPERATIONS",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA2-01"
-    },
-    {
       "title": "A SUSTAINABLE AND GREEN RAIL SYSTEM",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA4-01"
     },
@@ -98,12 +106,16 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA5-01"
     },
     {
-      "title": "NETWORK MANAGEMENT PLANNING AND CONTROL & MOBILITY MANAGEMENT IN A MULTIMODAL ENVIRONMENT AND DIGITAL ENABLERS",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA1-TT-01"
-    },
-    {
       "title": "INTELLIGENT & INTEGRATED ASSET MANAGEMENT",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA3-01"
+    },
+    {
+      "title": "DIGITAL & AUTOMATIC UP TO AUTOMATED TRAIN OPERATIONS",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA2-01"
+    },
+    {
+      "title": "NETWORK MANAGEMENT PLANNING AND CONTROL & MOBILITY MANAGEMENT IN A MULTIMODAL ENVIRONMENT AND DIGITAL ENABLERS",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA1-TT-01"
     },
     {
       "title": "Uptake of innovative cybersecurity solutions for SMEs",
@@ -246,40 +258,8 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-MARKETNET"
     },
     {
-      "title": "European slate development",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-DEVSLATE"
-    },
-    {
-      "title": "European VOD networks and operators",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-VODNET"
-    },
-    {
       "title": "ERC CONSOLIDATOR GRANTS",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2026-COG"
-    },
-    {
-      "title": "Real time monitoring of regulated and non-regulated emissions from all types of vessels and other port activities in order to enforce emission limits in waterfront cities",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D5-17"
-    },
-    {
-      "title": "Federated CCAM data exchange platform (CCAM Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-06"
-    },
-    {
-      "title": "Accelerated multi-physical and virtual testing for battery aging, reliability, and safety evaluation (Batt4EU Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-05"
-    },
-    {
-      "title": "Monitoring and Evaluation of the Societal Readiness Pilot",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-09"
-    },
-    {
-      "title": "Integration of human driving behaviour in the validation of CCAM systems (CCAM Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-04"
-    },
-    {
-      "title": "Predicting and avoiding road crashes based on Artificial Intelligence (AI) and big data",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-14"
     },
     {
       "title": "Accelerating freight transport and logistics digital innovation",
@@ -298,6 +278,14 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-03"
     },
     {
+      "title": "Accelerated multi-physical and virtual testing for battery aging, reliability, and safety evaluation (Batt4EU Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-05"
+    },
+    {
+      "title": "Reliable data and practices to measure and calculate transport emissions in multimodal transport chains",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-09"
+    },
+    {
       "title": "Integrating advanced materials, cell design and manufacturing development for high-performance batteries aimed at mobility (Batt4EU Partnership)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-04"
     },
@@ -306,8 +294,28 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-13"
     },
     {
-      "title": "Reliable data and practices to measure and calculate transport emissions in multimodal transport chains",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-09"
+      "title": "Real time monitoring of regulated and non-regulated emissions from all types of vessels and other port activities in order to enforce emission limits in waterfront cities",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D5-17"
+    },
+    {
+      "title": "Federated CCAM data exchange platform (CCAM Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-06"
+    },
+    {
+      "title": "Monitoring and Evaluation of the Societal Readiness Pilot",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-09"
+    },
+    {
+      "title": "Integration of human driving behaviour in the validation of CCAM systems (CCAM Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-04"
+    },
+    {
+      "title": "Predicting and avoiding road crashes based on Artificial Intelligence (AI) and big data",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-14"
+    },
+    {
+      "title": "Development of sustainable and design-to-cost batteries with (energy-)efficient manufacturing processes and based on advanced and safer materials (Batt4EU Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-01"
     },
     {
       "title": "Innovative construction and maintenance, with the use of new materials and techniques, for resilient and sustainable transport infrastructure",
@@ -316,10 +324,6 @@
     {
       "title": "Integrating inland waterway transport in smart shipping and multimodal logistics chains",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-10"
-    },
-    {
-      "title": "Development of sustainable and design-to-cost batteries with (energy-)efficient manufacturing processes and based on advanced and safer materials (Batt4EU Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-01"
     },
     {
       "title": "Call for proposals to pilot and implement cancer screening programmes for lung cancer",
@@ -464,10 +468,6 @@
     {
       "title": "Call for proposals to support the development of innovative medical countermeasures for chemical, biological, radiological and nuclear threats (HERA) - Detection and diagnosis",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EU4H-2025-HERA-PJ-1-c"
-    },
-    {
-      "title": "Empowering Truck Drivers – Revolutionizing European Logistics",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2025-EMPOWERTD"
     },
     {
       "title": "Setting up of Cross-Border Coordination Points",
