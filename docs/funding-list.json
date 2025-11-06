@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-05T05:30:35.253Z",
+  "generatedAt": "2025-11-06T05:28:49.378Z",
   "items": [
     {
       "title": "Cross-border renewable energy works projects",
@@ -54,10 +54,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-GENAI-PA"
     },
     {
-      "title": "Selection of hosting sites and fellows for EFSA's European Food Risk Assessment Fellowship (EU-FORA) Programme.",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2026-ENREL-01"
-    },
-    {
       "title": "European Digital Media Observatory Hubs",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-BESTUSE-TECH-EDMO-09-HUBS"
     },
@@ -72,6 +68,10 @@
     {
       "title": "Consolidation of the Network of European Digital Innovation Hubs (EDIHs with reinforced AI focus)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-EDIH-EU-EEA-09-CONSOLIDATION-STEP"
+    },
+    {
+      "title": "Selection of hosting sites and fellows for EFSA's European Food Risk Assessment Fellowship (EU-FORA) Programme.",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2026-ENREL-01"
     },
     {
       "title": "Perform EU",
@@ -202,24 +202,24 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/IMCAP-2026-INFOME"
     },
     {
-      "title": "Risk Assessment in Eastern Eu",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-04-Lot4"
+      "title": "MSCA Choose Europe for Science 2025",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2025-COFUND-02-01"
     },
     {
-      "title": "Risk Assessments in Southern Eu",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-02-Lot2"
+      "title": "Risk Assessment in Eastern Eu",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-04-Lot4"
     },
     {
       "title": "Risk Assessment in Western Eu",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-03-Lot3"
     },
     {
-      "title": "Risk Assessments in Northern Eu",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-01-Lot1"
+      "title": "Risk Assessments in Southern Eu",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-02-Lot2"
     },
     {
-      "title": "MSCA Choose Europe for Science 2025",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2025-COFUND-02-01"
+      "title": "Risk Assessments in Northern Eu",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-01-Lot1"
     },
     {
       "title": "Building a trustworthy social media sphere: countering disinformation on social media for young Europeans",
@@ -476,10 +476,6 @@
     {
       "title": "Support for the Ukrainian tech SMEs and startups",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2025-UKRAINIANTECH-01"
-    },
-    {
-      "title": "ERC SYNERGY GRANTS",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2026-SyG"
     },
     {
       "title": "DIGITAL-JU-CHIPS-2025-SG-SSOI",
