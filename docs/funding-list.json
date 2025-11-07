@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-06T05:28:49.378Z",
+  "generatedAt": "2025-11-07T05:28:27.447Z",
   "items": [
     {
       "title": "Cross-border renewable energy works projects",
@@ -14,44 +14,8 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ED-2025-BELGIUM-2-FPA"
     },
     {
-      "title": "Health: Data ingestion capacities and data services for the European Genomic Data Infrastructure in the European Health Data Space: data storage and processing capacity",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-DS-HEALTH-STORAGE"
-    },
-    {
-      "title": "Deployment of cutting-edge multi-modal AI-based solutions in medical imaging",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-SOLUTIONS-CANCER-STEP"
-    },
-    {
-      "title": "ELEVATE: European League of Advanced Digital Skills Academies",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SKILLS-09-LEAGUE-OF-ACADEMIES"
-    },
-    {
-      "title": "European Advanced Digital Skills Competitions",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SKILLS-09-COMPETITIONS"
-    },
-    {
-      "title": "Data Space for Manufacturing",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-DSM-AI-09-DS-MANUFACTUR-STEP"
-    },
-    {
-      "title": "Supporting the Network of National Contact Points (NCPs) of the Digital Europe Programme",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SUPPORT-09-NCP-NETWORK"
-    },
-    {
-      "title": "Secretariat of the European Connected and Autonomous Vehicle Alliance",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-ECAVA"
-    },
-    {
-      "title": "Health: Data ingestion capacities and data services for the European Genomic Data Infrastructure in the European Health Data Space: data tools",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-DS-HEALTH-TOOL"
-    },
-    {
-      "title": "Virtual worlds test beds",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-VIRTUAL-TESTBEDS-STEP"
-    },
-    {
-      "title": "Apply AI: GenAI for the public administrations",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-GENAI-PA"
+      "title": "Selection of hosting sites and fellows for EFSA's European Food Risk Assessment Fellowship (EU-FORA) Programme.",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2026-ENREL-01"
     },
     {
       "title": "European Digital Media Observatory Hubs",
@@ -70,16 +34,48 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-EDIH-EU-EEA-09-CONSOLIDATION-STEP"
     },
     {
-      "title": "Selection of hosting sites and fellows for EFSA's European Food Risk Assessment Fellowship (EU-FORA) Programme.",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2026-ENREL-01"
+      "title": "European Advanced Digital Skills Competitions",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SKILLS-09-COMPETITIONS"
+    },
+    {
+      "title": "Supporting the Network of National Contact Points (NCPs) of the Digital Europe Programme",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SUPPORT-09-NCP-NETWORK"
+    },
+    {
+      "title": "Secretariat of the European Connected and Autonomous Vehicle Alliance",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-ECAVA"
+    },
+    {
+      "title": "Health: Data ingestion capacities and data services for the European Genomic Data Infrastructure in the European Health Data Space: data tools",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-DS-HEALTH-TOOL"
+    },
+    {
+      "title": "Virtual worlds test beds",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-VIRTUAL-TESTBEDS-STEP"
+    },
+    {
+      "title": "Health: Data ingestion capacities and data services for the European Genomic Data Infrastructure in the European Health Data Space: data storage and processing capacity",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-DS-HEALTH-STORAGE"
+    },
+    {
+      "title": "Deployment of cutting-edge multi-modal AI-based solutions in medical imaging",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-SOLUTIONS-CANCER-STEP"
+    },
+    {
+      "title": "ELEVATE: European League of Advanced Digital Skills Academies",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SKILLS-09-LEAGUE-OF-ACADEMIES"
+    },
+    {
+      "title": "Data Space for Manufacturing",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-DSM-AI-09-DS-MANUFACTUR-STEP"
+    },
+    {
+      "title": "Apply AI: GenAI for the public administrations",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-GENAI-PA"
     },
     {
       "title": "Perform EU",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2026-PERFORM-EU"
-    },
-    {
-      "title": "REGIONAL RAIL SERVICES / INNOVATIVE RAIL SERVICES TO REVITALISE CAPILLARY LINES",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA6-01"
     },
     {
       "title": "STUDIES ON RAIL INDUSTRY 5.0",
@@ -98,6 +94,18 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-EXPLR-03"
     },
     {
+      "title": "REGIONAL RAIL SERVICES / INNOVATIVE RAIL SERVICES TO REVITALISE CAPILLARY LINES",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA6-01"
+    },
+    {
+      "title": "NETWORK MANAGEMENT PLANNING AND CONTROL & MOBILITY MANAGEMENT IN A MULTIMODAL ENVIRONMENT AND DIGITAL ENABLERS",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA1-TT-01"
+    },
+    {
+      "title": "DIGITAL & AUTOMATIC UP TO AUTOMATED TRAIN OPERATIONS",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA2-01"
+    },
+    {
       "title": "A SUSTAINABLE AND GREEN RAIL SYSTEM",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA4-01"
     },
@@ -110,24 +118,16 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA3-01"
     },
     {
-      "title": "DIGITAL & AUTOMATIC UP TO AUTOMATED TRAIN OPERATIONS",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA2-01"
-    },
-    {
-      "title": "NETWORK MANAGEMENT PLANNING AND CONTROL & MOBILITY MANAGEMENT IN A MULTIMODAL ENVIRONMENT AND DIGITAL ENABLERS",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2025-FA1-TT-01"
-    },
-    {
       "title": "Uptake of innovative cybersecurity solutions for SMEs",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-ECCC-2025-DEPLOY-CYBER-09-UPTAKE"
     },
     {
-      "title": "Regional Cable Hubs",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-ECCC-2025-DEPLOY-CYBER-09-CABLEHUBS"
-    },
-    {
       "title": "Cybersecure tools, technologies and services relying on AI",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-ECCC-2025-DEPLOY-CYBER-09-CYBERAI"
+    },
+    {
+      "title": "Regional Cable Hubs",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-ECCC-2025-DEPLOY-CYBER-09-CABLEHUBS"
     },
     {
       "title": "Coordinated preparedness testing and other preparedness actions",
@@ -254,6 +254,14 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-FILMOVE"
     },
     {
+      "title": "European slate development",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-DEVSLATE"
+    },
+    {
+      "title": "European VOD networks and operators",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-VODNET"
+    },
+    {
       "title": "Markets and Networking",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-MARKETNET"
     },
@@ -278,14 +286,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-03"
     },
     {
-      "title": "Accelerated multi-physical and virtual testing for battery aging, reliability, and safety evaluation (Batt4EU Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-05"
-    },
-    {
-      "title": "Reliable data and practices to measure and calculate transport emissions in multimodal transport chains",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-09"
-    },
-    {
       "title": "Integrating advanced materials, cell design and manufacturing development for high-performance batteries aimed at mobility (Batt4EU Partnership)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-04"
     },
@@ -294,12 +294,32 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-13"
     },
     {
+      "title": "Reliable data and practices to measure and calculate transport emissions in multimodal transport chains",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-09"
+    },
+    {
+      "title": "Innovative construction and maintenance, with the use of new materials and techniques, for resilient and sustainable transport infrastructure",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-07"
+    },
+    {
+      "title": "Integrating inland waterway transport in smart shipping and multimodal logistics chains",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-10"
+    },
+    {
+      "title": "Development of sustainable and design-to-cost batteries with (energy-)efficient manufacturing processes and based on advanced and safer materials (Batt4EU Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-01"
+    },
+    {
       "title": "Real time monitoring of regulated and non-regulated emissions from all types of vessels and other port activities in order to enforce emission limits in waterfront cities",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D5-17"
     },
     {
       "title": "Federated CCAM data exchange platform (CCAM Partnership)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-06"
+    },
+    {
+      "title": "Accelerated multi-physical and virtual testing for battery aging, reliability, and safety evaluation (Batt4EU Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-05"
     },
     {
       "title": "Monitoring and Evaluation of the Societal Readiness Pilot",
@@ -312,18 +332,6 @@
     {
       "title": "Predicting and avoiding road crashes based on Artificial Intelligence (AI) and big data",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-14"
-    },
-    {
-      "title": "Development of sustainable and design-to-cost batteries with (energy-)efficient manufacturing processes and based on advanced and safer materials (Batt4EU Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-01"
-    },
-    {
-      "title": "Innovative construction and maintenance, with the use of new materials and techniques, for resilient and sustainable transport infrastructure",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-07"
-    },
-    {
-      "title": "Integrating inland waterway transport in smart shipping and multimodal logistics chains",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D6-10"
     },
     {
       "title": "Call for proposals to pilot and implement cancer screening programmes for lung cancer",
