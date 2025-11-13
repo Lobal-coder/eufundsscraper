@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-12T05:29:48.111Z",
+  "generatedAt": "2025-11-13T05:29:38.100Z",
   "items": [
     {
       "title": "Cross-border renewable energy works projects",
@@ -8,6 +8,26 @@
     {
       "title": "Cross-border renewable energy studies projects",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-E-2026-CBRENEW-STUDIES"
+    },
+    {
+      "title": "Small-scale Partnerships",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SSCP"
+    },
+    {
+      "title": "Cooperation Partnerships",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SCP"
+    },
+    {
+      "title": "Not-for-profit European sport events",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SNCESE"
+    },
+    {
+      "title": "Capacity Building in the Field of Sport",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-CB"
+    },
+    {
+      "title": "Large scale not-for-profit European sport event",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-LSSNCESE"
     },
     {
       "title": "EIC STEP Scale Up",
@@ -502,106 +522,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-01"
     },
     {
-      "title": "Security of implementations of Post-Quantum Cryptography algorithms",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-05"
-    },
-    {
-      "title": "New advanced tools and processes for Operational Cybersecurity",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-02"
-    },
-    {
-      "title": "Integration of Post-Quantum Cryptography (PQC) algorithms into high-level protocols",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-06"
-    },
-    {
-      "title": "Generative AI for Cybersecurity applications",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-01"
-    },
-    {
-      "title": "Security evaluations of Post-Quantum Cryptography (PQC) primitives",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-04"
-    },
-    {
-      "title": "Privacy Enhancing Technologies",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-02-CS-ECCC-03"
-    },
-    {
-      "title": "Open topic for role of the human factor for the resilience of critical infrastructures",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-INFRA-02"
-    },
-    {
-      "title": "Open topic on Improving disaster risk management and governance to ensure self-sufficiency and sustainability of operations in support of enhanced resilience",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-02"
-    },
-    {
-      "title": "Open topic on efficient border surveillance and maritime security",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-01"
-    },
-    {
-      "title": "Open topic for improved preparedness for, response to and recovery from large-scale disruptions of critical infrastructures",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-INFRA-01"
-    },
-    {
-      "title": "Open topic on citizen and regional and/or local authorities' engagement in enhanced disaster risk awareness, including education, and preparedness",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-01"
-    },
-    {
-      "title": "Open topic on secured and facilitated crossing of external borders",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-02"
-    },
-    {
-      "title": "Open topic on better customs and supply chain security",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-BM-03"
-    },
-    {
-      "title": "Humanitarian demining / Unexploded Ordnance Disposal (UXO) of civil areas and unexploded ordnance risk education",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-04"
-    },
-    {
-      "title": "Data repository for security research and innovation",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-05"
-    },
-    {
-      "title": "Uptake Acceleration Services",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-02"
-    },
-    {
-      "title": "Accelerating uptake through open proposals for advanced SME innovation",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-04"
-    },
-    {
-      "title": "Open grounds for pre-commercial procurement of innovative security technologies",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-03"
-    },
-    {
-      "title": "Advancing autonomous systems and robotics for high-risk disaster response, strengthening disaster resilience in conflict-afflicted crisis zones",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-04"
-    },
-    {
-      "title": "Demand-led innovation for civil security through Pre-Commercial Procurement (PCP)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-06"
-    },
-    {
-      "title": "National Contact Points (NCPs) in the field of security and cybersecurity fostering the links with National Community building for Safe, Secure and Resilient Societies",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-SSRI-01"
-    },
-    {
-      "title": "Open topic on testing / validating tools, technologies and data used in cross-border prevention, preparedness and responses to climate extreme and geological events and chemical, biological or radiological emergency threats",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-DRS-03"
-    },
-    {
-      "title": "Open topic on prevention, detection and deterrence of various forms of crime and terrorism through an enhanced understanding of the related societal issues",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-02"
-    },
-    {
-      "title": "Open topic on modern information and forensic evidence analysis and on frontline policing",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-01"
-    },
-    {
-      "title": "Open topic on improved intelligence picture and enhanced prevention, detection and deterrence of various forms of organised crime",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2025-01-FCT-03"
-    },
-    {
       "title": "EIC pre-accelerator - Widening",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2025-02-ACCESS-01"
     },
@@ -640,50 +560,6 @@
     {
       "title": "Selection of partners to carry out EUROPE DIRECT activities",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ED-2025-PORTUGAL-FPA"
-    },
-    {
-      "title": "Fostering and maintaining the social fabric for the green transition in neighbourhoods",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-PARTICIPATION-02"
-    },
-    {
-      "title": "The impact of common space on neighbourhood communities",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-PARTICIPATION-01"
-    },
-    {
-      "title": "Network of neighbourhoods for innovative policies on gentrification",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-PARTICIPATION-04"
-    },
-    {
-      "title": "Bio-fabricated materials for sustainable and beautiful construction",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-REGEN-02"
-    },
-    {
-      "title": "Applying regenerative design to the built environment in neighbourhoods",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-REGEN-01"
-    },
-    {
-      "title": "Beautiful, sustainable and inclusive street furniture for the transformation of neighbourhoods",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-PARTICIPATION-03"
-    },
-    {
-      "title": "Sufficiency measures in the built environment",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-REGEN-03"
-    },
-    {
-      "title": "Renovating the built environment through design for adaptability and disassembly.",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-BUSINESS-01"
-    },
-    {
-      "title": "Bottom-up social entrepreneurship for the co-creation of neighbourhoods in line with the New European Bauhaus",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-BUSINESS-02"
-    },
-    {
-      "title": "Reverse local construction supply chains for the beautiful re-assembly of reclaimed construction products",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-BUSINESS-03"
-    },
-    {
-      "title": "Innovative approaches for sustainable, inclusive and beautiful social and affordable housing",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2025-01-REGEN-04"
     },
     {
       "title": "Boosting the transformation towards climate-neutral cities, the net-zero economy and open strategic autonomy through Pre-Commercial Procurement (PCP)",
