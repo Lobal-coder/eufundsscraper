@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-17T05:29:38.960Z",
+  "generatedAt": "2025-11-18T05:28:55.500Z",
   "items": [
     {
       "title": "Cross-border renewable energy works projects",
@@ -10,10 +10,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-E-2026-CBRENEW-STUDIES"
     },
     {
-      "title": "Small-scale Partnerships",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SSCP"
-    },
-    {
       "title": "Cooperation Partnerships",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SCP"
     },
@@ -22,12 +18,24 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SNCESE"
     },
     {
+      "title": "Small-scale Partnerships",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-SSCP"
+    },
+    {
       "title": "Capacity Building in the Field of Sport",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-CB"
     },
     {
+      "title": "Erasmus Mundus Joint Masters",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-PEX-EMJM-MOB"
+    },
+    {
       "title": "Erasmus Mundus Design Measures",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-EMJM-DESIGN"
+    },
+    {
+      "title": "European Universities",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-EUR-UNIV"
     },
     {
       "title": "Large scale not-for-profit European sport event",
@@ -571,11 +579,11 @@
     },
     {
       "title": "Alternative Fuels Infrastructure Facility - Unit Contributions",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-T-2024-AFIFGEN-UNITS"
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-T-2024-AFIFCOEN-UNITS"
     },
     {
       "title": "Alternative Fuels Infrastructure Facility - Unit Contributions",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-T-2024-AFIFCOEN-UNITS"
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-T-2024-AFIFGEN-UNITS"
     },
     {
       "title": "Alternative Fuels Infrastructure Facility - Co-funding Rate",
