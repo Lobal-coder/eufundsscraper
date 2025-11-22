@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-21T05:29:17.105Z",
+  "generatedAt": "2025-11-22T05:26:41.441Z",
   "items": [
     {
       "title": "Cross-border renewable energy studies projects",
@@ -88,10 +88,6 @@
     {
       "title": "Deployment of cutting-edge multi-modal AI-based solutions in medical imaging",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-SOLUTIONS-CANCER-STEP"
-    },
-    {
-      "title": "Health: Data ingestion capacities and data services for the European Genomic Data Infrastructure in the European Health Data Space: data storage and processing capacity",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-DS-HEALTH-STORAGE"
     },
     {
       "title": "Collaboration platform for the European connected and autonomous vehicle of the future",
@@ -238,12 +234,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-04-Lot4"
     },
     {
-      "title": "Risk Assessments in Southern Eu",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-02-Lot2"
-    },
-    {
       "title": "Risk Assessment in Western Eu",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-03-Lot3"
+    },
+    {
+      "title": "Risk Assessments in Southern Eu",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2025-BIOHAW-04-02-Lot2"
     },
     {
       "title": "Risk Assessments in Northern Eu",
@@ -266,16 +262,20 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-MARKETNET"
     },
     {
-      "title": "European co-development",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-CODEV"
-    },
-    {
       "title": "Innovative tools and business models",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-INNOVBUSMOD"
     },
     {
       "title": "TV and online content Fiction projects",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-TVONLINE-3"
+    },
+    {
+      "title": "TV and online content Documentary projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-TVONLINE-2"
+    },
+    {
+      "title": "European co-development",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-CODEV"
     },
     {
       "title": "European slate development",
@@ -288,10 +288,6 @@
     {
       "title": "Video games and immersive content development",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-DEVVGIM"
-    },
-    {
-      "title": "TV and online content Documentary projects",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-TVONLINE-2"
     },
     {
       "title": "ERC CONSOLIDATOR GRANTS",
