@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-01-06T05:34:47.596Z",
+  "generatedAt": "2026-01-07T05:34:39.581Z",
   "items": [
+    {
+      "title": "Thematic communication services",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7739f036-a8e0-43a4-9d6f-cae9b2d1bae8-CN"
+    },
     {
       "title": "Consolidated Tape Provider selection procedure - OTC derivatives",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/bb8468e7-9d34-4482-9d29-76b7aad15ee6-CN"
@@ -224,10 +228,6 @@
     {
       "title": "Supervision of Works and FOPIP for Construction Works for Wastewater Collection and Treatment System in the City of Čačak",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/3c4283fe-e2c9-445a-aad0-060ea2ffe354-CN"
-    },
-    {
-      "title": "Consultancy services to carry out a data request and validation for the gas Transmission System Operators (TSOs) efficiency benchmark of the European Union Agency for the Cooperation of Energy Regulators",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/b604fa4c-5d4a-4847-8d82-344a644452a8-EXA"
     },
     {
       "title": "Provision of training services for the EUIPO Mediation Centre",
@@ -598,16 +598,16 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1af5b78b-106c-4f4e-af28-76d2953080cc-CN"
     },
     {
-      "title": "Photovoltaic Installation JRC-Geel",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/d8da75b0-ec52-4e10-84e8-32786bb72755-CN"
-    },
-    {
       "title": "Provision of Training Brokerage Services",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4ed2df83-a69c-43f7-9087-b85a9982e5d8-CN"
     },
     {
       "title": "Collection and transfer of the payments of application fees for travel authorisations under ETIAS (European Travel Information and Authorisation System)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/208d51f6-c6b0-418b-b4fa-421ea287d870-CN"
+    },
+    {
+      "title": "Photovoltaic Installation JRC-Geel",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/d8da75b0-ec52-4e10-84e8-32786bb72755-CN"
     },
     {
       "title": "EMODnet Data Ingestion service",
@@ -850,16 +850,16 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/80633701-c7ce-42cd-ac46-e125721c7039-CN"
     },
     {
-      "title": "CLMS Sentinel-2 Mosaic On-Demand",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/595a871b-f61b-4acd-b49a-8601bcddcf7b-PIN"
-    },
-    {
       "title": "Technical support for the development of the Animal Welfare Data Hub",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/75be3743-576f-4d09-b2c5-5f06d57b2998-CN"
     },
     {
       "title": "Transport lent de la valise diplomatique",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4f9d3168-7bdb-4286-a92c-f0bb99c828fc-EXA"
+    },
+    {
+      "title": "CLMS Sentinel-2 Mosaic On-Demand",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/595a871b-f61b-4acd-b49a-8601bcddcf7b-PIN"
     },
     {
       "title": "Developing, organizing and delivering of training activities under the EFSA European Food Risk Assessment Fellowship Programme.",
@@ -872,10 +872,6 @@
     {
       "title": "UCA 25/026 - Rental of tents",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/78f7c1ee-c9a4-4254-9193-eb96a7b163f6-CN"
-    },
-    {
-      "title": "EUSPA/OP/14/25 - Galileo Reference Centre (GRC) Guarding, Security, and Safety Monitoring (GSM) Services in Noordwijk (Netherlands)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/f3b0278f-985c-4ace-b413-17ec23a5c787-CN"
     },
     {
       "title": "Portable hyperspectral spectrometer to be used for the collection of in situ radiometric measurements above water.",
@@ -1034,10 +1030,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/47eebd77-2dcd-4cd8-80a6-842be9c650fd-PIN"
     },
     {
-      "title": "Study on the expected investment return of commercial digital submarine cables to establish a profitability benchmark for CEF Digital",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7943f921-ce2a-478e-a79f-36c3049c70d8-EXA"
-    },
-    {
       "title": "Technical facility management services",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1e69aec0-d9c8-4c56-8caa-136c7253ac2c-PIN"
     },
@@ -1056,6 +1048,10 @@
     {
       "title": "Facilité pour des études et des appuis à la mise en place des projets de production de stockage de transport de gestion des réseaux et de gestion du marché régional de l'électricité",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/71316f8e-c90c-424f-9b16-624f62c3d614-CN"
+    },
+    {
+      "title": "Study on the expected investment return of commercial digital submarine cables to establish a profitability benchmark for CEF Digital",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7943f921-ce2a-478e-a79f-36c3049c70d8-EXA"
     },
     {
       "title": "Preventief en correctief onderhoud van binnen zonwering systemen van het Gemeenschappelijk Centrum voor Onderzoek te Petten'",
@@ -1160,10 +1156,6 @@
     {
       "title": "Supply of Passive Autocatalytic Hydrogen Recombiners and Hydrogen Monitoring System for Armenian Nuclear Power Plant Unit 2",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9ca296e7-066a-4f3a-9a8a-c6efdf67d898-PIN"
-    },
-    {
-      "title": "Laos EU Strategic Communication Facility",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/53b1408d-0ef4-4e20-a0a0-0b53804961cf-CN"
     },
     {
       "title": "EU Customs Data Hub for e-Commerce",
@@ -1592,10 +1584,6 @@
     {
       "title": "Facade renovation and insulation Building 020",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7016bc85-8519-4ac8-9731-438c4e3840b7-EXA"
-    },
-    {
-      "title": "EUSPA/OP/14/25 - Galileo Reference Centre (GRC) Guarding, Security, and Safety Monitoring (GSM) Services for Noordwijk (Netherlands)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/f3b0278f-985c-4ace-b413-17ec23a5c787-PIN"
     },
     {
       "title": "Provision of ICT Support Services to the European Union Agency for the Space Programme",
