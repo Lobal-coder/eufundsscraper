@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T06:03:50.690Z",
+  "generatedAt": "2026-03-20T06:00:20.432Z",
   "items": [
     {
       "title": "Industrial processes and equipment for innovative, reliable and scalable tandem technologies (EUPI-PV Partnership)",
@@ -1570,16 +1570,48 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-CSA-01"
     },
     {
-      "title": "Organisation of high-quality master, post-graduate or bachelor courses offering conference interpreter training in Ukrainian, Montenegrin, and Albanian (2026-2027)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EP-LINC-SUBV-2026-CONF-INT-03"
+      "title": "Strengthening a European user facility for nuclear research",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-04"
+    },
+    {
+      "title": "Enhancing the European nuclear competence area",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-03"
+    },
+    {
+      "title": "Co-funded European partnership for research in nuclear materials",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-08"
+    },
+    {
+      "title": "Towards a European production of stable isotopes for novel nuclear medicine therapies (SAMIRA/ERVI)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-05"
+    },
+    {
+      "title": "Support for the Sustainable Nuclear Energy Technology Platform to address cross-sectoral challenges and non-power applications of ionising radiation",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-06"
+    },
+    {
+      "title": "European Partnership for research in radiation protection and detection of ionising radiation",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-09"
+    },
+    {
+      "title": "Safety of SMRs, advanced and innovative nuclear reactors and fuels",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-02"
+    },
+    {
+      "title": "Safety of operating nuclear power plants and research reactors",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-01"
+    },
+    {
+      "title": "Chips Diplomacy Support Initiative",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-CHIPS-DSI"
     },
     {
       "title": "Organisation of high-quality master or post-graduate courses in conference interpreting 2026-2027",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EP-LINC-SUBV-2026-CONF-INT-01"
     },
     {
-      "title": "Chips Diplomacy Support Initiative",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-CHIPS-DSI"
+      "title": "Organisation of high-quality master, post-graduate or bachelor courses offering conference interpreter training in Ukrainian, Montenegrin, and Albanian (2026-2027)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EP-LINC-SUBV-2026-CONF-INT-03"
     },
     {
       "title": "Supporting excellence, cooperation or research in conference interpreting training 2026-2027",
@@ -2838,12 +2870,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2026-NRCP"
     },
     {
-      "title": "A European HPC-centric Benchmark Framework",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EUROHPC-JU-2024-BENCHMARK-05"
-    },
-    {
       "title": "A European Benchmarking Framework for hybrid quantum-classical computing",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EUROHPC-JU-2024-BENCHMARK-05-03"
+    },
+    {
+      "title": "A European HPC-centric Benchmark Framework",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EUROHPC-JU-2024-BENCHMARK-05"
     },
     {
       "title": "Strengthening the CER framework",
@@ -2958,14 +2990,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-Chips-2025-CSA-LFA"
     },
     {
-      "title": "Leadership Development programme for higher education institutions’ leaders",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2025-PI-FORWARD-HE-LD"
-    },
-    {
-      "title": "European Degree Pathway Projects",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2025-PI-FORWARD-HE-EDPP"
-    },
-    {
       "title": "Volunteering in support of humanitarian aid operations",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ESC-HUMAID-2026-VOLUN"
     },
@@ -3012,10 +3036,6 @@
     {
       "title": "Standalone projects",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/JTM-2026-PSLF-STANDALONE-PROJECTS"
-    },
-    {
-      "title": "CAPACITY BUILDING CAP2B",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/I3-2026-CAP2B"
     },
     {
       "title": "Films on the Move",
