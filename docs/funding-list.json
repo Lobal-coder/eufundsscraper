@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T06:05:46.789Z",
+  "generatedAt": "2026-03-25T06:07:14.141Z",
   "items": [
     {
       "title": "Industrial processes and equipment for innovative, reliable and scalable tandem technologies (EUPI-PV Partnership)",
@@ -1570,6 +1570,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-02"
     },
     {
+      "title": "Agri-food Biotech Scaling-up",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/SMP-COSME-2026-BIOAGRIFOOD"
+    },
+    {
       "title": "Strengthening a European user facility for nuclear research",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-04"
     },
@@ -1596,10 +1600,6 @@
     {
       "title": "European Partnership for research in radiation protection and detection of ionising radiation",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-09"
-    },
-    {
-      "title": "Safety of operating nuclear power plants and research reactors",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-01"
     },
     {
       "title": "Chips Diplomacy Support Initiative",
@@ -2868,14 +2868,6 @@
     {
       "title": "Call for proposals to National Roma Contact Points",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2026-NRCP"
-    },
-    {
-      "title": "A European Benchmarking Framework for hybrid quantum-classical computing",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EUROHPC-JU-2024-BENCHMARK-05-03"
-    },
-    {
-      "title": "A European HPC-centric Benchmark Framework",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EUROHPC-JU-2024-BENCHMARK-05"
     },
     {
       "title": "Strengthening the CER framework",
