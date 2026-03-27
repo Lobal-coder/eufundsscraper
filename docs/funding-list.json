@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T06:15:48.207Z",
+  "generatedAt": "2026-03-27T06:18:21.563Z",
   "items": [
     {
       "title": "Industrial processes and equipment for innovative, reliable and scalable tandem technologies (EUPI-PV Partnership)",
@@ -64,6 +64,18 @@
     {
       "title": "Advancing bio-printing of living cells for regenerative medicine",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-03-TOOL-02"
+    },
+    {
+      "title": "Reinforcing synergies between experimentation spaces and innovation procurement",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIE-2027-01-CONNECT-02"
+    },
+    {
+      "title": "Enhancing the involvement of philanthropic organisations in innovation ecosystems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIE-2027-01-CONNECT-03"
+    },
+    {
+      "title": "Startup Europe",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIE-2027-01-CONNECT-01"
     },
     {
       "title": "MSCA Doctoral Networks 2027",
@@ -1582,24 +1594,20 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-05"
     },
     {
-      "title": "Support for the Sustainable Nuclear Energy Technology Platform to address cross-sectoral challenges and non-power applications of ionising radiation",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-06"
-    },
-    {
-      "title": "Enhancing the European nuclear competence area",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-03"
-    },
-    {
       "title": "Co-funded European partnership for research in nuclear materials",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-08"
     },
     {
-      "title": "Safety of SMRs, advanced and innovative nuclear reactors and fuels",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-02"
-    },
-    {
       "title": "European Partnership for research in radiation protection and detection of ionising radiation",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-09"
+    },
+    {
+      "title": "Safety of operating nuclear power plants and research reactors",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-01"
+    },
+    {
+      "title": "Safety of SMRs, advanced and innovative nuclear reactors and fuels",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-01-02"
     },
     {
       "title": "Setting up of Cross-Border Coordination Points",
@@ -2314,10 +2322,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2026-GE-GENDER-STEREO"
     },
     {
-      "title": "PPPA-2026-Game-Changing Innovation for European Launch Solutions",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-LAUNCHERS-GAMECHANGING"
-    },
-    {
       "title": "SNS Operations and Output optimisation",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2026-STREAM-CSA-01"
     },
@@ -2336,6 +2340,10 @@
     {
       "title": "SNS experimental infrastructure",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-SNS-2026-STREAM-C-01"
+    },
+    {
+      "title": "PPPA-2026-Game-Changing Innovation for European Launch Solutions",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-LAUNCHERS-GAMECHANGING"
     },
     {
       "title": "AGRIP-MULTI-2026-IM-FRESH-FV",
@@ -2450,10 +2458,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-04-DIGITAL-EMERGING-11"
     },
     {
-      "title": "New or enhanced Innovative Advanced Materials (IAM) enabled sensing functionality (RIA)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-05-MAT-PROD-25"
-    },
-    {
       "title": "Boosting innovation through better integration of fragmented health R&I efforts",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-IHI-2026-12-SINGLE-STAGE-02"
     },
@@ -2494,16 +2498,20 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-04-DATA-03"
     },
     {
-      "title": "Next-Generation AI Agents for Real-World Applications in the Apply AI sectors (RIA) (Partnership in AI, Data and Robotics)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-05-DIGITAL-EMERGING-02"
+      "title": "Standards for Quantum Technologies – Coordination and Support Action (CSA)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-04-DIGITAL-EMERGING-12"
+    },
+    {
+      "title": "New or enhanced Innovative Advanced Materials (IAM) enabled sensing functionality (RIA)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-05-MAT-PROD-25"
     },
     {
       "title": "Apply AI: Next-Generation Agile and Intelligent Robotics Platforms for Industrial and Service Applications (Partnership in AI, Data and Robotics) (RIA)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-05-DIGITAL-EMERGING-03"
     },
     {
-      "title": "Standards for Quantum Technologies – Coordination and Support Action (CSA)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-04-DIGITAL-EMERGING-12"
+      "title": "Next-Generation AI Agents for Real-World Applications in the Apply AI sectors (RIA) (Partnership in AI, Data and Robotics)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-05-DIGITAL-EMERGING-02"
     },
     {
       "title": "Enhancing integrated research and healthcare in sub-Saharan Africa through digital innovation and Artificial Intelligence",
@@ -2628,10 +2636,6 @@
     {
       "title": "Twinning",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2026-02-WIDENING-01"
-    },
-    {
-      "title": "HORIZON-EIC-2026-BAS-01-ECOSYSTEM",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-BAS-01-ECOSYSTEM"
     },
     {
       "title": "Optimise the usage of resources in a circular economy (RIA) (Processes4Planet and Clean Steel partnerships)",
@@ -2918,46 +2922,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-PEX-COVE"
     },
     {
-      "title": "Capacity building in VET in Neighbourhood East",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-CB-VET-NE"
-    },
-    {
-      "title": "Capacity building in VET in Western Balkans",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-CB-VET-WB"
-    },
-    {
-      "title": "Capacity building in VET in South Mediterranean Countries",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-CB-VET-SMC"
-    },
-    {
-      "title": "Capacity building in VET in Sub-Saharan Africa",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-CB-VET-SSA"
-    },
-    {
-      "title": "Capacity building in VET in Caribbean",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-CB-VET-CA"
-    },
-    {
-      "title": "Erasmus+ Virtual Exchanges in Neighbourhood East",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-VIRT-EXCH-NE"
-    },
-    {
-      "title": "Erasmus+ Virtual Exchanges in Western Balkans",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-VIRT-EXCH-WB"
-    },
-    {
-      "title": "Capacity building in VET in Latin America",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-CB-VET-LA"
-    },
-    {
-      "title": "Erasmus+ Virtual Exchanges in Sub-Saharan Africa",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-VIRT-EXCH-SSA"
-    },
-    {
-      "title": "Erasmus+ Virtual Exchanges in South Mediterranean Countries",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-VIRT-EXCH-SMC"
-    },
-    {
       "title": "Innovation Fund 2025 Net Zero Technologies - Clean-tech manufacturing",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/INNOVFUND-2025-NZT-CLEAN-TECH-MANUFACTURING"
     },
@@ -3034,12 +2998,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CROSS-2026-INNOVLAB"
     },
     {
-      "title": "Framework Loans",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/JTM-2026-PSLF-FRAMEWORK-LOANS"
-    },
-    {
       "title": "Standalone projects",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/JTM-2026-PSLF-STANDALONE-PROJECTS"
+    },
+    {
+      "title": "Framework Loans",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/JTM-2026-PSLF-FRAMEWORK-LOANS"
     },
     {
       "title": "Films on the Move",
