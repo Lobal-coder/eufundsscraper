@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T06:56:31.726Z",
+  "generatedAt": "2026-03-31T06:20:03.023Z",
   "items": [
     {
       "title": "Industrial processes and equipment for innovative, reliable and scalable tandem technologies (EUPI-PV Partnership)",
@@ -1062,6 +1062,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2027-01-01"
     },
     {
+      "title": "Support for the functioning of SEAPs, including for the purpose of establishing, managing and maintaining defence industrial readiness pools",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2026-2027-FNLC-SA-SEAP"
+    },
+    {
       "title": "Additional activities for the European Partnership of Agriculture of Data",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2026-04-GOVERNANCE-01"
     },
@@ -1084,6 +1088,34 @@
     {
       "title": "Improved system design for innovative PV applications (EUPI-PV Partnership)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-11-D3-14"
+    },
+    {
+      "title": "C5ISR and other space-related products",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2027-FNLC-CPA-C5ISRS"
+    },
+    {
+      "title": "Ground and naval platforms and systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2027-FNLC-CPA-GNPS"
+    },
+    {
+      "title": "Key electronic components",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2027-LS-IRA-KEC"
+    },
+    {
+      "title": "Platforms and end-products",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2027-LS-IRA-PE"
+    },
+    {
+      "title": "Air and missile defence systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2027-FNLC-CPA-AMDS"
+    },
+    {
+      "title": "Unmanned systems and counter-unmanned systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-USI-2027-LS-IRA-CUXS"
+    },
+    {
+      "title": "Missiles, ammunition and bombs",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-USI-2026-LS-IRA-MAB"
     },
     {
       "title": "From lab to market: Strengthening the role of Technology Transfer Offices in bringing knowledge to the market",
@@ -1390,6 +1422,18 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NEB-2026-01-PARTICIPATION-01"
     },
     {
+      "title": "Energetic components",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2026-LS-IRA-EC"
+    },
+    {
+      "title": "Counter-drone systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2026-FNLC-CPA-CDS"
+    },
+    {
+      "title": "Ammunition, missiles and other explosive weapons",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2026-FNLC-CPA-AMEW"
+    },
+    {
       "title": "European Film sales agent",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-FILMSALES"
     },
@@ -1494,6 +1538,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-MEDIA-FREEDOM-HUB"
     },
     {
+      "title": "Citizen facing European TV and Video News Portal for Streaming, Search and Translation of European TV and video news and political documentaries produced or transmitted by accredited public and private media in Member States",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-CITIZEN-PLATFORM-TV"
+    },
+    {
       "title": "Non-thematic research actions by SMEs and research organisations",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-RA-SMERO-NT"
     },
@@ -1522,24 +1570,24 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-06"
     },
     {
-      "title": "Operational stakeholders’ group to support the deployment of Clean Aviation aircraft concepts and technologies",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-CSA-01"
+      "title": "Demonstration of advanced FC propulsion techno-bricks for a fully electric hydrogen fuel cell powered aircraft",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-HPA-01"
     },
     {
-      "title": "Demonstration of an Ultra-Efficient Rear Fuselage and Empennage and Its Integrated Industrial System enabling EIS2035 for the SMR Aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-SMR-02"
+      "title": "Demonstration and Validation of icing Certification Methodologies compatible with EIS2035 for the SMR and REG Aircraft",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-TRA-01"
     },
     {
-      "title": "Advanced noise-reducing technologies for propulsion systems of next generation Ultra-efficient SMR aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-03"
+      "title": "Demonstration of advanced airframe for ultra-efficient regional aircraft",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-REG-01"
     },
     {
-      "title": "Innovative light weight and reliable liquid hydrogen tank",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-07"
+      "title": "Demonstration of an integrated hydrogen fuel system for a fully electric hydrogen fuel cell powered aircraft",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-HPA-02"
     },
     {
-      "title": "Demonstration of an Optimized System Platform for Ultra-efficient SMR Aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-SMR-01"
+      "title": "Cryo-cooled power electronics for a fully electric hydrogen fuel cell powered aircraft",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-05"
     },
     {
       "title": "Key Technologies for Loads Control Lidar for Ultra-efficient SMR aircraft",
@@ -1550,36 +1598,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-HPA-03"
     },
     {
-      "title": "Demonstration and Validation of icing Certification Methodologies compatible with EIS2035 for the SMR and REG Aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-TRA-01"
-    },
-    {
-      "title": "Demonstration of an integrated hydrogen fuel system for a fully electric hydrogen fuel cell powered aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-HPA-02"
-    },
-    {
-      "title": "Demonstration of advanced airframe for ultra-efficient regional aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-REG-01"
-    },
-    {
-      "title": "Demonstration of advanced FC propulsion techno-bricks for a fully electric hydrogen fuel cell powered aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-HPA-01"
-    },
-    {
-      "title": "Cryo-cooled power electronics for a fully electric hydrogen fuel cell powered aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-05"
-    },
-    {
-      "title": "Demonstration of low power Ice Protection System technology",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-01"
+      "title": "Ground Demonstration of Hybrid-Electric Propulsion Architectures for the Ultra-efficient SMR aircraft",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-SMR-03"
     },
     {
       "title": "Demonstration of a hydrogen distribution system for a direct hydrogen combustion propulsion aircraft",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-HPA-04"
-    },
-    {
-      "title": "Ground Demonstration of Hybrid-Electric Propulsion Architectures for the Ultra-efficient SMR aircraft",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-SMR-03"
     },
     {
       "title": "Hydrogen powered aircraft concepts and key technologies integration and impact assessment",
@@ -1588,6 +1612,10 @@
     {
       "title": "Demonstration of cabin acoustic optimization technology",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-02"
+    },
+    {
+      "title": "Demonstration of low power Ice Protection System technology",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-01"
     },
     {
       "title": "Agri-food Biotech Scaling-up",
@@ -2150,34 +2178,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-06-01"
     },
     {
-      "title": "Integration of control & monitoring tools and strategies for improved Fuel Cell System durability & reliability",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-03-01"
-    },
-    {
-      "title": "Next generation of reversible proton conducting ceramic cells and stacks for efficient energy applications at ≥1 kW scale",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-04-01"
-    },
-    {
-      "title": "Innovative business models advancing renewable electrolysis integration in industry",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-04"
-    },
-    {
-      "title": "Affordable, Safe and Sustainable aboveground medium to large GH2 storage",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-02-01"
-    },
-    {
-      "title": "Fuel-flexible gas turbine combustion technology for clean and efficient ammonia firing",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-04-03"
-    },
-    {
-      "title": "Scalable and high efficiency materials and reactors for direct solar hydrogen production",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-06"
-    },
-    {
-      "title": "Small-scale Hydrogen Valley",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-06-02"
-    },
-    {
       "title": "Public datasets of technologies along the hydrogen value chain for life cycle (sustainability) assessment",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-05-01"
     },
@@ -2188,6 +2188,54 @@
     {
       "title": "Sustainable hydrogen production from renewable gases and biogenic waste sources through innovative modular reactor design, process intensification and integration",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-05"
+    },
+    {
+      "title": "Innovative business models advancing renewable electrolysis integration in industry",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-04"
+    },
+    {
+      "title": "Fuel-flexible gas turbine combustion technology for clean and efficient ammonia firing",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-04-03"
+    },
+    {
+      "title": "Scalable and high efficiency materials and reactors for direct solar hydrogen production",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-06"
+    },
+    {
+      "title": "Affordable, Safe and Sustainable aboveground medium to large GH2 storage",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-02-01"
+    },
+    {
+      "title": "Improved components and tools to increase the safety of electrolysers",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-03"
+    },
+    {
+      "title": "Components Development and Experimental Testing for an Onboard Liquid Hydrogen Supply and Conditioning System in High-Power Fuel Cell Aviation Applications",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-03-02"
+    },
+    {
+      "title": "Demonstration of rSOC operation for local grid-connected hydrogen production and utilisation",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-04-02"
+    },
+    {
+      "title": "Cost-efficient and reliable designs towards gigawatt-scale electrolytic hydrogen production plants",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-02"
+    },
+    {
+      "title": "Small-scale Hydrogen Valley",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-06-02"
+    },
+    {
+      "title": "Next generation of reversible proton conducting ceramic cells and stacks for efficient energy applications at ≥1 kW scale",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-04-01"
+    },
+    {
+      "title": "Demonstrating in-line inspection (ILI) to monitor cracks assuring compatibility for operation with hydrogen in new and re-purposed offshore natural gas pipelines",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-02-02"
+    },
+    {
+      "title": "Integration of control & monitoring tools and strategies for improved Fuel Cell System durability & reliability",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-03-01"
     },
     {
       "title": "Submarine Cable Repair Capacities – Pilot Works",
