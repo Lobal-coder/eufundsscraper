@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:19:45.298Z",
+  "generatedAt": "2026-04-14T06:56:18.465Z",
   "items": [
     {
       "title": "Industrial processes and equipment for innovative, reliable and scalable tandem technologies (EUPI-PV Partnership)",
@@ -1678,10 +1678,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-FTA-03"
     },
     {
-      "title": "Hydrogen powered aircraft concepts and key technologies integration and impact assessment",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEAN-AVIATION-2026-04-ACI-01"
-    },
-    {
       "title": "Agri-food Biotech Scaling-up",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/SMP-COSME-2026-BIOAGRIFOOD"
     },
@@ -2050,10 +2046,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ACC-AIRDEF-EATMI"
     },
     {
-      "title": "Development and validation of models predicting flow-related underwater noise",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-UWW-FUWN"
-    },
-    {
       "title": "Multidomain sensors demonstrator and test",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SENS-MSDT"
     },
@@ -2076,6 +2068,10 @@
     {
       "title": "Non-thematic development actions by SMEs",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DA-SME-NT"
+    },
+    {
+      "title": "Development and validation of models predicting flow-related underwater noise",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-UWW-FUWN"
     },
     {
       "title": "AI-based tactical situational awareness using swarms of small robots and drones – participation in a technological challenge\"",
@@ -2556,6 +2552,10 @@
     {
       "title": "Open Internet Stack Sovereign Solutions (RIA)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-04-DATA-02"
+    },
+    {
+      "title": "Advanced Local Digital Twins using AI for Early Warning and Preparedness (IA)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-04-DIGITAL-EMERGING-09"
     },
     {
       "title": "Standards for Quantum Technologies – Coordination and Support Action (CSA)",
