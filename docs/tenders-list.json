@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T09:32:15.172Z",
+  "generatedAt": "2026-09-12T09:11:14.851Z",
   "items": [
     {
       "title": "ENEST regional communication programme (2027-2031)",
@@ -16,6 +16,22 @@
     {
       "title": "Provision of ICT services: Project Management Support, Plone Maintenance and Microsoft Maintenance and Developments",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/d307cb87-9c3a-4f71-82ce-21441f98284b-CN"
+    },
+    {
+      "title": "Transport Poverty Hub Website and Dashboard: Design and Development of a Geospatial Dashboard and Website to Identify and Monitor Transport Poverty Indicators in the EU",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c730f6a3-7387-438a-951f-169c3fcb8fa4-EXA"
+    },
+    {
+      "title": "Legal Services under the EU Cybersecurity Reserve",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/8f61ac8d-8026-4f39-9656-bd032f6e4ab1-EXA"
+    },
+    {
+      "title": "Fourniture de PC portables et écrans pour l'OCVV",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/6466f1fe-2fc5-45b2-841d-da4c9943ce85-EXA"
+    },
+    {
+      "title": "Study on circular economy activities in the EU",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/51b5bd2a-bf95-4d9a-9509-dfc1b5f5e6b5-EXA"
     },
     {
       "title": "Supply and Maintenance of a GC-MS/MS-QQQ",
@@ -122,24 +138,16 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/f798ecab-b545-4d0e-a75f-58c262b62f9d-PIN"
     },
     {
+      "title": "Manual on the changes between ESA 2010 and ESA 2030",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c725d51e-77e6-425c-b7f4-345dc77c4187-EXA"
+    },
+    {
       "title": "Prestations d'assistance en gestion de sinistres",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9d7bffb6-b93d-4348-9b77-0745567b212a-CN"
     },
     {
       "title": "Managing Tourism Development in the EU: Funding Frameworks and Indicators for Sustainable Tourism",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4b9b51b1-2929-4ca8-aa44-34701ffa2c0d-EXA"
-    },
-    {
-      "title": "Manual on the changes between ESA 2010 and ESA 2030",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c725d51e-77e6-425c-b7f4-345dc77c4187-EXA"
-    },
-    {
-      "title": "Development, Implementation, Maintenance and Operation of financial IT Systems",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/966981b6-1f69-46a6-b4c9-17a2079928ba-CN"
-    },
-    {
-      "title": "Financial and Accounting Support",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/379d3d36-9c4a-4ee5-bdb1-9e8e7b634a9d-CN"
     },
     {
       "title": "Assessment of the Performance and Effectiveness of Farmer Cooperatives and Farmer Groups in the Cocoa Sectors of Ghana and Ivory Coast",
@@ -196,10 +204,6 @@
     {
       "title": "Subscriptions to specialist periodicals, in all formats, and other electronic resources for 2027",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c88f6e7d-eeef-4539-9522-c2c05e3c0fbd-EXA"
-    },
-    {
-      "title": "Monitoring and analysis services of the Greek media",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/6870d01e-9665-41b9-98dc-6033a7188875-CN"
     },
     {
       "title": "Development and assembly of a new motion control system for one of the neutron diffractometers at the High Flux Reactor",
@@ -318,16 +322,8 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7d2c262b-2f2c-491a-bd0a-296aa6d042de-CN"
     },
     {
-      "title": "Supply, Installation and maintenance of a PEM Electrolyser for Hydrogen Production at JRC Ispra",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a2c207c5-43fe-42dc-9a1b-05e03990752c-CN"
-    },
-    {
       "title": "Defining the next steps for collaboration in SDV, Data Pooling and Autonomous Driving in the European Connected and Autonomous Vehicle Alliance (ECAVA)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/ce7fbbcd-52a4-4d0f-ba69-8ebb90c5b629-EXA"
-    },
-    {
-      "title": "Study on transformative innovation capabilities and enabling conditions for sustainable competitiveness",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/09a52480-3303-41d9-86d8-04519ee1faba-EXA"
     },
     {
       "title": "Asistencia Técnica para la implementación de la Agenda de inversiones Global Gateway en Guatemala – Global Gateway Facility Guatemala",
@@ -336,6 +332,14 @@
     {
       "title": "Pilot Project on Multi-layered Airborne Capabilities for Situational Awareness - HAPS Services for Border Surveillance",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/022a474b-19c5-41bb-a86b-fd644676334c-CN"
+    },
+    {
+      "title": "Study on transformative innovation capabilities and enabling conditions for sustainable competitiveness",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/09a52480-3303-41d9-86d8-04519ee1faba-EXA"
+    },
+    {
+      "title": "Supply, Installation and maintenance of a PEM Electrolyser for Hydrogen Production at JRC Ispra",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a2c207c5-43fe-42dc-9a1b-05e03990752c-CN"
     },
     {
       "title": "Test Vector Generators’ (TVG) corrective and evolutive maintenance",
@@ -432,10 +436,6 @@
     {
       "title": "Single Framework contract for technical analysis of innovative textile fibres and related services in support of the EU Textile Labelling Regulation",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/913c8ce4-d0fc-4ac5-aad8-afc3ed5fc165-CN"
-    },
-    {
-      "title": "Servizi di analisi e campionamento dell'acqua",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/b822c84d-8791-4175-a49e-19856f98b3eb-EXA"
     },
     {
       "title": "Subscription contract for provision of energy supplies (electricity and gas) to EDA's premises.",
@@ -562,10 +562,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4d821b79-286e-4100-bf5d-dc6e52e38211-CN"
     },
     {
-      "title": "Publications on EU Policy Initiatives and Methodological Assistance on Indicators",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9ed48fe6-1b4e-48b1-9dcc-6a0ef8b56f8c-CN"
-    },
-    {
       "title": "Soporte técnico de equipos audiovisuales para eventos y salas de reuniones y suministro (compra o alquiler) de equipamiento audiovisual.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/b9f35070-d7b4-4ab5-98ea-a642bdbfe253-CN"
     },
@@ -580,6 +576,10 @@
     {
       "title": "Location et maintenance de vélos à assistance électrique, avec système digital de réservation et sécurisation, dans la Région de Bruxelles-Capitale et sa périphérie",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/fac23e74-7836-4682-af85-01a48d1c1596-CN"
+    },
+    {
+      "title": "Publications on EU Policy Initiatives and Methodological Assistance on Indicators",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9ed48fe6-1b4e-48b1-9dcc-6a0ef8b56f8c-CN"
     },
     {
       "title": "Environmental Services: Operational Support for Airborne and Sea Operations",
@@ -606,14 +606,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/87882ac6-726b-41b3-a7ac-e0a889b695de-CN"
     },
     {
-      "title": "Servicios de restauración",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c9561f09-afc5-40af-bc3d-2cbe553cecc0-PIN"
-    },
-    {
-      "title": "DTS/260921-IT Consultancy Services",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/0393e476-3277-4e22-8543-27177900c8fa-CN"
-    },
-    {
       "title": "European Health Data Space IT systems development, operations and support",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/ea88c2b3-2595-4d56-b8c3-45c3b8cc4031-CN"
     },
@@ -624,6 +616,18 @@
     {
       "title": "Fourniture d’appareils d’éclairage à LED pour l’immeuble BERLAYMONT",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c78e2222-8728-49bf-a275-30734f8069f6-CN"
+    },
+    {
+      "title": "Servicios de restauración",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c9561f09-afc5-40af-bc3d-2cbe553cecc0-PIN"
+    },
+    {
+      "title": "DTS/260921-IT Consultancy Services",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/0393e476-3277-4e22-8543-27177900c8fa-CN"
+    },
+    {
+      "title": "Supply and Maintenance of a GC-MS/MS-QQQ",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/51e3ba95-4a41-400b-824a-fafcad66ba85-PIN"
     },
     {
       "title": "Call for Tenders for the selection of Artificial Intelligence Gigafactory Consortia and the establishment of AI Gigafactories",
@@ -654,8 +658,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9bfdd453-036c-4b71-9aa4-842dad66a79a-CN"
     },
     {
-      "title": "Supply and Maintenance of a GC-MS/MS-QQQ",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/51e3ba95-4a41-400b-824a-fafcad66ba85-PIN"
+      "title": "Study of the Cyber Solidarity Act",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/aaeb91c5-5007-4809-99d5-cc7d9288ccbe-CN"
+    },
+    {
+      "title": "Management Skills Assessment Centre",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/90aa975c-6378-491d-aff1-02232dff7fcd-CN"
     },
     {
       "title": "European Monitoring of Biodiversity in Agricultural Landscapes (EMBAL) 2028",
@@ -666,14 +674,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1bae130e-cd1d-4a08-b323-efd6cb343123-CN"
     },
     {
-      "title": "Study of the Cyber Solidarity Act",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/aaeb91c5-5007-4809-99d5-cc7d9288ccbe-CN"
-    },
-    {
-      "title": "Management Skills Assessment Centre",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/90aa975c-6378-491d-aff1-02232dff7fcd-CN"
-    },
-    {
       "title": "Unlocking the impact of Regional Centres of Excellence (RcoEs)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/97d944aa-978d-4ec6-8cf3-041b1d4bd4a2-EXA"
     },
@@ -682,16 +682,16 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/d77ff98e-ac13-4b1c-b5cb-7d0522187870-CN"
     },
     {
-      "title": "Servicios de seguridad para la Delegación de la Unión Europea en Argentina",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a2908005-1a6b-4461-93af-fe463ca0406c-CN"
-    },
-    {
       "title": "Provision of modification, transportation and installation services for container units",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c0f19498-3673-4149-8096-c92bfda782e6-EXA"
     },
     {
       "title": "Provision of assistance in the field of economic efficiency benchmarking and cost comparisons for transmission system operators for the European Union Agency for the Cooperation of Energy Regulators",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/c872d99d-1a6c-4ab8-9524-910bf28e137b-CN"
+    },
+    {
+      "title": "Servicios de seguridad para la Delegación de la Unión Europea en Argentina",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a2908005-1a6b-4461-93af-fe463ca0406c-CN"
     },
     {
       "title": "Supply and Installation of the Personal Microwave Security Scanners",
@@ -718,6 +718,14 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/120fdd70-634a-4afb-afcc-328b38dd482c-PIN"
     },
     {
+      "title": "Provision of Cleaning Services for Cedefop premises",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eb9cab08-3cd0-4ec2-9374-1e09e3462ab2-CN"
+    },
+    {
+      "title": "Framework contract for peer reviews and mutual learning",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/31c1b3e1-772b-42f5-ba8e-ed84073b4e55-CN"
+    },
+    {
       "title": "Tactical Driving Trainings for Close Protection Officers.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9ccc93c1-ee1d-464f-9377-57a30356eb93-CN"
     },
@@ -742,14 +750,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/f973475e-15da-494f-a059-120666b05e30-EXA"
     },
     {
-      "title": "Provision of Cleaning Services for Cedefop premises",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eb9cab08-3cd0-4ec2-9374-1e09e3462ab2-CN"
-    },
-    {
-      "title": "Framework contract for peer reviews and mutual learning",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/31c1b3e1-772b-42f5-ba8e-ed84073b4e55-CN"
-    },
-    {
       "title": "Dynamic Purchasing System (DPS) for Provision of Technical Equipment for Standing Corps",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e9e1e866-b13b-40e4-9cc9-f337d034bef1-CN"
     },
@@ -770,6 +770,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a038ae38-a4f7-4dc0-a097-ecdc6e80aac1-CN"
     },
     {
+      "title": "Labour Market and Skills Forecast in ETF Partner Countries",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/ae6df361-9f2d-4a0b-8ced-b7ebb0e565c5-CN"
+    },
+    {
       "title": "Service of Occupational Risk Assessment Documents (Documento di Valutazione dei Rischi – DVR) for buildings, workplaces and activities located at the JRC Ispra site.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/2321f9a3-f651-4801-aed7-95ab0c4e04ce-EXA"
     },
@@ -786,16 +790,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/8bacfa6c-451c-4638-8739-e7d4943a847f-CN"
     },
     {
-      "title": "Labour Market and Skills Forecast in ETF Partner Countries",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/ae6df361-9f2d-4a0b-8ced-b7ebb0e565c5-CN"
+      "title": "Events Organisation and Meeting Management services",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e7896d9c-6823-40b1-a47a-d43573a05fb6-CN"
     },
     {
       "title": "MANAGED IT SERVICES 2026",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9b0b9094-65bb-4c39-a39b-5a062609d4a6-CN"
-    },
-    {
-      "title": "Durchführung von Strahlenschutzaufgaben in Rückbauprojekten",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/d72bfcd3-ca34-455b-853f-0591199dc76a-PIN"
     },
     {
       "title": "remplacement d'onduleurs et batteries",
@@ -808,10 +808,6 @@
     {
       "title": "ICTSS IV - ICT Support Services IV",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/cce8a662-54c8-4a09-980b-3d7b600bc5ed-CN"
-    },
-    {
-      "title": "Events Organisation and Meeting Management services",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e7896d9c-6823-40b1-a47a-d43573a05fb6-CN"
     },
     {
       "title": "Organisation of public events, communication campaigns and production of promotional materials for the communication needs of the EC Representation in Bulgaria",
@@ -874,10 +870,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/91f44443-e0db-4085-b9b2-6b83881d9ed7-EXA"
     },
     {
-      "title": "Provision of Preventive and Corrective Maintenance for the EUAA Premises in Greece (Building and containers)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/36b45816-bcef-41e7-8cee-9ad34fa854b8-CN"
-    },
-    {
       "title": "MASSIVE – Metabolite Analysis System Supporting In-depth Validation and Exploration",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a9b8180f-3bb5-4807-846c-25c9d39952d1-CN"
     },
@@ -906,6 +898,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/3bf3f8e4-3cf0-4007-9840-6ead6196935e-CN"
     },
     {
+      "title": "Provision of Preventive and Corrective Maintenance for the EUAA Premises in Greece (Building and containers)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/36b45816-bcef-41e7-8cee-9ad34fa854b8-CN"
+    },
+    {
       "title": "Online platform offering access to the digital edition of printed newspapers and weekly news magazines covering the 27 EU Member States",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/54163b61-254e-4b7f-9d6a-43059d53b4a5-CN"
     },
@@ -932,10 +928,6 @@
     {
       "title": "Creation of Europe Houses in selected cities of Serbia",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/5d394093-54ed-4047-88dc-819d30befe47-CN"
-    },
-    {
-      "title": "European Parliament Ambassador School in Latvia",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/fc05e284-7819-42fb-839d-8dc3501e3df8-CN"
     },
     {
       "title": "Public Buyers Community support",
@@ -986,6 +978,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/f46f5df4-f058-4eba-9634-c846a9f0a9c5-CN"
     },
     {
+      "title": "Supplies to protect heritage and agriculture in the Turkish Cypriot community",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/42364bab-9dd6-4a99-be90-9761687c07da-CN"
+    },
+    {
       "title": "Catering Services, supplies and arrangement of venues.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/e35b6893-6b12-48b3-8151-719479ad8729-PIN"
     },
@@ -1000,10 +996,6 @@
     {
       "title": "Prestación de servicios de asistencia y apoyo social al personal del Centro Común de Investigación de la Comisión Europea en Sevilla",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/41a66af4-2ec5-4c55-82b6-cb79f3f24b4b-CN"
-    },
-    {
-      "title": "App-based recording of pollinators under the Nature Restoration Regulation",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/47909690-4647-44ff-8048-ad2d6ad24317-PIN"
     },
     {
       "title": "DVD/261012 - Monitoring of excess mortality across Europe for timely assessment of the impact of communicable diseases and public health threats",
@@ -1030,6 +1022,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/5a4ee61e-8062-4683-a9ac-ccf4c22ede67-CN"
     },
     {
+      "title": "App-based recording of pollinators under the Nature Restoration Regulation",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/47909690-4647-44ff-8048-ad2d6ad24317-PIN"
+    },
+    {
       "title": "Services of a journalist to author, review and revise texts for the website",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/eea5cc41-3f07-495c-8c32-2df12cab3619-EXA"
     },
@@ -1040,10 +1036,6 @@
     {
       "title": "Étude sur la restauration",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/239ee2ce-a4f2-48d0-b56e-3e5df9f496ff-EXA"
-    },
-    {
-      "title": "Call for Tender for media monitoring services",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7c213849-58e6-4bbb-b9d4-609fdeba90c2-CN"
     },
     {
       "title": "Operational Support to In-Season Crop Monitoring and Yield Forecasting Activities (MARSOP7)",
@@ -1106,6 +1098,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/48cee2f8-4487-4a8b-b448-b341f68ce27c-PIN"
     },
     {
+      "title": "prestations dans le domaine de la santé et de la sécurité au travail pour le personnel du Parlement européen",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/830cc552-3a9c-41cb-b29b-b5f015343239-CN"
+    },
+    {
       "title": "European Marine Observation and Data Network (EMODnet) - Global Data Service",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/07cb9812-5373-4b1e-8c49-3f74c47125c2-CN"
     },
@@ -1116,10 +1112,6 @@
     {
       "title": "NL-Petten: Technical assistance by a Project Support Officer in the supervision of projects executed on the JRC Petten site, including various other supporting tasks.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9a5bea12-7a03-4e6d-a9ab-46cf975f4910-PIN"
-    },
-    {
-      "title": "prestations dans le domaine de la santé et de la sécurité au travail pour le personnel du Parlement européen",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/830cc552-3a9c-41cb-b29b-b5f015343239-CN"
     },
     {
       "title": "Raamcontract voor het inhuren van consultants op technisch en sociaal gebied",
@@ -1140,10 +1132,6 @@
     {
       "title": "Prestations de contrôle périodique réglementaire des appareils de levage et des équipements antichute",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/2b5867d3-8c26-4c76-a0ec-910b1bcadf04-CN"
-    },
-    {
-      "title": "Development, consultancy and support for the Single Resolution Board (SRB) Information systems (IS) – Time and Means service provision",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/9ed134ab-3075-4afd-bb81-5c2ffb2c52d4-CN"
     },
     {
       "title": "OHD/260934 Support to a point prevalence survey of healthcare-associated infections and antimicrobial use in long-term care facilities, including data validation and analysis",
@@ -1174,14 +1162,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/149e3bc2-e3b7-4c12-b128-c137b0572d17-CN"
     },
     {
-      "title": "Development, Implementation, Maintenance and Operation of financial IT Systems",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/966981b6-1f69-46a6-b4c9-17a2079928ba-PIN"
-    },
-    {
-      "title": "Financial and Accounting Support",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/379d3d36-9c4a-4ee5-bdb1-9e8e7b634a9d-PIN"
-    },
-    {
       "title": "Gold disks",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/419a44a7-f985-4b24-bb7f-b57f74e74b70-EXA"
     },
@@ -1210,16 +1190,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/addd0682-e241-4626-85f4-21f4f438e580-EXA"
     },
     {
-      "title": "Technical analysis of innovative textile fibres and related services in support of the EU Textile Labelling Regulation",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/913c8ce4-d0fc-4ac5-aad8-afc3ed5fc165-PIN"
+      "title": "Open procedure for the conclusion of a single framework contract on the supply of security equipment to the benefit of CFSP Entities",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1add454e-7312-490c-b0f3-a52c3182ecd6-CN"
     },
     {
       "title": "Provision of graphic design services and image-related services",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/b7e13a4e-f6e5-4dd9-aff7-0b47937ad71e-CN"
-    },
-    {
-      "title": "Open procedure for the conclusion of a single framework contract on the supply of security equipment to the benefit of CFSP Entities",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1add454e-7312-490c-b0f3-a52c3182ecd6-CN"
     },
     {
       "title": "Grondige renovatie en uitbreiding van het conferentiegebouw, (B100), JRC Geel - Een NEB-proefproject",
@@ -1298,10 +1274,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/b9601742-9b75-4a4e-868a-86eb2f094ea0-EXA"
     },
     {
-      "title": "Development and maintenance of learning products for the EU Agency for Railways",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/81d42864-1a2d-4b95-8453-5ed6b4cd3e7b-CN"
-    },
-    {
       "title": "Connection of Vinica to WWTP Kocani, including partial rehabilitation and extension of sewarage and stormwater systems in the Municipality of Vinica",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/78daa744-3775-4f44-a10c-958822818fb1-CN"
     },
@@ -1328,10 +1300,6 @@
     {
       "title": "Provision of expert support for RoHS: SEAC capacity building and technical support services",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/8d7b6357-212c-4892-ab5c-3d7248d12a86-EXA"
-    },
-    {
-      "title": "Spare electronic modules for spent fuel verification",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/8687b688-bb0b-4792-8018-b4ff1f0b5603-EXA"
     },
     {
       "title": "HAB detection based on analysis of spatial patterns in EO data",
@@ -1410,12 +1378,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/4eb96668-2a8a-47f2-8a99-77501d2ab71c-EXA"
     },
     {
-      "title": "Nanomaterial Risk Assessment: Refining and Validating Acceptable Variation in Nanoform Characterisers",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/32532b02-12e3-4213-89a5-41a90753bab5-PIN"
-    },
-    {
       "title": "Strengthening digital connectivity and the digital transformation of businesses and public services in Albania",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/ff049c5f-7507-4216-8e8d-55acab592f01-PIN"
+    },
+    {
+      "title": "Nanomaterial Risk Assessment: Refining and Validating Acceptable Variation in Nanoform Characterisers",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/32532b02-12e3-4213-89a5-41a90753bab5-PIN"
     },
     {
       "title": "Support services to Simpl’s Programme - Support Office (PSO II) Open procedure",
@@ -1684,10 +1652,6 @@
     {
       "title": "Framework contract supporting measures to enhance cooperation between Public Employment Services (PES) Lot 1: Qualitative PES benchmarking Lot 2: Mutual learning, mutual assistance and supporting services",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/a023dd20-f1d6-4825-a922-d3cca6098af4-PIN"
-    },
-    {
-      "title": "Call for Tender for media monitoring services",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/7c213849-58e6-4bbb-b9d4-609fdeba90c2-PIN"
     },
     {
       "title": "EEA/ENS/26/001 - Enhancing the integration of small-scale fisheries into marine governance through improved spatial data and indicators",
