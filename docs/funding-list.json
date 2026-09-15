@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T10:31:31.622Z",
+  "generatedAt": "2026-09-15T09:58:29.676Z",
   "items": [
     {
       "title": "Demonstration of hydropower technologies for efficient and forward-looking refurbishment of existing hydropower plants",
@@ -998,6 +998,10 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-04-HUMAN-07"
     },
     {
+      "title": "Support for the functioning of SEAPs, including for the purpose of establishing, managing and maintaining defence industrial readiness pools",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2026-2027-FNLC-SA-SEAP"
+    },
+    {
       "title": "Automated Scientific Discovery – Food (RAISE pilot)",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-RAISE-2027-01-02"
     },
@@ -1066,8 +1070,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2027-01-01"
     },
     {
-      "title": "Support for the functioning of SEAPs, including for the purpose of establishing, managing and maintaining defence industrial readiness pools",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-EDIP-P-2026-2027-FNLC-SA-SEAP"
+      "title": "Standardisation",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ISF-2026-TF2-AG-CYBER-STANDARD"
+    },
+    {
+      "title": "Digital Investigations",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ISF-2026-TF2-AG-CYBER-DIGITAL"
     },
     {
       "title": "SOCPL-2026-INFO-REPR",
@@ -1174,24 +1182,24 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-YOUTH-SOCIAL-MEDIA-DESIGN"
     },
     {
-      "title": "Advanced Materials for Miniaturised Energy Harvesting Systems",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PATHFINDERCHALLENGES-01-01"
-    },
-    {
-      "title": "DeepRAP: Deep Reasoning, Abstraction & Planning towards trustworthy Cognitive AI Systems",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PATHFINDERCHALLENGES-01-03"
-    },
-    {
-      "title": "Biotechnology for Healthy Ageing",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PATHFINDERCHALLENGES-01-02"
-    },
-    {
       "title": "ERC Starting Grant",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2027-STG"
     },
     {
       "title": "Scientific and technical assistance on a foresight activity in the field of plant health to enhance crisis preparedness for the EU territory.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUBA-EFSA-2026-PLANTS-01"
+    },
+    {
+      "title": "Biotechnology for Healthy Ageing",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PATHFINDERCHALLENGES-01-02"
+    },
+    {
+      "title": "DeepRAP: Deep Reasoning, Abstraction & Planning towards trustworthy Cognitive AI Systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PATHFINDERCHALLENGES-01-03"
+    },
+    {
+      "title": "Advanced Materials for Miniaturised Energy Harvesting Systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PATHFINDERCHALLENGES-01-01"
     },
     {
       "title": "Integrated Surveillance mechanism: Regional Cable hubs",
@@ -1242,10 +1250,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2026-SG-JAPAN"
     },
     {
-      "title": "Skills Hubs of Excellence",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2026-SKILLS-HOE-SG"
-    },
-    {
       "title": "Protecting and supporting victims and survivors of gender-based violence.",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2026-DAPHNE-PROTECTION"
     },
@@ -1272,6 +1276,10 @@
     {
       "title": "AI compute evaluation and deployment platform for EU infrastructure",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2026-AI-GFP"
+    },
+    {
+      "title": "Skills Hubs of Excellence",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-JU-CHIPS-2026-SKILLS-HOE-SG"
     },
     {
       "title": "IHI European HealthCare Incubator Network",
@@ -2174,12 +2182,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2026-01-CIRCBIO-02"
     },
     {
-      "title": "Non-thematic actions targeting disruptive technologies for defence",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-NT"
-    },
-    {
       "title": "Non-thematic research actions by SMEs and research organisations",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-RA-SMERO-NT"
+    },
+    {
+      "title": "Non-thematic actions targeting disruptive technologies for defence",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-NT"
     },
     {
       "title": "European Nuclear Skills Initiative – towards European Nuclear Skills Academy",
@@ -2238,16 +2246,8 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ACC-AIRDEF-EATMI"
     },
     {
-      "title": "Modelling & simulation supported AI framework for military decision-making and training",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SIMTRAIN-MSAI"
-    },
-    {
-      "title": "Multidomain sensors demonstrator and test",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SENS-MSDT"
-    },
-    {
-      "title": "CBRN decontamination systems and technologies",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-MCBRN-DST"
+      "title": "Multiple rocket launcher",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-GROUND-MRL"
     },
     {
       "title": "Layered critical seabed infrastructure protection",
@@ -2258,8 +2258,44 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-SI-ENERENV-NTFE"
     },
     {
-      "title": "Development and validation of models predicting flow-related underwater noise",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-UWW-FUWN"
+      "title": "Secure digital military mobility system",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-PROTMOB-DMM"
+    },
+    {
+      "title": "Integration of Galileo PRS receivers on weapon systems and NAVWAR operational centres in military C2",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-SPACE-PRS-STEP"
+    },
+    {
+      "title": "Future main battle tank platform systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-GROUND-MBT"
+    },
+    {
+      "title": "AI-based tactical situational awareness using swarms of small robots and drones – organisation of a technological challenge\"",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAO"
+    },
+    {
+      "title": "Enhanced medium-size semi-autonomous surface vessels",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-NAVAL-EMSAS"
+    },
+    {
+      "title": "AI-based tactical situational awareness using swarms of small robots and drones – participation in a technological challenge\"",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAP-STEP"
+    },
+    {
+      "title": "Non-thematic development actions by SMEs",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DA-SME-NT"
+    },
+    {
+      "title": "Modelling & simulation supported AI framework for military decision-making and training",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SIMTRAIN-MSAI"
+    },
+    {
+      "title": "Multidomain sensors demonstrator and test",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SENS-MSDT"
+    },
+    {
+      "title": "CBRN decontamination systems and technologies",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-MCBRN-DST"
     },
     {
       "title": "Quantum secured tactical networks",
@@ -2274,60 +2310,32 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-PROTMOB-FMLA"
     },
     {
-      "title": "Smart and multifunctional textiles",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-MATCOMP-SMT-STEP"
-    },
-    {
-      "title": "Smart technologies for next generation fighter systems",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-AIR-STFS"
-    },
-    {
-      "title": "Ammunition Waste Collection and Disposal Unmanned Platform",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ENERENV-AWC-STEP"
-    },
-    {
-      "title": "Multiple rocket launcher",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-GROUND-MRL"
-    },
-    {
-      "title": "Enhanced cognitive EW system with intelligent RESM CESM signal analysis",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-SENS-CEW-STEP"
+      "title": "Development and validation of models predicting flow-related underwater noise",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-UWW-FUWN"
     },
     {
       "title": "Self-protection systems",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-AIR-SPS"
     },
     {
-      "title": "Integration of Galileo PRS receivers on weapon systems and NAVWAR operational centres in military C2",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-SPACE-PRS-STEP"
+      "title": "Enhanced cognitive EW system with intelligent RESM CESM signal analysis",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-SENS-CEW-STEP"
+    },
+    {
+      "title": "Ammunition Waste Collection and Disposal Unmanned Platform",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ENERENV-AWC-STEP"
+    },
+    {
+      "title": "Smart and multifunctional textiles",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-MATCOMP-SMT-STEP"
     },
     {
       "title": "High-performance energy systems",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ENERENV-HPES-STEP"
     },
     {
-      "title": "Future main battle tank platform systems",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-GROUND-MBT"
-    },
-    {
-      "title": "Secure digital military mobility system",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-PROTMOB-DMM"
-    },
-    {
-      "title": "Non-thematic development actions by SMEs",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DA-SME-NT"
-    },
-    {
-      "title": "Enhanced medium-size semi-autonomous surface vessels",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-NAVAL-EMSAS"
-    },
-    {
-      "title": "AI-based tactical situational awareness using swarms of small robots and drones – participation in a technological challenge\"",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAP-STEP"
-    },
-    {
-      "title": "AI-based tactical situational awareness using swarms of small robots and drones – organisation of a technological challenge\"",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAO"
+      "title": "Smart technologies for next generation fighter systems",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-AIR-STFS"
     },
     {
       "title": "New abilities in over-the-horizon sensing",
