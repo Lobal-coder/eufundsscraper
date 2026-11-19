@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T13:47:40.696Z",
+  "generatedAt": "2026-11-19T14:16:36.390Z",
   "items": [
     {
       "title": "Space critical equipment for EU non-dependence",
@@ -778,12 +778,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CID-2027-01-01"
     },
     {
-      "title": "Cooperation Partnerships",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2027-SCP"
-    },
-    {
       "title": "ERASMUS-SPORT-2027-CB - Capacity Building in the Field of Sport",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2027-CB"
+    },
+    {
+      "title": "Cooperation Partnerships",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2027-SCP"
     },
     {
       "title": "Small-scale Partnerships",
@@ -930,6 +930,14 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2027-PATHFINDEROPEN-two-stage"
     },
     {
+      "title": "Not-for-profit European sport events",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2027-SNCESE"
+    },
+    {
+      "title": "Large scale not-for-profit European sport event",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2027-LSSNCESE"
+    },
+    {
       "title": "Erasmus Mundus Joint Masters",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-PEX-EMJM-MOB"
     },
@@ -1014,12 +1022,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-13"
     },
     {
-      "title": "Advanced integrated photonic devices for extended features and ultra-low power consumption (RIA) (Photonics Partnership)",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-05-DIGITAL-EMERGING-03"
-    },
-    {
       "title": "EU Humanitarian Partnership Certificate 2028-2034",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HUMA-2028-2034-PARTNERSHIP-CERT"
+    },
+    {
+      "title": "Advanced integrated photonic devices for extended features and ultra-low power consumption (RIA) (Photonics Partnership)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-05-DIGITAL-EMERGING-03"
     },
     {
       "title": "Improving scientific knowledge to strengthen the science-basis of management decisions under the CFP",
@@ -1366,40 +1374,40 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-BRIDGING-2027-04-08"
     },
     {
-      "title": "TV and online content Animation projects",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-1"
-    },
-    {
-      "title": "European video games and immersive content",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-DEVVGIM"
-    },
-    {
       "title": "Films on the Move",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-FILMOVE"
-    },
-    {
-      "title": "European slate development",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-DEVSLATE"
     },
     {
       "title": "Audience Development and Film Education",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-AUDFILMEDU"
     },
     {
+      "title": "TV and online content Documentary projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-2"
+    },
+    {
       "title": "TV and online content Fiction projects",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-3"
     },
     {
-      "title": "TV and online content Documentary projects",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-2"
+      "title": "TV and online content Animation projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-1"
+    },
+    {
+      "title": "Innovative tools and business models",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-INNOVBUSMOD"
+    },
+    {
+      "title": "European video games and immersive content",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-DEVVGIM"
     },
     {
       "title": "European co-development",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-CODEV"
     },
     {
-      "title": "Innovative tools and business models",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-INNOVBUSMOD"
+      "title": "European slate development",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-DEVSLATE"
     },
     {
       "title": "ERC Consolidator Grant",
