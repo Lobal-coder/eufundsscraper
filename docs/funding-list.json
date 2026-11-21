@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T13:56:28.235Z",
+  "generatedAt": "2026-11-21T13:21:30.354Z",
   "items": [
     {
       "title": "Space critical equipment for EU non-dependence",
@@ -42,12 +42,12 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-07-D3-11"
     },
     {
-      "title": "Centres of Vocational Excellence",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-PEX-COVE-TOP1"
-    },
-    {
       "title": "Community of practice",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-PEX-COVE-TOP2"
+    },
+    {
+      "title": "Centres of Vocational Excellence",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-PEX-COVE-TOP1"
     },
     {
       "title": "Virtual Human Twins (VHTs) for integrated clinical decision support in prevention and diagnosis",
@@ -702,20 +702,20 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2027-03-OCEAN-02"
     },
     {
-      "title": "Capacity building in VET in Sub-Saharan Africa",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SSA"
+      "title": "Capacity building in VET in Western Balkans",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-WB"
     },
     {
-      "title": "Capacity building in VET in South Mediterranean Countries",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SMC"
+      "title": "Capacity building in VET in Sub-Saharan Africa",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SSA"
     },
     {
       "title": "Capacity building in VET in Latin America",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-LA"
     },
     {
-      "title": "Capacity building in VET in Western Balkans",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-WB"
+      "title": "Capacity building in VET in South Mediterranean Countries",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SMC"
     },
     {
       "title": "Capacity building in VET in Caribbean",
@@ -1038,18 +1038,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-05-DIGITAL-EMERGING-03"
     },
     {
-      "title": "Africa-EU CO-FUND action on climate",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-11"
-    },
-    {
-      "title": "Palaeoclimate science for a better understanding of Earth system dynamics",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-08"
-    },
-    {
-      "title": "Next generation scenarios for informing climate and sustainability transitions",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-13"
-    },
-    {
       "title": "Assessing the performance of policy instruments to inform climate change mitigation action",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-09"
     },
@@ -1058,12 +1046,24 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-12"
     },
     {
+      "title": "Africa-EU CO-FUND action on climate",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-11"
+    },
+    {
       "title": "Advancing understanding, modelling and prediction of extreme events in a changing climate",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-07"
     },
     {
+      "title": "Palaeoclimate science for a better understanding of Earth system dynamics",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-08"
+    },
+    {
       "title": "Understanding and avoiding maladaptation to climate change",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-10"
+    },
+    {
+      "title": "Next generation scenarios for informing climate and sustainability transitions",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-13"
     },
     {
       "title": "Improving scientific knowledge to strengthen the science-basis of management decisions under the CFP",
